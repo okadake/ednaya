@@ -6,20 +6,28 @@ const base = import.meta.env.BASE_URL;
 
 <Layout title="PLANET FOTO LABO | エドナ屋" description="PLANET FOTO LABO — 写真家のアトリエ。">
   <!-- Hero -->
-  <section class="relative min-h-[60vh] flex items-center justify-center bg-gradient-to-br from-sky-100 via-slate-50 to-stone-50 overflow-hidden">
+  <section class="relative min-h-[80vh] flex items-center justify-center overflow-hidden -mt-16 pt-16">
+    <div class="absolute inset-0">
+      <img
+        src={`${base}/images/heroes/planet-foto-labo.jpg`}
+        alt="PLANET FOTO LABO"
+        class="w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-stone-950/65"></div>
+    </div>
     <div class="relative z-10 text-center px-6">
-      <p class="text-xs tracking-[0.5em] text-sky-700 mb-6">EDNAYA / 03</p>
-      <h1 class="text-4xl md:text-7xl font-light tracking-[0.15em] text-sky-900 mb-4">PLANET FOTO LABO</h1>
-      <p class="text-sm tracking-[0.3em] text-sky-700">PHOTOGRAPHER'S ATELIER</p>
+      <p class="text-xs tracking-[0.5em] text-sky-300 mb-6">EDNAYA / 03</p>
+      <h1 class="text-4xl md:text-7xl font-light tracking-[0.15em] text-white mb-4">PLANET FOTO LABO</h1>
+      <p class="text-sm tracking-[0.3em] text-stone-300">PHOTOGRAPHER'S ATELIER</p>
     </div>
   </section>
 
   <!-- About -->
-  <section class="py-24 px-6">
+  <section class="py-24 px-6 bg-stone-950">
     <div class="max-w-3xl mx-auto text-center">
-      <p class="text-xs tracking-[0.4em] text-sky-700 mb-4">ABOUT</p>
-      <h2 class="text-3xl font-light tracking-wider mb-12">アトリエについて</h2>
-      <p class="text-stone-600 leading-loose">
+      <p class="text-xs tracking-[0.4em] text-sky-400 mb-4">ABOUT</p>
+      <h2 class="text-3xl font-light tracking-wider text-white mb-12">アトリエについて</h2>
+      <p class="text-stone-400 leading-loose">
         写真家のアトリエ「PLANET FOTO LABO」。<br />
         光と時間を捉えた一枚の物語を、ここから世界へ。<br />
         作品制作・展示・撮影依頼を承っております。
@@ -28,16 +36,16 @@ const base = import.meta.env.BASE_URL;
   </section>
 
   <!-- Gallery -->
-  <section class="py-24 px-6 bg-slate-50">
+  <section class="py-24 px-6 bg-black">
     <div class="max-w-6xl mx-auto">
       <div class="text-center mb-16">
-        <p class="text-xs tracking-[0.4em] text-sky-700 mb-4">GALLERY</p>
-        <h2 class="text-3xl font-light tracking-wider">作品ギャラリー</h2>
+        <p class="text-xs tracking-[0.4em] text-sky-400 mb-4">GALLERY</p>
+        <h2 class="text-3xl font-light tracking-wider text-white">作品ギャラリー</h2>
       </div>
       <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
         {Array.from({ length: 9 }).map(() => (
-          <div class="bg-stone-200 aspect-[4/5] flex items-center justify-center">
-            <span class="text-xs tracking-[0.3em] text-stone-400">PHOTO</span>
+          <div class="bg-stone-900 aspect-[4/5] flex items-center justify-center">
+            <span class="text-xs tracking-[0.3em] text-stone-600">PHOTO</span>
           </div>
         ))}
       </div>
@@ -45,11 +53,11 @@ const base = import.meta.env.BASE_URL;
   </section>
 
   <!-- Services -->
-  <section class="py-24 px-6">
+  <section class="py-24 px-6 bg-stone-950">
     <div class="max-w-4xl mx-auto">
       <div class="text-center mb-16">
-        <p class="text-xs tracking-[0.4em] text-sky-700 mb-4">SERVICES</p>
-        <h2 class="text-3xl font-light tracking-wider">サービス</h2>
+        <p class="text-xs tracking-[0.4em] text-sky-400 mb-4">SERVICES</p>
+        <h2 class="text-3xl font-light tracking-wider text-white">サービス</h2>
       </div>
       <div class="grid md:grid-cols-3 gap-8">
         {[
@@ -58,16 +66,16 @@ const base = import.meta.env.BASE_URL;
           { name: 'EXHIBITION', desc: '作品展示・販売。アトリエ作品をご紹介します。' },
         ].map((s) => (
           <div class="text-center">
-            <p class="text-xs tracking-[0.3em] text-sky-700 mb-4">{s.name}</p>
-            <p class="text-sm text-stone-600 leading-loose">{s.desc}</p>
+            <p class="text-xs tracking-[0.3em] text-sky-400 mb-4">{s.name}</p>
+            <p class="text-sm text-stone-400 leading-loose">{s.desc}</p>
           </div>
         ))}
       </div>
     </div>
   </section>
 
-  <div class="text-center py-12">
-    <a href={base} class="text-xs tracking-[0.3em] text-stone-500 hover:text-sky-700 transition">
+  <div class="text-center py-12 bg-stone-950">
+    <a href={base} class="text-xs tracking-[0.3em] text-stone-500 hover:text-sky-400 transition">
       ← BACK TO エドナ屋
     </a>
   </div>

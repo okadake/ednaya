@@ -6,20 +6,28 @@ const base = import.meta.env.BASE_URL;
 
 <Layout title="EDNA | エドナ屋" description="EDNA — サーフボードの製造・販売。">
   <!-- Hero -->
-  <section class="relative min-h-[60vh] flex items-center justify-center bg-gradient-to-br from-amber-100 via-orange-50 to-stone-50 overflow-hidden">
+  <section class="relative min-h-[80vh] flex items-center justify-center overflow-hidden -mt-16 pt-16">
+    <div class="absolute inset-0">
+      <img
+        src={`${base}/images/heroes/edna006.jpg`}
+        alt="EDNA"
+        class="w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-stone-950/60"></div>
+    </div>
     <div class="relative z-10 text-center px-6">
-      <p class="text-xs tracking-[0.5em] text-amber-700 mb-6">EDNAYA / 01</p>
-      <h1 class="text-6xl md:text-8xl font-light tracking-[0.2em] text-amber-900 mb-4">EDNA</h1>
-      <p class="text-sm tracking-[0.3em] text-amber-700">SURFBOARDS</p>
+      <p class="text-xs tracking-[0.5em] text-amber-300 mb-6">EDNAYA / 01</p>
+      <h1 class="text-6xl md:text-8xl font-light tracking-[0.2em] text-white mb-4">EDNA</h1>
+      <p class="text-sm tracking-[0.3em] text-stone-300">SURFBOARDS</p>
     </div>
   </section>
 
   <!-- About -->
-  <section class="py-24 px-6">
+  <section class="py-24 px-6 bg-stone-950">
     <div class="max-w-3xl mx-auto text-center">
-      <p class="text-xs tracking-[0.4em] text-amber-700 mb-4">ABOUT</p>
-      <h2 class="text-3xl font-light tracking-wider mb-12">EDNAについて</h2>
-      <p class="text-stone-600 leading-loose">
+      <p class="text-xs tracking-[0.4em] text-amber-400 mb-4">ABOUT</p>
+      <h2 class="text-3xl font-light tracking-wider text-white mb-12">EDNAについて</h2>
+      <p class="text-stone-400 leading-loose">
         EDNAは、波と共に生きる人々のためのサーフボードブランドです。<br />
         Long Board、Short Board、Alternative —<br />
         ライダーのスタイルに合わせた一本を、職人の手でお届けします。
@@ -28,26 +36,57 @@ const base = import.meta.env.BASE_URL;
   </section>
 
   <!-- Categories -->
-  <section class="py-24 px-6 bg-stone-50">
+  <section class="py-24 px-6 bg-black">
     <div class="max-w-5xl mx-auto">
       <div class="text-center mb-16">
-        <p class="text-xs tracking-[0.4em] text-amber-700 mb-4">CATEGORIES</p>
-        <h2 class="text-3xl font-light tracking-wider">サーフボード</h2>
+        <p class="text-xs tracking-[0.4em] text-amber-400 mb-4">CATEGORIES</p>
+        <h2 class="text-3xl font-light tracking-wider text-white">サーフボード</h2>
       </div>
       <div class="grid md:grid-cols-3 gap-6">
         {[
-          { name: 'LONG BOARD', desc: 'ゆったりとした波に寄り添う、伝統的な一本。' },
-          { name: 'SHORT BOARD', desc: '機敏な動きを可能にする、現代的なデザイン。' },
-          { name: 'ALTERNATIVE', desc: '型にはまらない、自由な発想のシェイプ。' },
+          { name: 'LONG BOARD', desc: 'ゆったりとした波に寄り添う、伝統的な一本。', image: 'longboard.jpg', href: 'edna/long', count: 53 },
+          { name: 'SHORT BOARD', desc: '機敏な動きを可能にする、現代的なデザイン。', image: 'shortboard.jpg', href: 'edna/short', count: 27 },
+          { name: 'ALTERNATIVE', desc: '型にはまらない、自由な発想のシェイプ。', image: 'alternative.jpg', href: 'edna/altanative', count: 50 },
         ].map((c) => (
-          <div class="bg-white aspect-[3/4] p-8 flex flex-col justify-between border border-stone-200">
-            <div class="flex-1 flex items-center justify-center">
-              <span class="text-xs tracking-[0.3em] text-stone-300">PHOTO</span>
+          <a
+            href={`${base}/${c.href}`}
+            class="group relative block aspect-[3/4] overflow-hidden border border-stone-800 hover:border-amber-400 transition"
+          >
+            <img
+              src={`${base}/images/boards/${c.image}`}
+              alt={c.name}
+              class="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-90 group-hover:scale-105 transition-all duration-700"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/40 to-transparent"></div>
+            <div class="relative z-10 flex flex-col h-full justify-end p-8">
+              <h3 class="text-sm tracking-[0.25em] text-amber-300 mb-3">{c.name}</h3>
+              <p class="text-xs text-stone-300 leading-relaxed mb-4">{c.desc}</p>
+              <span class="inline-flex items-center gap-2 text-xs tracking-[0.3em] text-amber-300">
+                VIEW {c.count} ITEMS
+                <span class="transition-transform group-hover:translate-x-1">→</span>
+              </span>
             </div>
-            <div>
-              <h3 class="text-sm tracking-[0.25em] text-amber-900 mb-3">{c.name}</h3>
-              <p class="text-xs text-stone-500 leading-relaxed">{c.desc}</p>
-            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Artworks -->
+  <section class="py-24 px-6 bg-stone-950">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <p class="text-xs tracking-[0.4em] text-amber-400 mb-4">ARTWORKS</p>
+        <h2 class="text-3xl font-light tracking-wider text-white">作品ギャラリー</h2>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-3">
+        {['mb001.png', 'mb002.png', 'mb003.png', 'mb004.jpg', 'mb005.png'].map((img) => (
+          <div class="aspect-[2/3] overflow-hidden bg-stone-900 border border-stone-800 hover:border-amber-400 transition">
+            <img
+              src={`${base}/images/artworks/${img}`}
+              alt="EDNA Artwork"
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+            />
           </div>
         ))}
       </div>
@@ -55,31 +94,97 @@ const base = import.meta.env.BASE_URL;
   </section>
 
   <!-- Stores -->
-  <section class="py-24 px-6">
-    <div class="max-w-4xl mx-auto">
+  <section class="py-24 px-6 bg-black">
+    <div class="max-w-5xl mx-auto">
       <div class="text-center mb-16">
-        <p class="text-xs tracking-[0.4em] text-amber-700 mb-4">STORE LIST</p>
-        <h2 class="text-3xl font-light tracking-wider">取扱店舗</h2>
+        <p class="text-xs tracking-[0.4em] text-amber-400 mb-4">STORE LIST</p>
+        <h2 class="text-3xl font-light tracking-wider text-white">取扱店舗</h2>
       </div>
       <div class="grid md:grid-cols-2 gap-6">
         {[
-          { name: 'EDNA屋', area: 'HEAD STORE' },
-          { name: 'T-STICK surfshop', area: 'PARTNER' },
-          { name: 'INDY SURF', area: 'PARTNER' },
-          { name: 'GOLGODA', area: 'PARTNER' },
+          {
+            name: 'EDNA屋',
+            area: 'HEAD STORE',
+            zip: '〒251-0037',
+            address: '神奈川県藤沢市本町3-11-12',
+            tel: '0466-63-8107',
+            image: 'ednaya.jpg',
+          },
+          {
+            name: 'T-STICK surfshop',
+            area: 'PARTNER',
+            zip: '〒251-0037',
+            address: '神奈川県藤沢市鵠沼海岸2-15-150',
+            tel: '0466-36-0324',
+            telLabel: 'TEL / FAX',
+            url: 'http://www.t-sticksurf.com/',
+            image: 'tstick.jpg',
+          },
+          {
+            name: 'INDY SURF',
+            area: 'PARTNER',
+            zip: '〒960-0111',
+            address: '福島県福島市丸子富塚35-2',
+            tel: '024-554-4877',
+            url: 'http://profile.ameba.jp/indysurf2004/',
+            image: 'indy.jpg',
+          },
+          {
+            name: 'GOLGODA',
+            area: 'PARTNER',
+            zip: '〒463-0037',
+            address: '愛知県名古屋市守山区天子田1-106',
+            tel: '052-739-5273',
+            telLabel: 'TEL / FAX',
+            url: 'http://golgoda.com/',
+            image: 'golgoda.jpg',
+          },
         ].map((s) => (
-          <div class="border border-stone-200 p-6">
-            <p class="text-xs tracking-[0.3em] text-amber-700 mb-2">{s.area}</p>
-            <h3 class="text-lg tracking-wider">{s.name}</h3>
-            <p class="text-xs text-stone-400 mt-3">住所・電話番号</p>
+          <div class="group border border-stone-800 hover:border-amber-400 transition overflow-hidden">
+            <div class="aspect-[16/9] overflow-hidden bg-stone-900">
+              <img
+                src={`${base}/images/stores/${s.image}`}
+                alt={s.name}
+                class="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+              />
+            </div>
+            <div class="p-6">
+              <p class="text-xs tracking-[0.3em] text-amber-400 mb-2">{s.area}</p>
+              <h3 class="text-lg tracking-wider text-white mb-4">{s.name}</h3>
+              <dl class="space-y-2 text-xs text-stone-400 leading-relaxed">
+                <div class="flex gap-3">
+                  <dt class="shrink-0 text-stone-600 w-12 tracking-wider">ADDR</dt>
+                  <dd>
+                    {s.zip}<br />
+                    {s.address}
+                  </dd>
+                </div>
+                <div class="flex gap-3">
+                  <dt class="shrink-0 text-stone-600 w-12 tracking-wider">{s.telLabel ?? 'TEL'}</dt>
+                  <dd>
+                    <a href={`tel:${s.tel.replace(/-/g, '')}`} class="hover:text-amber-300 transition">{s.tel}</a>
+                  </dd>
+                </div>
+                {s.url && (
+                  <div class="flex gap-3">
+                    <dt class="shrink-0 text-stone-600 w-12 tracking-wider">WEB</dt>
+                    <dd>
+                      <a href={s.url} target="_blank" rel="noopener noreferrer" class="hover:text-amber-300 transition break-all">
+                        {s.url.replace(/^https?:\/\//, '').replace(/\/$/, '')} ↗
+                      </a>
+                    </dd>
+                  </div>
+                )}
+              </dl>
+            </div>
           </div>
         ))}
       </div>
     </div>
   </section>
 
-  <div class="text-center py-12">
-    <a href={base} class="text-xs tracking-[0.3em] text-stone-500 hover:text-amber-700 transition">
+  <div class="text-center py-12 bg-stone-950">
+    <a href={base} class="text-xs tracking-[0.3em] text-stone-500 hover:text-amber-400 transition">
       ← BACK TO エドナ屋
     </a>
   </div>

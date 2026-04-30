@@ -9,86 +9,99 @@ const brands = [
     name: 'EDNA',
     tagline: 'SURFBOARDS',
     description: 'サーフボードの製造・販売。波と共に生きる人々のための、こだわりの一本。',
-    accent: 'from-amber-100 to-orange-50',
-    text: 'text-amber-900',
-    hover: 'hover:text-amber-700',
+    image: 'edna006.jpg',
+    accent: 'text-amber-300',
+    border: 'hover:border-amber-400',
   },
   {
     slug: 'birdie',
     name: 'BIRDIE',
     tagline: 'BOTANICAL DESIGN',
     description: 'エアプランツ、多肉植物、観葉植物。日々の暮らしに、緑のいろどりを。',
-    accent: 'from-emerald-100 to-green-50',
-    text: 'text-emerald-900',
-    hover: 'hover:text-emerald-700',
+    image: 'birdie.jpg',
+    accent: 'text-emerald-300',
+    border: 'hover:border-emerald-400',
   },
   {
     slug: 'planet-foto-labo',
     name: 'PLANET FOTO LABO',
     tagline: "PHOTOGRAPHER'S ATELIER",
     description: '写真家のアトリエ。光と時間を捉えた、一枚の物語。',
-    accent: 'from-sky-100 to-slate-50',
-    text: 'text-sky-900',
-    hover: 'hover:text-sky-700',
+    image: 'planet-foto-labo.jpg',
+    accent: 'text-sky-300',
+    border: 'hover:border-sky-400',
   },
   {
     slug: 'edna-books',
     name: 'EDNA BOOKS',
     tagline: 'ART BOOKS',
     description: 'アートブック専門店。ページの中に広がる、もうひとつの世界。',
-    accent: 'from-rose-100 to-pink-50',
-    text: 'text-rose-900',
-    hover: 'hover:text-rose-700',
+    image: 'ednabooks.jpg',
+    accent: 'text-rose-300',
+    border: 'hover:border-rose-400',
   },
 ];
 ---
 
 <Layout>
   <!-- Hero -->
-  <section class="relative min-h-[calc(100vh-4rem)] flex items-center justify-center overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-br from-stone-100 via-amber-50 to-emerald-50"></div>
+  <section class="relative min-h-[calc(100vh-4rem)] flex items-center justify-center overflow-hidden -mt-16 pt-16">
+    <div class="absolute inset-0">
+      <img
+        src={`${base}/images/heroes/ednaya.jpg`}
+        alt="エドナ屋"
+        class="w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-gradient-to-b from-stone-950/80 via-stone-950/60 to-stone-950"></div>
+    </div>
     <div class="relative z-10 text-center px-6">
-      <p class="text-xs tracking-[0.5em] text-stone-500 mb-8">A HOUSE OF FOUR BRANDS</p>
-      <h1 class="text-6xl md:text-8xl font-light tracking-[0.2em] mb-2 text-stone-900">
+      <p class="text-xs tracking-[0.5em] text-stone-300 mb-8">A HOUSE OF FOUR BRANDS</p>
+      <h1 class="text-6xl md:text-8xl font-light tracking-[0.2em] mb-2 text-white">
         エドナ屋
       </h1>
-      <p class="text-sm tracking-[0.4em] text-stone-500 mb-12">EDNAYA</p>
-      <p class="text-sm md:text-base text-stone-600 leading-loose max-w-xl mx-auto">
+      <p class="text-sm tracking-[0.4em] text-stone-400 mb-12">EDNAYA</p>
+      <p class="text-sm md:text-base text-stone-300 leading-loose max-w-xl mx-auto">
         サーフボード、植物、写真、本。<br />
         異なる4つの世界が集う場所。
       </p>
     </div>
-    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-xs tracking-[0.3em] text-stone-400">
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-xs tracking-[0.3em] text-stone-500">
       ↓ SCROLL
     </div>
   </section>
 
   <!-- Brands Grid -->
-  <section id="brands" class="py-24 px-6">
+  <section id="brands" class="py-24 px-6 bg-stone-950">
     <div class="max-w-6xl mx-auto">
       <div class="text-center mb-16">
         <p class="text-xs tracking-[0.4em] text-stone-500 mb-4">OUR BRANDS</p>
-        <h2 class="text-3xl font-light tracking-wider">4つのブランド</h2>
+        <h2 class="text-3xl font-light tracking-wider text-white">4つのブランド</h2>
       </div>
 
       <div class="grid md:grid-cols-2 gap-6">
         {brands.map((b) => (
           <a
             href={`${base}/${b.slug}`}
-            class={`group relative block overflow-hidden bg-gradient-to-br ${b.accent} aspect-[4/3] p-10 transition-transform hover:scale-[1.01]`}
+            class={`group relative block overflow-hidden aspect-[4/3] border border-stone-800 ${b.border} transition`}
           >
-            <div class="flex flex-col h-full justify-between">
+            <img
+              src={`${base}/images/heroes/${b.image}`}
+              alt={b.name}
+              class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/40 to-stone-950/20"></div>
+            <div class="relative z-10 flex flex-col h-full justify-between p-10">
               <div>
-                <p class={`text-xs tracking-[0.3em] ${b.text} opacity-60 mb-3`}>{b.tagline}</p>
-                <h3 class={`text-3xl md:text-4xl font-light tracking-[0.15em] ${b.text}`}>
+                <p class={`text-xs tracking-[0.3em] ${b.accent} mb-3`}>{b.tagline}</p>
+                <h3 class="text-3xl md:text-4xl font-light tracking-[0.15em] text-white">
                   {b.name}
                 </h3>
               </div>
               <div>
-                <p class={`text-sm ${b.text} opacity-80 leading-loose mb-6 max-w-md`}>
+                <p class="text-sm text-stone-300 leading-loose mb-6 max-w-md">
                   {b.description}
                 </p>
-                <span class={`inline-flex items-center gap-2 text-xs tracking-[0.3em] ${b.text} ${b.hover} transition`}>
+                <span class={`inline-flex items-center gap-2 text-xs tracking-[0.3em] ${b.accent}`}>
                   EXPLORE
                   <span class="transition-transform group-hover:translate-x-1">→</span>
                 </span>
@@ -101,17 +114,17 @@ const brands = [
   </section>
 
   <!-- About -->
-  <section id="about" class="py-24 px-6 bg-stone-100">
+  <section id="about" class="py-24 px-6 bg-black">
     <div class="max-w-3xl mx-auto text-center">
       <p class="text-xs tracking-[0.4em] text-stone-500 mb-4">ABOUT</p>
-      <h2 class="text-3xl font-light tracking-wider mb-12">エドナ屋について</h2>
-      <p class="text-stone-600 leading-loose">
-        「エドナ屋」は、サーフボードの<strong class="font-medium">EDNA</strong>、植物の<strong class="font-medium">BIRDIE</strong>、<br />
-        写真家のアトリエ<strong class="font-medium">PLANET FOTO LABO</strong>、<br />
-        アートブックの<strong class="font-medium">EDNA BOOKS</strong>、<br />
+      <h2 class="text-3xl font-light tracking-wider mb-12 text-white">エドナ屋について</h2>
+      <p class="text-stone-400 leading-loose">
+        「エドナ屋」は、サーフボードの<strong class="font-medium text-stone-200">EDNA</strong>、植物の<strong class="font-medium text-stone-200">BIRDIE</strong>、<br />
+        写真家のアトリエ<strong class="font-medium text-stone-200">PLANET FOTO LABO</strong>、<br />
+        アートブックの<strong class="font-medium text-stone-200">EDNA BOOKS</strong>、<br />
         4つのブランドを束ねるプラットフォームです。
       </p>
-      <p class="text-stone-600 leading-loose mt-6">
+      <p class="text-stone-400 leading-loose mt-6">
         それぞれが独立した世界を持ちながら、<br />
         日々の暮らしに彩りを添えるものを届けます。
       </p>

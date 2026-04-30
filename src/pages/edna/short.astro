@@ -1,0 +1,71 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const base = import.meta.env.BASE_URL;
+
+const shapes = [
+  { name: 'DOUBLE BUMP', slug: 'double_bump', count: 13 },
+  { name: 'LED HEAD', slug: 'led_head', count: 5 },
+  { name: 'NORMAL', slug: 'normal', count: 9 },
+];
+
+const imgUrl = (slug: string, i: number) =>
+  `https://edna.jp/wp-content/uploads/2014/09/${slug}${String(i).padStart(3, '0')}.jpg`;
+---
+
+<Layout title="SHORT BOARD | EDNA | エドナ屋" description="EDNA Short Board lineup.">
+  <!-- Hero -->
+  <section class="relative min-h-[40vh] flex items-center justify-center bg-stone-950 overflow-hidden -mt-16 pt-16 border-b border-stone-800">
+    <div class="relative z-10 text-center px-6">
+      <p class="text-xs tracking-[0.5em] text-amber-400 mb-4">EDNA / SURFBOARDS</p>
+      <h1 class="text-5xl md:text-7xl font-light tracking-[0.2em] text-white">SHORT BOARD</h1>
+      <p class="text-sm tracking-[0.3em] text-stone-400 mt-4">{shapes.reduce((sum, s) => sum + s.count, 0)} ITEMS / {shapes.length} SHAPES</p>
+    </div>
+  </section>
+
+  {shapes.map((shape) => (
+    <section class="py-20 px-6 bg-stone-950 even:bg-black">
+      <div class="max-w-6xl mx-auto">
+        <div class="flex items-baseline justify-between mb-10 pb-4 border-b border-stone-800">
+          <div>
+            <p class="text-xs tracking-[0.3em] text-amber-400 mb-2">SHAPE</p>
+            <h2 class="text-2xl md:text-3xl font-light tracking-[0.15em] text-white">{shape.name}</h2>
+          </div>
+          <p class="text-xs tracking-wider text-stone-500">{shape.count} items</p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-3">
+          {Array.from({ length: shape.count }, (_, i) => i + 1).map((i) => (
+            <a
+              href={imgUrl(shape.slug, i)}
+              data-gallery={shape.slug}
+              data-description={`${shape.name} #${i}`}
+              class="glightbox group block aspect-[3/4] overflow-hidden bg-stone-900 border border-stone-800 hover:border-amber-400 transition"
+            >
+              <img
+                src={imgUrl(shape.slug, i)}
+                alt={`${shape.name} ${i}`}
+                loading="lazy"
+                class="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+              />
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <div class="text-center py-12 bg-stone-950 space-x-6">
+    <a href={`${base}/edna`} class="text-xs tracking-[0.3em] text-stone-500 hover:text-amber-400 transition">
+      ← EDNA
+    </a>
+    <a href={base} class="text-xs tracking-[0.3em] text-stone-500 hover:text-amber-400 transition">
+      ← エドナ屋
+    </a>
+  </div>
+</Layout>
+
+<script>
+  import GLightbox from 'glightbox';
+  import 'glightbox/dist/css/glightbox.min.css';
+  GLightbox({ selector: '.glightbox', loop: true });
+</script>

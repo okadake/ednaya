@@ -6,20 +6,28 @@ const base = import.meta.env.BASE_URL;
 
 <Layout title="EDNA BOOKS | エドナ屋" description="EDNA BOOKS — アートブック専門店。">
   <!-- Hero -->
-  <section class="relative min-h-[60vh] flex items-center justify-center bg-gradient-to-br from-rose-100 via-pink-50 to-stone-50 overflow-hidden">
+  <section class="relative min-h-[80vh] flex items-center justify-center overflow-hidden -mt-16 pt-16">
+    <div class="absolute inset-0">
+      <img
+        src={`${base}/images/heroes/ednabooks.jpg`}
+        alt="EDNA BOOKS"
+        class="w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-stone-950/65"></div>
+    </div>
     <div class="relative z-10 text-center px-6">
-      <p class="text-xs tracking-[0.5em] text-rose-700 mb-6">EDNAYA / 04</p>
-      <h1 class="text-6xl md:text-8xl font-light tracking-[0.2em] text-rose-900 mb-4">EDNA BOOKS</h1>
-      <p class="text-sm tracking-[0.3em] text-rose-700">ART BOOKS</p>
+      <p class="text-xs tracking-[0.5em] text-rose-300 mb-6">EDNAYA / 04</p>
+      <h1 class="text-6xl md:text-8xl font-light tracking-[0.2em] text-white mb-4">EDNA BOOKS</h1>
+      <p class="text-sm tracking-[0.3em] text-stone-300">ART BOOKS</p>
     </div>
   </section>
 
   <!-- About -->
-  <section class="py-24 px-6">
+  <section class="py-24 px-6 bg-stone-950">
     <div class="max-w-3xl mx-auto text-center">
-      <p class="text-xs tracking-[0.4em] text-rose-700 mb-4">ABOUT</p>
-      <h2 class="text-3xl font-light tracking-wider mb-12">EDNA BOOKSについて</h2>
-      <p class="text-stone-600 leading-loose">
+      <p class="text-xs tracking-[0.4em] text-rose-400 mb-4">ABOUT</p>
+      <h2 class="text-3xl font-light tracking-wider text-white mb-12">EDNA BOOKSについて</h2>
+      <p class="text-stone-400 leading-loose">
         ページの中に広がる、もうひとつの世界。<br />
         国内外のアーティストによるアートブックを集めた専門店です。<br />
         写真集、画集、デザイン集 — 紙の手触りと共に、<br />
@@ -29,20 +37,20 @@ const base = import.meta.env.BASE_URL;
   </section>
 
   <!-- Featured Books -->
-  <section class="py-24 px-6 bg-rose-50/50">
+  <section class="py-24 px-6 bg-black">
     <div class="max-w-5xl mx-auto">
       <div class="text-center mb-16">
-        <p class="text-xs tracking-[0.4em] text-rose-700 mb-4">FEATURED</p>
-        <h2 class="text-3xl font-light tracking-wider">おすすめのアートブック</h2>
+        <p class="text-xs tracking-[0.4em] text-rose-400 mb-4">FEATURED</p>
+        <h2 class="text-3xl font-light tracking-wider text-white">おすすめのアートブック</h2>
       </div>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
         {Array.from({ length: 8 }).map((_, i) => (
           <div class="group cursor-pointer">
-            <div class="bg-white aspect-[3/4] flex items-center justify-center border border-rose-100 mb-3">
-              <span class="text-xs tracking-[0.3em] text-stone-300">BOOK</span>
+            <div class="bg-stone-900 aspect-[3/4] flex items-center justify-center border border-stone-800 group-hover:border-rose-400 transition mb-3">
+              <span class="text-xs tracking-[0.3em] text-stone-600">BOOK</span>
             </div>
-            <p class="text-xs tracking-wider text-stone-700">Book Title {i + 1}</p>
-            <p class="text-xs text-stone-400 mt-1">Artist Name</p>
+            <p class="text-xs tracking-wider text-stone-300">Book Title {i + 1}</p>
+            <p class="text-xs text-stone-500 mt-1">Artist Name</p>
           </div>
         ))}
       </div>
@@ -50,24 +58,24 @@ const base = import.meta.env.BASE_URL;
   </section>
 
   <!-- Categories -->
-  <section class="py-24 px-6">
+  <section class="py-24 px-6 bg-stone-950">
     <div class="max-w-4xl mx-auto">
       <div class="text-center mb-16">
-        <p class="text-xs tracking-[0.4em] text-rose-700 mb-4">CATEGORIES</p>
-        <h2 class="text-3xl font-light tracking-wider">取り扱いジャンル</h2>
+        <p class="text-xs tracking-[0.4em] text-rose-400 mb-4">CATEGORIES</p>
+        <h2 class="text-3xl font-light tracking-wider text-white">取り扱いジャンル</h2>
       </div>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
         {['PHOTOGRAPHY', 'ILLUSTRATION', 'DESIGN', 'PAINTING'].map((c) => (
-          <div class="border border-stone-200 py-8">
-            <p class="text-xs tracking-[0.3em] text-rose-700">{c}</p>
+          <div class="border border-stone-800 py-8 hover:border-rose-400 transition">
+            <p class="text-xs tracking-[0.3em] text-rose-300">{c}</p>
           </div>
         ))}
       </div>
     </div>
   </section>
 
-  <div class="text-center py-12">
-    <a href={base} class="text-xs tracking-[0.3em] text-stone-500 hover:text-rose-700 transition">
+  <div class="text-center py-12 bg-stone-950">
+    <a href={base} class="text-xs tracking-[0.3em] text-stone-500 hover:text-rose-400 transition">
       ← BACK TO エドナ屋
     </a>
   </div>
