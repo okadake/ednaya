@@ -1,0 +1,74 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  brandColor?: string;
+}
+
+const {
+  title = 'エドナ屋 | EDNAYA',
+  description = 'EDNA、BIRDIE、PLANET FOTO LABO、EDNA BOOKS — 4つのブランドが集う、エドナ屋のポータルサイト。',
+} = Astro.props;
+
+const base = import.meta.env.BASE_URL;
+---
+
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+  </head>
+  <body class="bg-stone-50 text-stone-800 font-sans antialiased">
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-stone-200">
+      <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+        <a href={base} class="text-base tracking-[0.25em] font-medium">
+          エドナ屋 <span class="text-stone-400 font-light">/ EDNAYA</span>
+        </a>
+        <nav class="hidden md:flex gap-6 text-xs tracking-[0.2em]">
+          <a href={`${base}/edna`} class="hover:text-amber-700 transition">EDNA</a>
+          <a href={`${base}/birdie`} class="hover:text-emerald-700 transition">BIRDIE</a>
+          <a href={`${base}/planet-foto-labo`} class="hover:text-sky-700 transition">FOTO LABO</a>
+          <a href={`${base}/edna-books`} class="hover:text-rose-700 transition">BOOKS</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="pt-16">
+      <slot />
+    </main>
+
+    <footer class="bg-stone-900 text-stone-300 mt-24">
+      <div class="max-w-6xl mx-auto px-6 py-12">
+        <div class="grid md:grid-cols-2 gap-8 mb-8">
+          <div>
+            <p class="text-xl tracking-[0.3em] font-light mb-2">エドナ屋</p>
+            <p class="text-xs tracking-wider text-stone-500">EDNAYA</p>
+            <p class="text-xs text-stone-500 mt-4 leading-loose">
+              4つのブランドが集う場所。<br />
+              EDNA / BIRDIE / PLANET FOTO LABO / EDNA BOOKS
+            </p>
+          </div>
+          <div>
+            <p class="text-xs tracking-[0.3em] text-stone-400 mb-4">BRANDS</p>
+            <ul class="space-y-2 text-sm">
+              <li><a href={`${base}/edna`} class="hover:text-amber-400 transition">EDNA — Surfboards</a></li>
+              <li><a href={`${base}/birdie`} class="hover:text-emerald-400 transition">BIRDIE — Botanical</a></li>
+              <li><a href={`${base}/planet-foto-labo`} class="hover:text-sky-400 transition">PLANET FOTO LABO</a></li>
+              <li><a href={`${base}/edna-books`} class="hover:text-rose-400 transition">EDNA BOOKS — Art Books</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="pt-8 border-t border-stone-800 text-center text-xs text-stone-600">
+          &copy; 2026 エドナ屋. All rights reserved.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
