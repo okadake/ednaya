@@ -10,6 +10,7 @@ const brands = [
     tagline: 'SURFBOARDS',
     description: 'サーフボードの製造・販売。波と共に生きる人々のための、こだわりの一本。',
     image: 'edna006.jpg',
+    logo: 'edna-white.svg',
     accent: 'text-amber-300',
     border: 'hover:border-amber-400',
   },
@@ -28,6 +29,7 @@ const brands = [
     tagline: "PHOTOGRAPHER'S ATELIER",
     description: '写真家のアトリエ。光と時間を捉えた、一枚の物語。',
     image: 'planet-foto-labo.jpg',
+    logo: 'pfl-white.png',
     accent: 'text-sky-300',
     border: 'hover:border-sky-400',
   },
@@ -94,22 +96,28 @@ const brands = [
               class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700"
             />
             <div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/40 to-stone-950/20"></div>
-            <div class="relative z-10 flex flex-col h-full justify-between p-10">
-              <div>
-                <p class={`text-xs tracking-[0.3em] ${b.accent} mb-3`}>{b.tagline}</p>
-                <h3 class="text-3xl md:text-4xl font-light tracking-[0.15em] text-white">
+            <p class={`absolute top-8 left-10 z-10 text-xs tracking-[0.3em] ${b.accent}`}>{b.tagline}</p>
+            <div class="absolute inset-0 z-10 flex items-center justify-center px-10">
+              {b.logo ? (
+                <img
+                  src={`${base}/images/logo/${b.logo}`}
+                  alt={b.name}
+                  class="h-20 md:h-28 w-auto max-w-full"
+                />
+              ) : (
+                <h3 class="text-4xl md:text-6xl font-light tracking-[0.15em] text-white text-center">
                   {b.name}
                 </h3>
-              </div>
-              <div>
-                <p class="text-sm text-stone-300 leading-loose mb-6 max-w-md">
-                  {b.description}
-                </p>
-                <span class={`inline-flex items-center gap-2 text-xs tracking-[0.3em] ${b.accent}`}>
-                  EXPLORE
-                  <span class="transition-transform group-hover:translate-x-1">→</span>
-                </span>
-              </div>
+              )}
+            </div>
+            <div class="absolute bottom-8 left-10 right-10 z-10">
+              <p class="text-sm text-stone-300 leading-loose mb-4 max-w-md">
+                {b.description}
+              </p>
+              <span class={`inline-flex items-center gap-2 text-xs tracking-[0.3em] ${b.accent}`}>
+                EXPLORE
+                <span class="transition-transform group-hover:translate-x-1">→</span>
+              </span>
             </div>
           </a>
         ))}
