@@ -41,8 +41,72 @@ const base = import.meta.env.BASE_URL;
     </div>
   </section>
 
-  <!-- Gallery -->
+  <!-- Artists -->
   <section class="py-24 px-6 bg-black">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-16">
+        <p class="text-xs tracking-[0.4em] text-sky-400 mb-4">ARTISTS</p>
+        <h2 class="text-3xl font-light tracking-wider text-white">アーティスト</h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        {[
+          {
+            name: 'Pero',
+            nameJa: 'アーティスト 1',
+            role: 'PHOTOGRAPHER',
+            bio: 'プロフィールや略歴をここに記載します。代表作・受賞歴・作風など、このアーティストを表現する文章を入れてください。',
+            url: 'https://www.perophoto.com/',
+            urlLabel: 'PORTFOLIO',
+            image: 'pero.jpg',
+          },
+          {
+            name: 'Fumi Photo',
+            nameJa: 'アーティスト 2',
+            role: 'PHOTOGRAPHER',
+            bio: 'プロフィールや略歴をここに記載します。代表作・受賞歴・作風など、このアーティストを表現する文章を入れてください。',
+            url: 'http://cptcpt.jp/',
+            urlLabel: 'PORTFOLIO',
+            image: 'fumi.Jpg',
+          },
+        ].map((a) => (
+          <a
+            href={a.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group block border border-stone-800 hover:border-sky-400 transition overflow-hidden"
+          >
+            <div class="aspect-[4/5] overflow-hidden bg-stone-900">
+              {a.image ? (
+                <img
+                  src={`${base}/images/artists/${a.image}`}
+                  alt={a.name}
+                  class="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+                />
+              ) : (
+                <div class="w-full h-full flex items-center justify-center">
+                  <span class="text-xs tracking-[0.3em] text-stone-700">PORTRAIT</span>
+                </div>
+              )}
+            </div>
+            <div class="p-8">
+              <p class="text-xs tracking-[0.3em] text-sky-400 mb-3">{a.role}</p>
+              <h3 class="text-2xl font-light tracking-widest text-white mb-1">{a.name}</h3>
+              <p class="text-xs text-stone-500 tracking-wider mb-6">{a.nameJa}</p>
+              <p class="text-sm text-stone-400 leading-loose mb-6">{a.bio}</p>
+              <span class="inline-flex items-center gap-2 text-xs tracking-[0.3em] text-sky-300 group-hover:text-sky-200 transition">
+                {a.urlLabel} ↗
+                <span class="transition-transform group-hover:translate-x-1">→</span>
+              </span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="py-24 px-6 bg-stone-950">
     <div class="max-w-6xl mx-auto">
       <div class="text-center mb-16">
         <p class="text-xs tracking-[0.4em] text-sky-400 mb-4">GALLERY</p>
@@ -59,7 +123,7 @@ const base = import.meta.env.BASE_URL;
   </section>
 
   <!-- Services -->
-  <section class="py-24 px-6 bg-stone-950">
+  <section class="py-24 px-6 bg-black">
     <div class="max-w-4xl mx-auto">
       <div class="text-center mb-16">
         <p class="text-xs tracking-[0.4em] text-sky-400 mb-4">SERVICES</p>
