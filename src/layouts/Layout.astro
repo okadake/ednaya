@@ -9,7 +9,7 @@ interface Props {
 
 const {
   title = 'エドナ屋 | EDNAYA',
-  description = 'EDNA、BIRDIE、PLANET FOTO LABO、EDNA BOOKS — 4つのブランドが集う、エドナ屋のポータルサイト。',
+  description = 'EDNA、BIRDIE、PLANET FOTO LABO、EDNA BOOKS — エドナ屋のポータルサイト。',
 } = Astro.props;
 
 const base = import.meta.env.BASE_URL;
@@ -50,15 +50,11 @@ const base = import.meta.env.BASE_URL;
         <div class="grid md:grid-cols-2 gap-8 mb-8">
           <div>
             <p class="text-xl tracking-[0.3em] font-light mb-2">エドナ屋</p>
-            <p class="text-xs tracking-wider text-stone-500">EDNAYA</p>
-            <p class="text-xs text-stone-500 mt-4 leading-loose">
-              4つのブランドが集う場所。<br />
-              EDNA / BIRDIE / PLANET FOTO LABO / EDNA BOOKS
-            </p>
+            <p class="text-xs tracking-wider text-stone-500">EDNA-YA</p>
           </div>
           <div>
-            <p class="text-xs tracking-[0.3em] text-stone-400 mb-4">BRANDS</p>
-            <ul class="space-y-2 text-sm">
+            <p class="text-xs tracking-[0.3em] text-stone-400 mb-4">ELEMENTS</p>
+            <ul class="space-y-1 text-sm ">
               <li><a href={`${base}/edna`} class="hover:text-amber-400 transition">EDNA — Surfboards</a></li>
               <li><a href={`${base}/birdie`} class="hover:text-emerald-400 transition">BIRDIE — Botanical</a></li>
               <li><a href={`${base}/planet-foto-labo`} class="hover:text-sky-400 transition">PLANET FOTO LABO</a></li>

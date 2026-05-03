@@ -8,7 +8,7 @@ const brands = [
     slug: 'edna',
     name: 'EDNA',
     tagline: 'SURFBOARDS',
-    description: 'サーフボードの製造・販売。波と共に生きる人々のための、こだわりの一本。',
+    description: 'サーフボードの製造・販売、波と共に生きる人々のために',
     image: 'edna006.jpg',
     logo: 'edna-white.svg',
     accent: 'text-amber-300',
@@ -18,8 +18,9 @@ const brands = [
     slug: 'birdie',
     name: 'BIRDIE',
     tagline: 'BOTANICAL DESIGN',
-    description: 'エアプランツ、多肉植物、観葉植物。日々の暮らしに、緑のいろどりを。',
+    description: '日々の暮らしに、緑のいろどりを',
     image: 'birdie.jpg',
+    logo: 'birdie_logo.svg',
     accent: 'text-emerald-300',
     border: 'hover:border-emerald-400',
   },
@@ -27,9 +28,9 @@ const brands = [
     slug: 'planet-foto-labo',
     name: 'PLANET FOTO LABO',
     tagline: "PHOTOGRAPHER'S ATELIER",
-    description: '写真家のアトリエ。光と時間を捉えた、一枚の物語。',
+    description: '写真家のアトリエ、光と時間を捉えた、一枚の物語',
     image: 'planet-foto-labo.jpg',
-    logo: 'pfl-white.png',
+    logo: 'pfl-white.svg',
     accent: 'text-sky-300',
     border: 'hover:border-sky-400',
   },
@@ -37,8 +38,9 @@ const brands = [
     slug: 'edna-books',
     name: 'EDNA BOOKS',
     tagline: 'ART BOOKS',
-    description: 'アートブック専門店。ページの中に広がる、もうひとつの世界。',
+    description: 'アートブック専門店、ページの中に広がる、もうひとつの世界',
     image: 'ednabooks.jpg',
+    logo: 'ednabooks_logo.svg',
     accent: 'text-rose-300',
     border: 'hover:border-rose-400',
   },
@@ -57,7 +59,7 @@ const brands = [
       <div class="absolute inset-0 bg-gradient-to-b from-stone-950/80 via-stone-950/60 to-stone-950"></div>
     </div>
     <div class="relative z-10 text-center px-6">
-      <p class="text-xs tracking-[0.5em] text-stone-300 mb-2">A HOUSE OF FOUR BRANDS</p>
+      <p class="text-xs tracking-[0.5em] text-stone-300 mb-2">Where worlds collide</p>
       <h1 class="mb-4 flex justify-center">
         <img
           src={`${base}/images/logo/ednaya-white.svg`}
@@ -65,10 +67,10 @@ const brands = [
           class="h-36 md:h-36 w-auto"
         />
       </h1>
-      <p class="text-sm tracking-[0.4em] text-stone-400 mb-4">EDNAYA</p>
+      <p class="text-sm tracking-[0.4em] text-stone-400 mb-4">EDNA-YA</p>
       <p class="text-sm md:text-base text-stone-300 leading-loose max-w-xl mx-auto">
-        サーフボード、植物、写真、本。<br />
-        異なる4つの世界が集う場所。
+        サーフボード、植物、写真、本<br />
+        異なる世界が集う場所
       </p>
     </div>
     <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-xs tracking-[0.3em] text-stone-500">
@@ -77,11 +79,11 @@ const brands = [
   </section>
 
   <!-- Brands Grid -->
-  <section id="brands" class="py-24 px-6 bg-stone-950">
+  <section id="brands" class="py-12 px-6 bg-stone-950">
     <div class="max-w-6xl mx-auto">
       <div class="text-center mb-16">
-        <p class="text-xs tracking-[0.4em] text-stone-500 mb-4">OUR BRANDS</p>
-        <h2 class="text-3xl font-light tracking-wider text-white">4つのブランド</h2>
+        <p class="text-xs tracking-[0.4em] text-stone-500 mb-4">OUR ELEMENTS</p>
+        <h2 class="text-3xl font-light tracking-wider text-white">共鳴する世界</h2>
       </div>
 
       <div class="grid md:grid-cols-2 gap-6">
@@ -98,20 +100,22 @@ const brands = [
             <div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/40 to-stone-950/20"></div>
             <p class={`absolute top-8 left-10 z-10 text-xs tracking-[0.3em] ${b.accent}`}>{b.tagline}</p>
             <div class="absolute inset-0 z-10 flex items-center justify-center px-10">
-              {b.logo ? (
-                <img
-                  src={`${base}/images/logo/${b.logo}`}
-                  alt={b.name}
-                  class="h-20 md:h-28 w-auto max-w-full"
-                />
-              ) : (
-                <h3 class="text-4xl md:text-6xl font-light tracking-[0.15em] text-white text-center">
-                  {b.name}
-                </h3>
-              )}
+              <div class="-mt-20 md:-mt-16">
+                {b.logo ? (
+                  <img
+                    src={`${base}/images/logo/${b.logo}`}
+                    alt={b.name}
+                    class="h-20 md:h-28 w-auto max-w-full"
+                  />
+                ) : (
+                  <h3 class="text-4xl md:text-6xl font-light tracking-[0.15em] text-white text-center">
+                    {b.name}
+                  </h3>
+                )}
+              </div>
             </div>
             <div class="absolute bottom-8 left-10 right-10 z-10">
-              <p class="text-sm text-stone-300 leading-loose mb-4 max-w-md">
+              <p class="text-sm text-stone-300 leading-6 mb-4 max-w-md">
                 {b.description}
               </p>
               <span class={`inline-flex items-center gap-2 text-xs tracking-[0.3em] ${b.accent}`}>
@@ -126,7 +130,7 @@ const brands = [
   </section>
 
   <!-- About -->
-  <section id="about" class="py-24 px-6 bg-black">
+  <section id="about" class="py-12 px-6 bg-black">
     <div class="max-w-3xl mx-auto text-center">
       <p class="text-xs tracking-[0.4em] text-stone-500 mb-4">ABOUT</p>
       <h2 class="text-3xl font-light tracking-wider mb-12 text-white">エドナ屋について</h2>
