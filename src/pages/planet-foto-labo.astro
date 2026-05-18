@@ -2,6 +2,18 @@
 import Layout from '../layouts/Layout.astro';
 
 const base = import.meta.env.BASE_URL;
+
+const galleryImages = [
+  { src: `${base}/images/planet-foto-labo/pero_001.jpg`, alt: "pero_001", caption: "アクリルフォトパネル / Pero" },
+  { src: `${base}/images/planet-foto-labo/pero_002.jpg`, alt: "pero_002", caption: "アクリルフォトパネル / Pero" },
+  { src: `${base}/images/planet-foto-labo/pero_003.jpg`, alt: "pero_003", caption: "アクリルフォトパネル / Pero" },
+  { src: `${base}/images/planet-foto-labo/pero_004.jpg`, alt: "pero_004", caption: "アクリルフォトパネル / Pero" },
+  { src: `${base}/images/planet-foto-labo/pero_005.jpg`, alt: "pero_005", caption: "アクリルフォトパネル / Pero" },
+  { src: `${base}/images/planet-foto-labo/pero_005.jpg`, alt: "pero_005", caption: "アクリルフォトパネル / Pero" },
+  { src: `${base}/images/planet-foto-labo/pero_005.jpg`, alt: "pero_005", caption: "アクリルフォトパネル / Pero" },
+  { src: `${base}/images/planet-foto-labo/pero_005.jpg`, alt: "pero_005", caption: "アクリルフォトパネル / Pero" },
+  { src: `${base}/images/planet-foto-labo/pero_005.jpg`, alt: "pero_005", caption: "アクリルフォトパネル / Pero" },
+];
 ---
 
 <Layout title="PLANET FOTO LABO | エドナ屋" description="PLANET FOTO LABO — 写真家のアトリエ。">
@@ -9,7 +21,7 @@ const base = import.meta.env.BASE_URL;
   <section class="relative min-h-[80vh] flex items-center justify-center overflow-hidden -mt-16 pt-16">
     <div class="absolute inset-0">
       <img
-        src={`${base}/images/heroes/planet-foto-labo.jpg`}
+        src={`${base}/images/heroes/planet-foto-labo03.jpg`}
         alt="PLANET FOTO LABO"
         class="w-full h-full object-cover"
       />
@@ -113,10 +125,22 @@ const base = import.meta.env.BASE_URL;
         <p class="text-xs tracking-[0.4em] text-sky-400 mb-4">GALLERY</p>
         <h2 class="text-3xl font-light tracking-wider text-white">作品ギャラリー</h2>
       </div>
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
-        {Array.from({ length: 9 }).map(() => (
-          <div class="bg-stone-900 aspect-[4/5] flex items-center justify-center">
-            <span class="text-xs tracking-[0.3em] text-stone-600">PHOTO</span>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
+        {galleryImages.map((img) => (
+          <div>
+            <a
+              href={img.src}
+              class="glightbox group relative bg-stone-900 aspect-[4/5] overflow-hidden block"
+              data-gallery="gallery"
+            >
+              <img
+                src={img.src}
+                alt={img.alt}
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                loading="lazy"
+              />
+            </a>
+            <p class="mt-2 mb-6 text-xs tracking-[0.2em] text-stone-400 text-right">{img.caption}</p>
           </div>
         ))}
       </div>
@@ -151,3 +175,10 @@ const base = import.meta.env.BASE_URL;
     </a>
   </div>
 </Layout>
+
+<script>
+  import GLightbox from 'glightbox';
+  import 'glightbox/dist/css/glightbox.min.css';
+
+  GLightbox({ selector: '.glightbox' });
+</script>
