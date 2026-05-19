@@ -38,45 +38,121 @@ const base = import.meta.env.BASE_URL;
         Long Board、Short Board、Alternative —<br />
         ライダーのスタイルに合わせた一本を、職人の手でお届けします。
       </p>
+      <a
+        href="https://www.instagram.com/ednasurfboards/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 mt-10 text-stone-400 hover:text-amber-300 transition-colors"
+        aria-label="Instagram"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+          <circle cx="12" cy="12" r="4"/>
+          <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+        </svg>
+        <span class="text-xs tracking-[0.2em]">@ednasurfboards</span>
+      </a>
     </div>
   </section>
 
-  <!-- Categories -->
+  <!-- Boards Gallery -->
   <section class="py-24 px-6 bg-black">
-    <div class="max-w-5xl mx-auto">
+    <div class="max-w-6xl mx-auto">
       <div class="text-center mb-16">
-        <p class="text-xs tracking-[0.4em] text-amber-400 mb-4">CATEGORIES</p>
+        <p class="text-xs tracking-[0.4em] text-amber-400 mb-4">BOARDS</p>
         <h2 class="text-3xl font-light tracking-wider text-white">サーフボード</h2>
       </div>
-      <div class="grid md:grid-cols-3 gap-6">
+      <div class="grid md:grid-cols-3 gap-4">
         {[
-          { name: 'LONG BOARD', desc: 'ゆったりとした波に寄り添う、伝統的な一本。', image: 'longboard.jpg', href: 'edna/long', count: 53 },
-          { name: 'SHORT BOARD', desc: '機敏な動きを可能にする、現代的なデザイン。', image: 'shortboard.jpg', href: 'edna/short', count: 27 },
-          { name: 'ALTERNATIVE', desc: '型にはまらない、自由な発想のシェイプ。', image: 'alternative.jpg', href: 'edna/altanative', count: 50 },
-        ].map((c) => (
-          <a
-            href={`${base}/${c.href}`}
-            class="group relative block aspect-[3/4] overflow-hidden border border-stone-800 hover:border-amber-400 transition"
+          { img: 'board001.jpg', name: 'CLASSIC NOSERIDER', length: "9'6\" × 23\" × 3\"", caption: 'Single fin / Polish gloss' },
+          { img: 'board002.jpg', name: 'MIDLENGTH', length: "7'6\" × 21.5\" × 2.75\"", caption: '2+1 fin setup' },
+          { img: 'board003.jpg', name: 'ALTERNATIVE', length: "8'0\" × 22\" × 2.875\"", caption: 'Twin + trailer / Teal tint' },
+        ].map((b) => (
+          <div
+            class="border border-stone-800 cursor-pointer"
+            data-lightbox={`${base}/images/boards/${b.img}`}
+            data-name={b.name}
+            data-length={b.length}
+            data-caption={b.caption}
           >
-            <img
-              src={`${base}/images/boards/${c.image}`}
-              alt={c.name}
-              class="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-90 group-hover:scale-105 transition-all duration-700"
-            />
-            <div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/40 to-transparent"></div>
-            <div class="relative z-10 flex flex-col h-full justify-end p-8">
-              <h3 class="text-sm tracking-[0.25em] text-amber-300 mb-3">{c.name}</h3>
-              <p class="text-xs text-stone-300 leading-relaxed mb-4">{c.desc}</p>
-              <span class="inline-flex items-center gap-2 text-xs tracking-[0.3em] text-amber-300">
-                VIEW {c.count} ITEMS
-                <span class="transition-transform group-hover:translate-x-1">→</span>
-              </span>
+            <div class="overflow-hidden">
+              <img
+                src={`${base}/images/boards/${b.img}`}
+                alt={b.name || 'EDNA Surfboard'}
+                class="w-full object-cover hover:opacity-80 transition-opacity duration-300"
+              />
             </div>
-          </a>
+            {b.name && (
+              <p class="text-xs tracking-[0.2em] text-stone-300 text-center py-3 px-4">{b.name}</p>
+            )}
+          </div>
         ))}
       </div>
     </div>
   </section>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="fixed inset-0 z-50 hidden flex-col items-center justify-center bg-black/90" role="dialog" aria-modal="true">
+    <!-- Caption (top) -->
+    <div id="lightbox-caption" class="w-full max-w-3xl px-8 pb-6 text-center">
+      <p id="lightbox-name" class="text-base tracking-[0.2em] text-white mb-1"></p>
+      <p id="lightbox-length" class="text-xs tracking-[0.15em] text-amber-300 mb-1"></p>
+      <p id="lightbox-note" class="text-xs text-stone-400"></p>
+    </div>
+    <!-- Image + arrows -->
+    <div class="relative flex items-center justify-center w-full">
+      <button id="lightbox-prev" class="absolute left-4 text-white text-5xl leading-none hover:text-amber-300 transition-colors px-4 py-6 z-10" aria-label="前へ">‹</button>
+      <img id="lightbox-img" src="" alt="EDNA Surfboard" class="max-h-[75vh] max-w-[80vw] object-contain select-none" />
+      <button id="lightbox-next" class="absolute right-4 text-white text-5xl leading-none hover:text-amber-300 transition-colors px-4 py-6 z-10" aria-label="次へ">›</button>
+    </div>
+    <button id="lightbox-close" class="absolute top-6 right-6 text-white text-3xl leading-none hover:text-amber-300 transition-colors z-10" aria-label="閉じる">✕</button>
+  </div>
+
+  <script>
+    const lightbox = document.getElementById('lightbox')!;
+    const lightboxImg = document.getElementById('lightbox-img') as HTMLImageElement;
+    const lightboxName = document.getElementById('lightbox-name')!;
+    const lightboxLength = document.getElementById('lightbox-length')!;
+    const lightboxNote = document.getElementById('lightbox-note')!;
+    const items = Array.from(document.querySelectorAll('[data-lightbox]')) as HTMLElement[];
+    let currentIndex = 0;
+
+    function showImage(index: number) {
+      currentIndex = (index + items.length) % items.length;
+      const d = items[currentIndex].dataset;
+      lightboxImg.src = d.lightbox!;
+      lightboxName.textContent = d.name || '';
+      lightboxLength.textContent = d.length || '';
+      lightboxNote.textContent = d.caption || '';
+    }
+
+    function openLightbox(index: number) {
+      showImage(index);
+      lightbox.classList.remove('hidden');
+      lightbox.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightbox.classList.add('hidden');
+      lightbox.classList.remove('flex');
+      lightboxImg.src = '';
+      document.body.style.overflow = '';
+    }
+
+    items.forEach((el, i) => el.addEventListener('click', () => openLightbox(i)));
+
+    document.getElementById('lightbox-prev')!.addEventListener('click', (e) => { e.stopPropagation(); showImage(currentIndex - 1); });
+    document.getElementById('lightbox-next')!.addEventListener('click', (e) => { e.stopPropagation(); showImage(currentIndex + 1); });
+    document.getElementById('lightbox-close')!.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+    document.addEventListener('keydown', (e) => {
+      if (!lightbox.classList.contains('flex')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') showImage(currentIndex - 1);
+      if (e.key === 'ArrowRight') showImage(currentIndex + 1);
+    });
+  </script>
 
   <!-- Artworks -->
   <section class="py-24 px-6 bg-stone-950">
@@ -125,25 +201,6 @@ const base = import.meta.env.BASE_URL;
             telLabel: 'TEL / FAX',
             url: 'http://www.t-sticksurf.com/',
             image: 'tstick.jpg',
-          },
-          {
-            name: 'INDY SURF',
-            area: 'PARTNER',
-            zip: '〒960-0111',
-            address: '福島県福島市丸子富塚35-2',
-            tel: '024-554-4877',
-            url: 'http://profile.ameba.jp/indysurf2004/',
-            image: 'indy.jpg',
-          },
-          {
-            name: 'GOLGODA',
-            area: 'PARTNER',
-            zip: '〒463-0037',
-            address: '愛知県名古屋市守山区天子田1-106',
-            tel: '052-739-5273',
-            telLabel: 'TEL / FAX',
-            url: 'http://golgoda.com/',
-            image: 'golgoda.jpg',
           },
         ].map((s) => (
           <div class="group border border-stone-800 hover:border-amber-400 transition overflow-hidden">
