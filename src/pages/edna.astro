@@ -6,7 +6,8 @@ const base = import.meta.env.BASE_URL;
 const res = await fetch('https://edna.microcms.io/api/v1/surfboards?limit=100', {
   headers: { 'X-MICROCMS-API-KEY': import.meta.env.MICROCMS_API_KEY ?? '' },
 });
-const { contents: boards } = await res.json();
+const data = await res.json();
+const boards = data.contents ?? [];
 ---
 
 <Layout title="EDNA | エドナ屋" description="EDNA — サーフボードの製造・販売。">
