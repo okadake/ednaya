@@ -2,6 +2,11 @@
 import Layout from '../layouts/Layout.astro';
 
 const base = import.meta.env.BASE_URL;
+
+const res = await fetch('https://edna.microcms.io/api/v1/surfboards?limit=100', {
+  headers: { 'X-MICROCMS-API-KEY': import.meta.env.MICROCMS_API_KEY ?? '' },
+});
+const { contents: boards } = await res.json();
 ---
 
 <Layout title="EDNA | エドナ屋" description="EDNA — サーフボードの製造・販売。">
@@ -63,21 +68,17 @@ const base = import.meta.env.BASE_URL;
         <h2 class="text-3xl font-light tracking-wider text-white">サーフボード</h2>
       </div>
       <div class="grid md:grid-cols-3 gap-4">
-        {[
-          { img: 'board001.jpg', name: 'CLASSIC NOSERIDER', length: "9'6\" × 23\" × 3\"", caption: 'Single fin / Polish gloss' },
-          { img: 'board002.jpg', name: 'MIDLENGTH', length: "7'6\" × 21.5\" × 2.75\"", caption: '2+1 fin setup' },
-          { img: 'board003.jpg', name: 'ALTERNATIVE', length: "8'0\" × 22\" × 2.875\"", caption: 'Twin + trailer / Teal tint' },
-        ].map((b) => (
+        {boards.map((b: any) => (
           <div
             class="border border-stone-800 cursor-pointer"
-            data-lightbox={`${base}/images/boards/${b.img}`}
+            data-lightbox={b.image?.url}
             data-name={b.name}
-            data-length={b.length}
-            data-caption={b.caption}
+            data-length={b.size}
+            data-caption={b.description}
           >
             <div class="overflow-hidden">
               <img
-                src={`${base}/images/boards/${b.img}`}
+                src={b.image?.url}
                 alt={b.name || 'EDNA Surfboard'}
                 class="w-full object-cover hover:opacity-80 transition-opacity duration-300"
               />
