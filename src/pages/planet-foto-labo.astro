@@ -68,7 +68,7 @@ const galleryImages = [
             name: 'Pero',
             nameJa: 'アーティスト 1',
             role: 'PHOTOGRAPHER',
-            bio: 'プロフィールや略歴をここに記載します。代表作・受賞歴・作風など、このアーティストを表現する文章を入れてください。',
+            bio: '1972生まれ 鵠沼在住<br />カメラ好きの父親に導かれる様にカメラをいじり始める。<br />東京工芸大芸術学部写真学科<br />卒業Movie & Still Camereman 芝田満之氏に出逢い作品を観て頂き運良くアシスタントとして学ぶ機会を得て撮影や人生のイロハを学び、現在に至る。',
             url: 'https://www.perophoto.com/',
             instagram: 'https://www.instagram.com/pero_884/',
             image: 'pero.jpg',
@@ -101,7 +101,7 @@ const galleryImages = [
               <p class="text-xs tracking-[0.3em] text-sky-400 mb-3">{a.role}</p>
               <h3 class="text-2xl font-light tracking-widest text-white mb-1">{a.name}</h3>
               <p class="text-xs text-stone-500 tracking-wider mb-6">{a.nameJa}</p>
-              <p class="text-sm text-stone-400 leading-loose mb-6">{a.bio}</p>
+              <p class="text-sm text-stone-400 leading-relaxed mb-6" set:html={a.bio} />
               <div class="flex items-center gap-6">
                 <a
                   href={a.url}
