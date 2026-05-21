@@ -165,7 +165,7 @@ const boards = data.contents ?? [];
       </div>
       <div class="grid grid-cols-2 md:grid-cols-5 gap-3">
         {['mb001.png', 'mb002.png', 'mb003.png', 'mb004.jpg', 'mb005.png'].map((img) => (
-          <div class="aspect-[2/3] overflow-hidden bg-stone-900 border border-stone-800 hover:border-amber-400 transition">
+          <div class="aspect-2/3 overflow-hidden bg-stone-900 border border-stone-800 hover:border-amber-400 transition">
             <img
               src={`${base}/images/artworks/${img}`}
               alt="EDNA Artwork"
@@ -202,11 +202,11 @@ const boards = data.contents ?? [];
             tel: '0466-36-0324',
             telLabel: 'TEL / FAX',
             url: 'http://www.t-sticksurf.com/',
-            image: 'tstick.jpg',
+            image: 'tstick02.jpg',
           },
         ].map((s) => (
           <div class="group border border-stone-800 hover:border-amber-400 transition overflow-hidden">
-            <div class="aspect-[16/9] overflow-hidden bg-stone-900">
+            <div class="aspect-video overflow-hidden bg-stone-900">
               <img
                 src={`${base}/images/stores/${s.image}`}
                 alt={s.name}
