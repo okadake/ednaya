@@ -2,6 +2,59 @@
 import Layout from '../layouts/Layout.astro';
 
 const base = import.meta.env.BASE_URL;
+
+const featuredBooks = [
+  {
+    title: 'SKID ROW',
+    artist: 'Photo and Text by FUMI',
+    image: `${base}/images/books/SKIDROW.png`,
+    gallery: null,
+  },
+  {
+    title: 'CPT Photobook',
+    artist: 'PHOTO by FUMI / SHOUT by VEGA-T',
+    image: `${base}/images/books/CPT-photobook.png`,
+    gallery: [
+      `${base}/images/books/CPT-photobook/001.jpeg`,
+      `${base}/images/books/CPT-photobook/002.jpeg`,
+      `${base}/images/books/CPT-photobook/003.jpeg`,
+    ],
+  },
+  {
+    title: 'Dear Style Masters,',
+    artist: 'Pero Hayashi',
+    image: `${base}/images/books/dear-style-masters.png`,
+    gallery: null,
+  },
+  {
+    title: 'To Leave Is to Return <br /> -Saigon Red,Phu Quoc Blue',
+    artist: 'Keizo Okada',
+    image: `${base}/images/books/ToLeaveIsToReturn_sigonPhuQuoc.jpg`,
+    gallery: [
+      `${base}/images/books/ToLeaveIsToReturn_sigonPhuQuoc/A7400789.jpg`,
+      `${base}/images/books/ToLeaveIsToReturn_sigonPhuQuoc/A7401131.jpg`,
+      `${base}/images/books/ToLeaveIsToReturn_sigonPhuQuoc/A7402744.jpg`,
+      `${base}/images/books/ToLeaveIsToReturn_sigonPhuQuoc/A7403564.jpg`,
+      `${base}/images/books/ToLeaveIsToReturn_sigonPhuQuoc/A7405661.jpg`,
+      `${base}/images/books/ToLeaveIsToReturn_sigonPhuQuoc/A7406414.jpg`,
+    ],
+  },
+  {
+    title: "To Leave Is to Return <br /> -At The Water's Edge",
+    artist: 'Keizo Okada',
+    image: `${base}/images/books/ToLeaveIsToReturn_AtTheWater'sEdge.jpg`,
+    gallery: [
+      `${base}/images/books/ToLeaveIsToReturn_AtTheWater'sEdge/001.jpg`,
+      `${base}/images/books/ToLeaveIsToReturn_AtTheWater'sEdge/002.jpg`,
+      `${base}/images/books/ToLeaveIsToReturn_AtTheWater'sEdge/003.jpg`,
+      `${base}/images/books/ToLeaveIsToReturn_AtTheWater'sEdge/004.jpg`,
+      `${base}/images/books/ToLeaveIsToReturn_AtTheWater'sEdge/005.jpg`,
+      `${base}/images/books/ToLeaveIsToReturn_AtTheWater'sEdge/006.jpg`,
+    ],
+  },
+  // 次のブックをここに追加:
+  // { title: '', artist: '', image: `${base}/images/books/.jpg`, gallery: null },
+];
 ---
 
 <Layout title="EDNA BOOKS | エドナ屋" description="EDNA BOOKS — アートブック専門店。">
@@ -47,24 +100,95 @@ const base = import.meta.env.BASE_URL;
     <div class="max-w-5xl mx-auto">
       <div class="text-center mb-16">
         <p class="text-xs tracking-[0.4em] text-rose-400 mb-4">FEATURED</p>
-        <h2 class="text-3xl font-light tracking-wider text-white">おすすめのアートブック</h2>
+        <h2 class="text-3xl font-light tracking-wider text-white">Photobooks</h2>
       </div>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-        {Array.from({ length: 8 }).map((_, i) => (
-          <div class="group cursor-pointer">
-            <div class="bg-stone-900 aspect-[3/4] flex items-center justify-center border border-stone-800 group-hover:border-rose-400 transition mb-3">
-              <span class="text-xs tracking-[0.3em] text-stone-600">BOOK</span>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        {featuredBooks.map((book) => (
+          <div
+            class="group cursor-pointer"
+            data-gallery={book.gallery ? JSON.stringify(book.gallery) : null}
+            onclick={book.gallery ? "openLightbox(this)" : null}
+          >
+            <div class="bg-stone-900 aspect-3/4 overflow-hidden border border-stone-800 group-hover:border-rose-400 transition mb-3">
+              {book.image ? (
+                <img src={book.image} alt={book.title} class="w-full h-full object-cover" />
+              ) : (
+                <div class="w-full h-full flex items-center justify-center">
+                  <span class="text-xs tracking-[0.3em] text-stone-600">BOOK</span>
+                </div>
+              )}
             </div>
-            <p class="text-xs tracking-wider text-stone-300">Book Title {i + 1}</p>
-            <p class="text-xs text-stone-500 mt-1">Artist Name</p>
+            <p class="text-xs tracking-wider text-stone-300" set:html={book.title} />
+            <p class="text-xs text-stone-500 mt-1">{book.artist}</p>
           </div>
         ))}
       </div>
     </div>
   </section>
 
+  <!-- Lightbox -->
+  <div id="lightbox" class="fixed inset-0 z-50 hidden bg-black/95 flex items-center justify-center">
+    <button onclick="closeLightbox()" class="absolute top-4 right-5 text-stone-400 hover:text-white text-3xl leading-none z-10">×</button>
+    <button onclick="prevPhoto()" class="absolute left-4 top-1/2 -translate-y-1/2 text-stone-400 hover:text-white text-3xl leading-none z-10">‹</button>
+    <button onclick="nextPhoto()" class="absolute right-4 top-1/2 -translate-y-1/2 text-stone-400 hover:text-white text-3xl leading-none z-10">›</button>
+    <img id="lightbox-img" src="" alt="" class="max-h-[90vh] max-w-[90vw] object-contain" />
+    <p id="lightbox-counter" class="absolute bottom-4 left-1/2 -translate-x-1/2 text-xs tracking-widest text-stone-500"></p>
+  </div>
+
+  <script>
+    let photos: string[] = [];
+    let current = 0;
+
+    function openLightbox(el: HTMLElement) {
+      photos = JSON.parse(el.dataset.gallery || '[]');
+      current = 0;
+      showPhoto();
+      const lb = document.getElementById('lightbox')!;
+      lb.classList.remove('hidden');
+      lb.classList.add('flex');
+    }
+
+    function closeLightbox() {
+      const lb = document.getElementById('lightbox')!;
+      lb.classList.add('hidden');
+      lb.classList.remove('flex');
+    }
+
+    function showPhoto() {
+      (document.getElementById('lightbox-img') as HTMLImageElement).src = photos[current];
+      document.getElementById('lightbox-counter')!.textContent = `${current + 1} / ${photos.length}`;
+    }
+
+    function prevPhoto() {
+      current = (current - 1 + photos.length) % photos.length;
+      showPhoto();
+    }
+
+    function nextPhoto() {
+      current = (current + 1) % photos.length;
+      showPhoto();
+    }
+
+    document.getElementById('lightbox')!.addEventListener('click', (e) => {
+      if (e.target === e.currentTarget) closeLightbox();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      const lb = document.getElementById('lightbox')!;
+      if (lb.classList.contains('hidden')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') prevPhoto();
+      if (e.key === 'ArrowRight') nextPhoto();
+    });
+
+    (window as any).openLightbox = openLightbox;
+    (window as any).closeLightbox = closeLightbox;
+    (window as any).prevPhoto = prevPhoto;
+    (window as any).nextPhoto = nextPhoto;
+  </script>
+
   <!-- Categories -->
-  <section class="py-24 px-6 bg-stone-950">
+  <!--section class="py-24 px-6 bg-stone-950">
     <div class="max-w-4xl mx-auto">
       <div class="text-center mb-16">
         <p class="text-xs tracking-[0.4em] text-rose-400 mb-4">CATEGORIES</p>
@@ -78,7 +202,7 @@ const base = import.meta.env.BASE_URL;
         ))}
       </div>
     </div>
-  </section>
+  </section-->
 
   <div class="text-center py-12 bg-stone-950">
     <a href={base} class="text-xs tracking-[0.3em] text-stone-500 hover:text-rose-400 transition">
