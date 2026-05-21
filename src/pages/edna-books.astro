@@ -57,7 +57,7 @@ const featuredBooks = [
 ];
 ---
 
-<Layout title="EDNA BOOKS | エドナ屋" description="EDNA BOOKS — アートブック専門店。">
+<Layout title="EDNA BOOKS | エドナ屋" description="EDNA BOOKS — アートブック">
   <!-- Hero -->
   <section class="relative min-h-[80vh] flex items-center justify-center overflow-hidden -mt-16 pt-16">
     <div class="absolute inset-0">
@@ -102,14 +102,14 @@ const featuredBooks = [
         <p class="text-xs tracking-[0.4em] text-rose-400 mb-4">FEATURED</p>
         <h2 class="text-3xl font-light tracking-wider text-white">Photobooks</h2>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         {featuredBooks.map((book) => (
           <div
             class="group cursor-pointer"
             data-gallery={book.gallery ? JSON.stringify(book.gallery) : null}
             onclick={book.gallery ? "openLightbox(this)" : null}
           >
-            <div class="bg-stone-900 aspect-3/4 overflow-hidden border border-stone-800 group-hover:border-rose-400 transition mb-3">
+            <div class="bg-stone-900 aspect-3/4 overflow-hidden border border-stone-800 group-hover:border-olive-500 transition mb-3">
               {book.image ? (
                 <img src={book.image} alt={book.title} class="w-full h-full object-cover" />
               ) : (
