@@ -128,13 +128,13 @@ const featuredBooks = [
 
   <!-- Lightbox -->
   <div id="lb" class="fixed inset-0 z-50 hidden flex-col items-center justify-center bg-black/90" role="dialog" aria-modal="true">
-    <div class="relative flex items-center justify-center w-full">
-      <button id="lb-prev" class="absolute left-4 text-white text-5xl leading-none hover:text-rose-300 transition-colors px-4 py-6 z-10" aria-label="前へ">‹</button>
-      <img id="lb-img" src="" alt="" class="max-h-[85vh] max-w-[80vw] object-contain select-none" />
-      <button id="lb-next" class="absolute right-4 text-white text-5xl leading-none hover:text-rose-300 transition-colors px-4 py-6 z-10" aria-label="次へ">›</button>
-    </div>
+    <!-- 左右の判定エリア（縦全体） -->
+    <button id="lb-prev" class="absolute left-0 top-0 h-full w-[15%] flex items-center justify-start pl-4 text-white/50 hover:text-white text-5xl transition-colors z-10" aria-label="前へ">‹</button>
+    <button id="lb-next" class="absolute right-0 top-0 h-full w-[15%] flex items-center justify-end pr-4 text-white/50 hover:text-white text-5xl transition-colors z-10" aria-label="次へ">›</button>
+    <!-- 画像 -->
+    <img id="lb-img" src="" alt="" class="max-h-[85vh] max-w-[70vw] object-contain select-none" />
     <p id="lb-counter" class="mt-4 text-xs tracking-widest text-stone-500"></p>
-    <button id="lb-close" class="absolute top-6 right-6 text-white text-3xl leading-none hover:text-rose-300 transition-colors z-10" aria-label="閉じる">✕</button>
+    <button id="lb-close" class="absolute top-6 right-6 text-white text-3xl leading-none hover:text-rose-300 transition-colors z-20" aria-label="閉じる">✕</button>
   </div>
 
   <script>
@@ -174,7 +174,6 @@ const featuredBooks = [
     document.getElementById('lb-prev')!.addEventListener('click', (e) => { e.stopPropagation(); prevPhoto(); });
     document.getElementById('lb-next')!.addEventListener('click', (e) => { e.stopPropagation(); nextPhoto(); });
     document.getElementById('lb-close')!.addEventListener('click', closeLightbox);
-    lb.addEventListener('click', (e) => { if (e.target === lb) closeLightbox(); });
 
     lb.addEventListener('touchstart', (e) => {
       touchStartX = e.touches[0].clientX;
