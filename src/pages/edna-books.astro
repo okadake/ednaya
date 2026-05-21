@@ -128,16 +128,17 @@ const featuredBooks = [
 
   <!-- Lightbox -->
   <div id="lightbox" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/95">
-    <button onclick="closeLightbox()" class="absolute top-4 right-5 text-stone-400 hover:text-white text-3xl leading-none z-10">×</button>
-    <button onclick="prevPhoto()" class="absolute left-4 top-1/2 -translate-y-1/2 text-stone-400 hover:text-white text-3xl leading-none z-10">‹</button>
-    <button onclick="nextPhoto()" class="absolute right-4 top-1/2 -translate-y-1/2 text-stone-400 hover:text-white text-3xl leading-none z-10">›</button>
-    <img id="lightbox-img" src="" alt="" class="max-h-[90vh] max-w-[90vw] object-contain" />
+    <button onclick="closeLightbox()" class="absolute top-4 right-4 z-20 p-3 text-stone-400 hover:text-white text-3xl leading-none">×</button>
+    <button onclick="prevPhoto()" class="absolute left-0 top-0 h-full w-1/4 z-10 flex items-center justify-start pl-4 text-white/60 hover:text-white text-4xl">‹</button>
+    <button onclick="nextPhoto()" class="absolute right-0 top-0 h-full w-1/4 z-10 flex items-center justify-end pr-4 text-white/60 hover:text-white text-4xl">›</button>
+    <img id="lightbox-img" src="" alt="" class="max-h-[90vh] max-w-[90vw] object-contain pointer-events-none" />
     <p id="lightbox-counter" class="absolute bottom-4 left-1/2 -translate-x-1/2 text-xs tracking-widest text-stone-500"></p>
   </div>
 
   <script>
     let photos: string[] = [];
     let current = 0;
+    let touchStartX = 0;
 
     function openLightbox(el: HTMLElement) {
       photos = JSON.parse(el.dataset.gallery || '[]');
@@ -169,12 +170,24 @@ const featuredBooks = [
       showPhoto();
     }
 
-    document.getElementById('lightbox')!.addEventListener('click', (e) => {
+    const lb = document.getElementById('lightbox')!;
+
+    lb.addEventListener('click', (e) => {
       if (e.target === e.currentTarget) closeLightbox();
     });
 
+    lb.addEventListener('touchstart', (e) => {
+      touchStartX = e.touches[0].clientX;
+    }, { passive: true });
+
+    lb.addEventListener('touchend', (e) => {
+      const diff = touchStartX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 40) {
+        diff > 0 ? nextPhoto() : prevPhoto();
+      }
+    }, { passive: true });
+
     document.addEventListener('keydown', (e) => {
-      const lb = document.getElementById('lightbox')!;
       if (lb.classList.contains('hidden')) return;
       if (e.key === 'Escape') closeLightbox();
       if (e.key === 'ArrowLeft') prevPhoto();
