@@ -127,77 +127,82 @@ const featuredBooks = [
   </section>
 
   <!-- Lightbox -->
-  <div id="lightbox" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/95">
-    <button onclick="closeLightbox()" class="absolute top-4 right-4 z-20 p-3 text-stone-400 hover:text-white text-3xl leading-none">×</button>
-    <button onclick="prevPhoto()" class="absolute left-0 top-0 h-full w-1/4 z-10 flex items-center justify-start pl-4 text-white/60 hover:text-white text-4xl">‹</button>
-    <button onclick="nextPhoto()" class="absolute right-0 top-0 h-full w-1/4 z-10 flex items-center justify-end pr-4 text-white/60 hover:text-white text-4xl">›</button>
-    <img id="lightbox-img" src="" alt="" class="max-h-[90vh] max-w-[90vw] object-contain pointer-events-none" />
-    <p id="lightbox-counter" class="absolute bottom-4 left-1/2 -translate-x-1/2 text-xs tracking-widest text-stone-500"></p>
+  <div id="lb" class="fixed inset-0 z-50 hidden flex-col items-center justify-center bg-black/90" role="dialog" aria-modal="true">
+    <div class="relative flex items-center justify-center w-full">
+      <button id="lb-prev" class="absolute left-4 text-white text-5xl leading-none hover:text-rose-300 transition-colors px-4 py-6 z-10" aria-label="前へ">‹</button>
+      <img id="lb-img" src="" alt="" class="max-h-[85vh] max-w-[80vw] object-contain select-none" />
+      <button id="lb-next" class="absolute right-4 text-white text-5xl leading-none hover:text-rose-300 transition-colors px-4 py-6 z-10" aria-label="次へ">›</button>
+    </div>
+    <p id="lb-counter" class="mt-4 text-xs tracking-widest text-stone-500"></p>
+    <button id="lb-close" class="absolute top-6 right-6 text-white text-3xl leading-none hover:text-rose-300 transition-colors z-10" aria-label="閉じる">✕</button>
   </div>
 
   <script>
     let photos: string[] = [];
     let current = 0;
     let touchStartX = 0;
+    let touchStartY = 0;
+
+    const lb     = document.getElementById('lb')!;
+    const lbImg  = document.getElementById('lb-img') as HTMLImageElement;
+    const lbCnt  = document.getElementById('lb-counter')!;
+
+    function showPhoto() {
+      lbImg.src = photos[current];
+      lbCnt.textContent = `${current + 1} / ${photos.length}`;
+    }
 
     function openLightbox(el: HTMLElement) {
       photos = JSON.parse(el.dataset.gallery || '[]');
       current = 0;
       showPhoto();
-      const lb = document.getElementById('lightbox')!;
       lb.classList.remove('hidden');
       lb.classList.add('flex');
+      document.body.style.overflow = 'hidden';
     }
 
     function closeLightbox() {
-      const lb = document.getElementById('lightbox')!;
       lb.classList.add('hidden');
       lb.classList.remove('flex');
+      lbImg.src = '';
+      document.body.style.overflow = '';
     }
 
-    function showPhoto() {
-      (document.getElementById('lightbox-img') as HTMLImageElement).src = photos[current];
-      document.getElementById('lightbox-counter')!.textContent = `${current + 1} / ${photos.length}`;
-    }
+    function prevPhoto() { current = (current - 1 + photos.length) % photos.length; showPhoto(); }
+    function nextPhoto() { current = (current + 1) % photos.length; showPhoto(); }
 
-    function prevPhoto() {
-      current = (current - 1 + photos.length) % photos.length;
-      showPhoto();
-    }
-
-    function nextPhoto() {
-      current = (current + 1) % photos.length;
-      showPhoto();
-    }
-
-    const lb = document.getElementById('lightbox')!;
-
-    lb.addEventListener('click', (e) => {
-      if (e.target === e.currentTarget) closeLightbox();
-    });
+    document.getElementById('lb-prev')!.addEventListener('click', (e) => { e.stopPropagation(); prevPhoto(); });
+    document.getElementById('lb-next')!.addEventListener('click', (e) => { e.stopPropagation(); nextPhoto(); });
+    document.getElementById('lb-close')!.addEventListener('click', closeLightbox);
+    lb.addEventListener('click', (e) => { if (e.target === lb) closeLightbox(); });
 
     lb.addEventListener('touchstart', (e) => {
       touchStartX = e.touches[0].clientX;
+      touchStartY = e.touches[0].clientY;
     }, { passive: true });
 
+    lb.addEventListener('touchmove', (e) => {
+      const dx = Math.abs(e.touches[0].clientX - touchStartX);
+      const dy = Math.abs(e.touches[0].clientY - touchStartY);
+      if (dx > dy) e.preventDefault();
+    }, { passive: false });
+
     lb.addEventListener('touchend', (e) => {
-      const diff = touchStartX - e.changedTouches[0].clientX;
-      if (Math.abs(diff) > 40) {
-        diff > 0 ? nextPhoto() : prevPhoto();
+      const dx = touchStartX - e.changedTouches[0].clientX;
+      const dy = Math.abs(e.changedTouches[0].clientY - touchStartY);
+      if (Math.abs(dx) > 40 && Math.abs(dx) > dy) {
+        dx > 0 ? nextPhoto() : prevPhoto();
       }
     }, { passive: true });
 
     document.addEventListener('keydown', (e) => {
-      if (lb.classList.contains('hidden')) return;
+      if (!lb.classList.contains('flex')) return;
       if (e.key === 'Escape') closeLightbox();
       if (e.key === 'ArrowLeft') prevPhoto();
       if (e.key === 'ArrowRight') nextPhoto();
     });
 
     (window as any).openLightbox = openLightbox;
-    (window as any).closeLightbox = closeLightbox;
-    (window as any).prevPhoto = prevPhoto;
-    (window as any).nextPhoto = nextPhoto;
   </script>
 
   <!-- Categories -->
