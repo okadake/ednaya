@@ -3,16 +3,44 @@ import Layout from '../layouts/Layout.astro';
 
 const base = import.meta.env.BASE_URL;
 
-const galleryImages = [
-  { src: `${base}/images/planet-foto-labo/pero_001.jpg`, alt: "pero_001", caption: "アクリルフォトパネル / Pero" },
-  { src: `${base}/images/planet-foto-labo/pero_002.jpg`, alt: "pero_002", caption: "アクリルフォトパネル / Pero" },
-  { src: `${base}/images/planet-foto-labo/pero_003.jpg`, alt: "pero_003", caption: "アクリルフォトパネル / Pero" },
-  { src: `${base}/images/planet-foto-labo/pero_004.jpg`, alt: "pero_004", caption: "アクリルフォトパネル / Pero" },
-  { src: `${base}/images/planet-foto-labo/pero_005.jpg`, alt: "pero_005", caption: "アクリルフォトパネル / Pero" },
-  { src: `${base}/images/planet-foto-labo/pero_005.jpg`, alt: "pero_005", caption: "アクリルフォトパネル / Pero" },
-  { src: `${base}/images/planet-foto-labo/pero_005.jpg`, alt: "pero_005", caption: "アクリルフォトパネル / Pero" },
-  { src: `${base}/images/planet-foto-labo/pero_005.jpg`, alt: "pero_005", caption: "アクリルフォトパネル / Pero" },
-  { src: `${base}/images/planet-foto-labo/pero_005.jpg`, alt: "pero_005", caption: "アクリルフォトパネル / Pero" },
+const peroImages = [
+  `${base}/images/planet-foto-labo/pero/pero_001.jpg`,
+  `${base}/images/planet-foto-labo/pero/pero_002.jpg`,
+  `${base}/images/planet-foto-labo/pero/pero_003.jpg`,
+  `${base}/images/planet-foto-labo/pero/pero_004.jpg`,
+  `${base}/images/planet-foto-labo/pero/pero_005.jpg`,
+];
+
+const fumiImages = [
+  `${base}/images/planet-foto-labo/fumi/1K9A0098.jpg`,
+  `${base}/images/planet-foto-labo/fumi/1K9A1796.jpg`,
+  `${base}/images/planet-foto-labo/fumi/1K9A1887_1.jpg`,
+  `${base}/images/planet-foto-labo/fumi/1K9A2888_1.jpg`,
+  `${base}/images/planet-foto-labo/fumi/1K9A3462.jpg`,
+  `${base}/images/planet-foto-labo/fumi/1K9A4789.jpg`,
+  `${base}/images/planet-foto-labo/fumi/1K9A5426.jpg`,
+  `${base}/images/planet-foto-labo/fumi/1K9A5587.jpg`,
+  `${base}/images/planet-foto-labo/fumi/1K9A5751.jpg`,
+  `${base}/images/planet-foto-labo/fumi/1K9A6278.jpg`,
+  `${base}/images/planet-foto-labo/fumi/1K9A7238.jpg`,
+  `${base}/images/planet-foto-labo/fumi/1K9A8854.jpg`,
+  `${base}/images/planet-foto-labo/fumi/1K9A9035.jpg`,
+  `${base}/images/planet-foto-labo/fumi/1K9A9779.jpg`,
+  `${base}/images/planet-foto-labo/fumi/4rapperB&WNDsharpP2.jpg`,
+  `${base}/images/planet-foto-labo/fumi/IMG_2048.jpg`,
+  `${base}/images/planet-foto-labo/fumi/IMG_8616.jpg`,
+  `${base}/images/planet-foto-labo/fumi/TNBX.jpg`,
+  `${base}/images/planet-foto-labo/fumi/cavieportlait.jpg`,
+  `${base}/images/planet-foto-labo/fumi/cavieunsharp.jpg`,
+  `${base}/images/planet-foto-labo/fumi/cpt4sharpND.jpg`,
+  `${base}/images/planet-foto-labo/fumi/dogF1sharpX.jpg`,
+  `${base}/images/planet-foto-labo/fumi/dogpaper.jpg`,
+  `${base}/images/planet-foto-labo/fumi/dogsmileX.jpg`,
+  `${base}/images/planet-foto-labo/fumi/dvsroomxp.jpg`,
+  `${base}/images/planet-foto-labo/fumi/img20220223_15033548.jpg`,
+  `${base}/images/planet-foto-labo/fumi/instantsharpNDxx.jpg`,
+  `${base}/images/planet-foto-labo/fumi/pennyA4gray.jpg`,
+  `${base}/images/planet-foto-labo/fumi/uwp5xsharpP.jpg`,
 ];
 ---
 
@@ -142,26 +170,61 @@ const galleryImages = [
         <p class="text-xs tracking-[0.4em] text-sky-400 mb-4">GALLERY</p>
         <h2 class="text-3xl font-light tracking-wider text-white">作品ギャラリー</h2>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
-        {galleryImages.map((img) => (
-          <div>
-            <a
-              href={img.src}
-              class="glightbox group relative bg-stone-900 aspect-4/5 overflow-hidden block"
-              data-gallery="gallery"
-            >
-              <img
-                src={img.src}
-                alt={img.alt}
-                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                loading="lazy"
-              />
-            </a>
-            <p class="mt-2 mb-6 text-xs tracking-[0.2em] text-stone-400 text-right">{img.caption}</p>
+
+      <div class="grid md:grid-cols-2 gap-12">
+        <!-- Pero -->
+        <div>
+          <h3 class="text-lg font-light tracking-[0.2em] text-white mb-6 border-b border-stone-800 pb-3">Pero</h3>
+          <div
+            class="grid grid-cols-2 gap-2"
+            data-gallery={JSON.stringify(peroImages)}
+          >
+            {peroImages.map((src, idx) => (
+              <div
+                class="bg-stone-900 aspect-4/5 overflow-hidden cursor-pointer group"
+                onclick={`openLightbox(this.parentElement, ${idx})`}
+              >
+                <img
+                  src={src}
+                  alt=""
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                />
+              </div>
+            ))}
           </div>
-        ))}
+          <p class="mt-4 text-xs text-stone-400 text-right">アクリルフォトパネル / 900mm x 600mm ¥88,000 | 600mm x 300mm ¥44,000</p>
+        </div>
+
+        <!-- Fumi Photo -->
+        <div>
+          <h3 class="text-lg font-light tracking-[0.2em] text-white mb-6 border-b border-stone-800 pb-3">Fumi Photo</h3>
+          {fumiImages.length > 0 ? (
+            <div
+              class="grid grid-cols-2 gap-2"
+              data-gallery={JSON.stringify(fumiImages)}
+            >
+              {fumiImages.map((src, idx) => (
+                <div
+                  class="bg-stone-900 aspect-4/5 overflow-hidden cursor-pointer group"
+                  onclick={`openLightbox(this.parentElement, ${idx})`}
+                >
+                  <img
+                    src={src}
+                    alt=""
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div class="bg-stone-900 aspect-4/5 flex items-center justify-center border border-stone-800">
+              <span class="text-xs tracking-[0.3em] text-stone-600">COMING SOON</span>
+            </div>
+          )}
+        </div>
       </div>
-      <p class="mt-6 text-stone-400 text-right">アクリルフォトパネル / 900mm x 600mm ¥88,000 | 600mm x 300mm ¥44,000</p>
     </div>
   </section>
 
@@ -194,9 +257,63 @@ const galleryImages = [
   </div>
 </Layout>
 
-<script>
-  import GLightbox from 'glightbox';
-  import 'glightbox/dist/css/glightbox.min.css';
+<!-- Lightbox -->
+<div id="lb" class="fixed inset-0 z-50 hidden flex-col items-center justify-center bg-black/90" role="dialog" aria-modal="true">
+  <button id="lb-prev" class="absolute left-0 top-0 h-full w-[15%] flex items-center justify-start pl-4 text-white/50 hover:text-white text-5xl transition-colors z-10" aria-label="前へ">‹</button>
+  <button id="lb-next" class="absolute right-0 top-0 h-full w-[15%] flex items-center justify-end pr-4 text-white/50 hover:text-white text-5xl transition-colors z-10" aria-label="次へ">›</button>
+  <img id="lb-img" src="" alt="" class="max-h-[85vh] max-w-[70vw] object-contain select-none" />
+  <p id="lb-counter" class="mt-4 text-xs tracking-widest text-stone-500"></p>
+  <button id="lb-close" class="absolute top-6 right-6 text-white text-3xl leading-none hover:text-sky-300 transition-colors z-20" aria-label="閉じる">✕</button>
+</div>
 
-  GLightbox({ selector: '.glightbox' });
+<script>
+  let photos: string[] = [];
+  let current = 0;
+  let touchStartX = 0;
+  let touchStartY = 0;
+
+  const lb    = document.getElementById('lb')!;
+  const lbImg = document.getElementById('lb-img') as HTMLImageElement;
+  const lbCnt = document.getElementById('lb-counter')!;
+
+  function showPhoto() {
+    lbImg.src = photos[current];
+    lbCnt.textContent = `${current + 1} / ${photos.length}`;
+  }
+
+  function openLightbox(gridEl: HTMLElement, index: number) {
+    photos = JSON.parse(gridEl.dataset.gallery || '[]');
+    current = index;
+    showPhoto();
+    lb.classList.remove('hidden');
+    lb.classList.add('flex');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    lb.classList.add('hidden');
+    lb.classList.remove('flex');
+    lbImg.src = '';
+    document.body.style.overflow = '';
+  }
+
+  function prevPhoto() { current = (current - 1 + photos.length) % photos.length; showPhoto(); }
+  function nextPhoto() { current = (current + 1) % photos.length; showPhoto(); }
+
+  document.getElementById('lb-prev')!.addEventListener('click', (e) => { e.stopPropagation(); prevPhoto(); });
+  document.getElementById('lb-next')!.addEventListener('click', (e) => { e.stopPropagation(); nextPhoto(); });
+  document.getElementById('lb-close')!.addEventListener('click', closeLightbox);
+
+  lb.addEventListener('touchstart', (e) => { touchStartX = e.touches[0].clientX; touchStartY = e.touches[0].clientY; }, { passive: true });
+  lb.addEventListener('touchmove', (e) => { const dx = Math.abs(e.touches[0].clientX - touchStartX); const dy = Math.abs(e.touches[0].clientY - touchStartY); if (dx > dy) e.preventDefault(); }, { passive: false });
+  lb.addEventListener('touchend', (e) => { const dx = touchStartX - e.changedTouches[0].clientX; const dy = Math.abs(e.changedTouches[0].clientY - touchStartY); if (Math.abs(dx) > 40 && Math.abs(dx) > dy) { dx > 0 ? nextPhoto() : prevPhoto(); } }, { passive: true });
+
+  document.addEventListener('keydown', (e) => {
+    if (!lb.classList.contains('flex')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') prevPhoto();
+    if (e.key === 'ArrowRight') nextPhoto();
+  });
+
+  (window as any).openLightbox = openLightbox;
 </script>
