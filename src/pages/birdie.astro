@@ -36,9 +36,8 @@ const base = import.meta.env.BASE_URL;
       <p class="text-xs tracking-[0.4em] text-emerald-400 mb-4">ABOUT</p>
       <h2 class="text-3xl font-light tracking-wider text-white mb-12">BIRDIEについて</h2>
       <p class="text-stone-400 leading-loose">
-        植物のある暮らしを、もっと身近に。<br />
-        エアプランツ、サボテン、多肉植物、観葉植物、ドライフラワー、<br />
-        日々を彩るボタニカルアイテムをお届けします。
+        スタイリストとしてファッションで培った感性で植物をスタイリングするMoriyasuのアトリエ兼ボタニカルショップ。
+植物を絡めたファッション撮影や作品撮り、アートワーク、インテリアやショップのグリーンディスプレイ、ドライアレンジなどご相談下さい
       </p>
     </div>
   </section>
@@ -50,20 +49,16 @@ const base = import.meta.env.BASE_URL;
         <p class="text-xs tracking-[0.4em] text-emerald-400 mb-4">PRODUCTS</p>
         <h2 class="text-3xl font-light tracking-wider text-white">取扱植物</h2>
       </div>
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
-        {[
-          'エアプランツ',
-          'サボテン',
-          '多肉植物',
-          '観葉植物',
-          'ドライフラワー',
-          'アート作品',
-        ].map((p) => (
-          <div class="bg-stone-900 aspect-square flex items-center justify-center border border-stone-800 hover:border-emerald-400 transition">
-            <div class="text-center">
-              <p class="text-xs tracking-[0.3em] text-stone-600 mb-3">PHOTO</p>
-              <p class="text-sm tracking-wider text-emerald-300">{p}</p>
-            </div>
+      <div
+        class="grid grid-cols-1 md:grid-cols-4 gap-4"
+        data-gallery={JSON.stringify(Array.from({ length: 8 }, (_, i) => `${base}/images/birdie/BIRDIE00${i + 1}.jpg`))}
+      >
+        {Array.from({ length: 8 }, (_, i) => `${base}/images/birdie/BIRDIE00${i + 1}.jpg`).map((src, idx) => (
+          <div
+            class="overflow-hidden border border-stone-800 hover:border-emerald-400 transition cursor-pointer"
+            onclick={`openLightbox(${idx})`}
+          >
+            <img src={src} alt="" class="w-full aspect-square object-cover" />
           </div>
         ))}
       </div>
@@ -88,6 +83,68 @@ const base = import.meta.env.BASE_URL;
       </a>
     </div>
   </section>
+
+  <!-- Lightbox -->
+  <div id="lb" class="fixed inset-0 z-50 hidden flex-col items-center justify-center bg-black/90" role="dialog" aria-modal="true">
+    <button id="lb-prev" class="absolute left-0 top-0 h-full w-[15%] flex items-center justify-start pl-4 text-white/50 hover:text-white text-5xl transition-colors z-10" aria-label="前へ">‹</button>
+    <button id="lb-next" class="absolute right-0 top-0 h-full w-[15%] flex items-center justify-end pr-4 text-white/50 hover:text-white text-5xl transition-colors z-10" aria-label="次へ">›</button>
+    <img id="lb-img" src="" alt="" class="max-h-[85vh] max-w-[70vw] object-contain select-none" />
+    <p id="lb-counter" class="mt-4 text-xs tracking-widest text-stone-500"></p>
+    <button id="lb-close" class="absolute top-6 right-6 text-white text-3xl leading-none hover:text-emerald-300 transition-colors z-20" aria-label="閉じる">✕</button>
+  </div>
+
+  <script>
+    let photos: string[] = [];
+    let current = 0;
+    let touchStartX = 0;
+    let touchStartY = 0;
+
+    const lb    = document.getElementById('lb')!;
+    const lbImg = document.getElementById('lb-img') as HTMLImageElement;
+    const lbCnt = document.getElementById('lb-counter')!;
+
+    function showPhoto() {
+      lbImg.src = photos[current];
+      lbCnt.textContent = `${current + 1} / ${photos.length}`;
+    }
+
+    function openLightbox(index: number) {
+      const grid = document.querySelector('[data-gallery]') as HTMLElement;
+      photos = JSON.parse(grid.dataset.gallery || '[]');
+      current = index;
+      showPhoto();
+      lb.classList.remove('hidden');
+      lb.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lb.classList.add('hidden');
+      lb.classList.remove('flex');
+      lbImg.src = '';
+      document.body.style.overflow = '';
+    }
+
+    function prevPhoto() { current = (current - 1 + photos.length) % photos.length; showPhoto(); }
+    function nextPhoto() { current = (current + 1) % photos.length; showPhoto(); }
+
+    document.getElementById('lb-prev')!.addEventListener('click', (e) => { e.stopPropagation(); prevPhoto(); });
+    document.getElementById('lb-next')!.addEventListener('click', (e) => { e.stopPropagation(); nextPhoto(); });
+    document.getElementById('lb-close')!.addEventListener('click', closeLightbox);
+
+    lb.addEventListener('touchstart', (e) => { touchStartX = e.touches[0].clientX; touchStartY = e.touches[0].clientY; }, { passive: true });
+    lb.addEventListener('touchmove', (e) => { const dx = Math.abs(e.touches[0].clientX - touchStartX); const dy = Math.abs(e.touches[0].clientY - touchStartY); if (dx > dy) e.preventDefault(); }, { passive: false });
+    lb.addEventListener('touchend', (e) => { const dx = touchStartX - e.changedTouches[0].clientX; const dy = Math.abs(e.changedTouches[0].clientY - touchStartY); if (Math.abs(dx) > 40 && Math.abs(dx) > dy) { dx > 0 ? nextPhoto() : prevPhoto(); } }, { passive: true });
+
+    document.addEventListener('keydown', (e) => {
+      if (!lb.classList.contains('flex')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') prevPhoto();
+      if (e.key === 'ArrowRight') nextPhoto();
+    });
+
+    (window as any).openLightbox = openLightbox;
+  </script>
 
   <div class="text-center py-12 bg-stone-950">
     <a href={base} class="text-xs tracking-[0.3em] text-stone-500 hover:text-emerald-400 transition">
