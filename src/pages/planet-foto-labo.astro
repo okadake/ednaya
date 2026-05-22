@@ -3,13 +3,16 @@ import Layout from '../layouts/Layout.astro';
 
 const base = import.meta.env.BASE_URL;
 
-const peroImages = [
-  `${base}/images/planet-foto-labo/pero/pero_001.jpg`,
-  `${base}/images/planet-foto-labo/pero/pero_002.jpg`,
-  `${base}/images/planet-foto-labo/pero/pero_003.jpg`,
-  `${base}/images/planet-foto-labo/pero/pero_004.jpg`,
-  `${base}/images/planet-foto-labo/pero/pero_005.jpg`,
+const peroFiles = [
+  'pero_001.jpg','pero_002.png','pero_003.jpg','pero_004.jpg','pero_005.jpg',
+  'pero_006.jpg','pero_007.jpg','pero_008.jpg','pero_009.jpg','pero_010.jpg',
+  'pero_011.jpg','pero_012.jpg','pero_013.jpg','pero_014.jpg','pero_015.jpg',
+  'pero_016.jpg','pero_017.jpg','pero_018.jpg','pero_019.jpg','pero_020.jpg',
+  'pero_021.jpg','pero_022.jpg','pero_023.jpg','pero_024.jpg','pero_025.jpg',
+  'pero_026.jpg','pero_027.jpg','pero_028.png','pero_029.png','pero_030.png',
+  'pero_031.png','pero_032.png','pero_033.png',
 ];
+const peroImages = peroFiles.map(f => `${base}/images/planet-foto-labo/pero/${f}`);
 
 const fumiImages = [
   `${base}/images/planet-foto-labo/fumi/1K9A0098.jpg`,
@@ -41,6 +44,7 @@ const fumiImages = [
   `${base}/images/planet-foto-labo/fumi/instantsharpNDxx.jpg`,
   `${base}/images/planet-foto-labo/fumi/pennyA4gray.jpg`,
   `${base}/images/planet-foto-labo/fumi/uwp5xsharpP.jpg`,
+  `${base}/images/planet-foto-labo/fumi/1K9A1212x.jpg`,
 ];
 ---
 
@@ -193,7 +197,7 @@ const fumiImages = [
               </div>
             ))}
           </div>
-          <p class="mt-4 text-xs text-stone-400 text-right">アクリルフォトパネル / 900mm x 600mm ¥88,000 | 600mm x 300mm ¥44,000</p>
+          <!-- <p class="mt-4 text-xs text-stone-400 text-right">アクリルフォトパネル / 900mm x 600mm ¥88,000 | 600mm x 300mm ¥44,000</p> -->
         </div>
 
         <!-- Fumi Photo -->
