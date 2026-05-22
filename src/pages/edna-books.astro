@@ -9,6 +9,7 @@ const featuredBooks = [
     artist: 'Photo and Text by FUMI',
     image: `${base}/images/books/SKIDROW.png`,
     gallery: null,
+    buyUrl: 'https://dolocal.thebase.in/items/74795109',
   },
   {
     title: 'CPT Photobook',
@@ -19,12 +20,14 @@ const featuredBooks = [
       `${base}/images/books/CPT-photobook/002.jpeg`,
       `${base}/images/books/CPT-photobook/003.jpeg`,
     ],
+    buyUrl: 'https://dolocal.thebase.in/items/38018887',
   },
   {
     title: 'Dear Style Masters,',
     artist: 'Pero Hayashi',
     image: `${base}/images/books/dear-style-masters.png`,
     gallery: null,
+    buyUrl: '',
   },
   {
     title: 'To Leave Is to Return <br /> -Saigon Red,Phu Quoc Blue',
@@ -38,6 +41,7 @@ const featuredBooks = [
       `${base}/images/books/ToLeaveIsToReturn_sigonPhuQuoc/A7405661.jpg`,
       `${base}/images/books/ToLeaveIsToReturn_sigonPhuQuoc/A7406414.jpg`,
     ],
+    buyUrl: '',
   },
   {
     title: "To Leave Is to Return <br /> -At The Water's Edge",
@@ -51,9 +55,10 @@ const featuredBooks = [
       `${base}/images/books/ToLeaveIsToReturn_AtTheWater'sEdge/005.jpg`,
       `${base}/images/books/ToLeaveIsToReturn_AtTheWater'sEdge/006.jpg`,
     ],
+    buyUrl: '',
   },
   // 次のブックをここに追加:
-  // { title: '', artist: '', image: `${base}/images/books/.jpg`, gallery: null },
+  // { title: '', artist: '', image: `${base}/images/books/.jpg`, gallery: null, buyUrl: '' },
 ];
 ---
 
@@ -120,6 +125,24 @@ const featuredBooks = [
             </div>
             <p class="text-xs tracking-wider text-stone-300" set:html={book.title} />
             <p class="text-xs text-stone-500 mt-1">{book.artist}</p>
+            {book.buyUrl ? (
+              <a
+                href={book.buyUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-block mt-3 px-4 py-1.5 text-xs tracking-[0.2em] border border-rose-400 text-rose-400 hover:bg-rose-400 hover:text-black transition"
+                onclick="event.stopPropagation()"
+              >
+                BUY
+              </a>
+            ) : (
+              <span
+                class="inline-block mt-3 px-4 py-1.5 text-xs tracking-[0.2em] border border-stone-700 text-stone-600 cursor-default"
+                onclick="event.stopPropagation()"
+              >
+                BUY
+              </span>
+            )}
           </div>
         ))}
       </div>
