@@ -16,6 +16,7 @@ const featuredBooks = [
       `${base}/images/books/SuperSilent/SuperSilent0702-108.jpg`,
     ],
     buyUrl: '',
+    pages: 'A4/108P',
   },
   {
     title: 'SKID ROW',
@@ -29,6 +30,7 @@ const featuredBooks = [
       `${base}/images/books/skidrow/skidrowF_82.jpg`,
     ],
     buyUrl: 'https://dolocal.thebase.in/items/74795109',
+    pages: 'A4/94P',
   },
   {
     title: 'CPT Photobook',
@@ -40,6 +42,7 @@ const featuredBooks = [
       `${base}/images/books/CPT-photobook/003.jpeg`,
     ],
     buyUrl: 'https://dolocal.thebase.in/items/38018887',
+    pages: 'A4変形 / 100P / モノクロ',
   },
   {
     title: 'Dear Style Masters,',
@@ -47,6 +50,7 @@ const featuredBooks = [
     image: `${base}/images/books/dear-style-masters.png`,
     gallery: null,
     buyUrl: '',
+    pages: '144P',
   },
   {
     title: 'To Leave Is to Return <br /> -Saigon Red,Phu Quoc Blue',
@@ -61,6 +65,7 @@ const featuredBooks = [
       `${base}/images/books/ToLeaveIsToReturn_sigonPhuQuoc/A7406414.jpg`,
     ],
     buyUrl: '',
+    pages: '144P',
   },
   {
     title: "To Leave Is to Return <br /> -At The Water's Edge",
@@ -75,6 +80,7 @@ const featuredBooks = [
       `${base}/images/books/ToLeaveIsToReturn_AtTheWater'sEdge/006.jpg`,
     ],
     buyUrl: '',
+    pages: '144P',
   },
   // 次のブックをここに追加:
   // { title: '', artist: '', image: `${base}/images/books/.jpg`, gallery: null, buyUrl: '' },
@@ -143,6 +149,7 @@ const featuredBooks = [
               )}
             </div>
             <p class="text-xs tracking-wider text-stone-300" set:html={book.title} />
+            {book.pages && <p class="text-xs text-stone-600 mt-1">{book.pages}</p>}
             <p class="text-xs text-stone-500 mt-1">{book.artist}</p>
             {book.buyUrl ? (
               <a

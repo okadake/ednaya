@@ -180,7 +180,7 @@ const fumiImages = [
         <div>
           <h3 class="text-lg font-light tracking-[0.2em] text-white mb-6 border-b border-stone-800 pb-3">Pero</h3>
           <div
-            class="grid grid-cols-2 gap-2"
+            class="grid grid-cols-1 md:grid-cols-2 gap-2"
             data-gallery={JSON.stringify(peroImages)}
           >
             {peroImages.map((src, idx) => (
@@ -205,7 +205,7 @@ const fumiImages = [
           <h3 class="text-lg font-light tracking-[0.2em] text-white mb-6 border-b border-stone-800 pb-3">Fumi Photo</h3>
           {fumiImages.length > 0 ? (
             <div
-              class="grid grid-cols-2 gap-2"
+              class="grid grid-cols-1 md:grid-cols-2 gap-2"
               data-gallery={JSON.stringify(fumiImages)}
             >
               {fumiImages.map((src, idx) => (
