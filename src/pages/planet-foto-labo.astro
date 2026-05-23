@@ -14,38 +14,15 @@ const peroFiles = [
 ];
 const peroImages = peroFiles.map(f => `${base}/images/planet-foto-labo/pero/${f}`);
 
-const fumiImages = [
-  `${base}/images/planet-foto-labo/fumi/1K9A0098.jpg`,
-  `${base}/images/planet-foto-labo/fumi/1K9A1796.jpg`,
-  `${base}/images/planet-foto-labo/fumi/1K9A1887_1.jpg`,
-  `${base}/images/planet-foto-labo/fumi/1K9A2888_1.jpg`,
-  `${base}/images/planet-foto-labo/fumi/1K9A3462.jpg`,
-  `${base}/images/planet-foto-labo/fumi/1K9A4789.jpg`,
-  `${base}/images/planet-foto-labo/fumi/1K9A5426.jpg`,
-  `${base}/images/planet-foto-labo/fumi/1K9A5587.jpg`,
-  `${base}/images/planet-foto-labo/fumi/1K9A5751.jpg`,
-  `${base}/images/planet-foto-labo/fumi/1K9A6278.jpg`,
-  `${base}/images/planet-foto-labo/fumi/1K9A7238.jpg`,
-  `${base}/images/planet-foto-labo/fumi/1K9A8854.jpg`,
-  `${base}/images/planet-foto-labo/fumi/1K9A9035.jpg`,
-  `${base}/images/planet-foto-labo/fumi/1K9A9779.jpg`,
-  `${base}/images/planet-foto-labo/fumi/4rapperB&WNDsharpP2.jpg`,
-  `${base}/images/planet-foto-labo/fumi/IMG_2048.jpg`,
-  `${base}/images/planet-foto-labo/fumi/IMG_8616.jpg`,
-  `${base}/images/planet-foto-labo/fumi/TNBX.jpg`,
-  `${base}/images/planet-foto-labo/fumi/cavieportlait.jpg`,
-  `${base}/images/planet-foto-labo/fumi/cavieunsharp.jpg`,
-  `${base}/images/planet-foto-labo/fumi/cpt4sharpND.jpg`,
-  `${base}/images/planet-foto-labo/fumi/dogF1sharpX.jpg`,
-  `${base}/images/planet-foto-labo/fumi/dogpaper.jpg`,
-  `${base}/images/planet-foto-labo/fumi/dogsmileX.jpg`,
-  `${base}/images/planet-foto-labo/fumi/dvsroomxp.jpg`,
-  `${base}/images/planet-foto-labo/fumi/img20220223_15033548.jpg`,
-  `${base}/images/planet-foto-labo/fumi/instantsharpNDxx.jpg`,
-  `${base}/images/planet-foto-labo/fumi/pennyA4gray.jpg`,
-  `${base}/images/planet-foto-labo/fumi/uwp5xsharpP.jpg`,
-  `${base}/images/planet-foto-labo/fumi/1K9A1212x.jpg`,
+const fumiFiles = [
+  'fumi_001.jpg','fumi_002.jpg','fumi_003.jpg','fumi_004.jpg','fumi_005.jpg',
+  'fumi_006.jpg','fumi_007.jpg','fumi_008.jpg','fumi_009.jpg','fumi_010.jpg',
+  'fumi_011.jpg','fumi_012.jpg','fumi_013.jpg','fumi_014.jpg','fumi_015.jpg',
+  'fumi_016.jpg','fumi_017.jpg','fumi_018.jpg','fumi_019.jpg','fumi_020.jpg',
+  'fumi_021.jpg','fumi_022.jpg','fumi_023.jpg','fumi_024.jpg','fumi_025.jpg',
+  'fumi_026.jpg','fumi_027.jpg','fumi_028.jpg','fumi_029.jpg','fumi_030.jpg',
 ];
+const fumiImages = fumiFiles.map(f => `${base}/images/planet-foto-labo/fumi/${f}`);
 ---
 
 <Layout title="PLANET FOTO LABO | エドナ屋" description="PLANET FOTO LABO — 写真家のアトリエ。">
@@ -76,12 +53,10 @@ const fumiImages = [
   <!-- About -->
   <section class="py-24 px-6 bg-stone-950">
     <div class="max-w-3xl mx-auto text-center">
-      <p class="text-xs tracking-[0.4em] text-sky-400 mb-4">ABOUT</p>
-      <h2 class="text-3xl font-light tracking-wider text-white mb-12">アトリエについて</h2>
+      <!-- <p class="text-xs tracking-[0.4em] text-sky-400 mb-4">ABOUT</p> -->
+      <h2 class="text-3xl font-light tracking-wider text-sky-400 mb-12">ABOUT</h2>
       <p class="text-stone-400 leading-loose">
-        写真家のアトリエ「PLANET FOTO LABO」。<br />
-        光と時間を捉えた一枚の物語を、ここから世界へ。<br />
-        作品制作・展示・撮影依頼を承っております。
+        辻堂のBAR ”COAST TAVERN”でのバイト時代に出逢った２人が20年の年月を得て互いに写真家として活動をし、シェイパーの榎本信介の主宰する藤沢本町エドナ屋のFACTORYに集い、日々制作活動に楽しく勤しんでいます。
       </p>
     </div>
   </section>
@@ -169,8 +144,8 @@ const fumiImages = [
   <section class="py-24 px-6 bg-stone-950">
     <div class="max-w-6xl mx-auto">
       <div class="text-center mb-16">
-        <p class="text-xs tracking-[0.4em] text-sky-400 mb-4">GALLERY</p>
-        <h2 class="text-3xl font-light tracking-wider text-white">作品ギャラリー</h2>
+        <!-- <p class="text-xs tracking-[0.4em] text-sky-400 mb-4">GALLERY</p> -->
+        <h2 class="text-3xl font-light tracking-wider text-sky-400 mb-12">GALLERY</h2>
       </div>
 
       <div class="grid md:grid-cols-2 gap-12">
