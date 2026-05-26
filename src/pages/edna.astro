@@ -39,6 +39,7 @@ const hasCategory = (item: any, targetCategory: string): boolean => {
 // カテゴリごとにグループ分け
 const boardItems = allItems.filter((item: any) => hasCategory(item, 'Surfboards'));
 const tshirtItems = allItems.filter((item: any) => hasCategory(item, 'Tshirt'));
+const resinworksItems = allItems.filter((item: any) => hasCategory(item, 'ResinWorks'));
 ---
 
 <Layout title="EDNA | エドナ屋" description="EDNA — サーフボードの製造・販売。">
@@ -128,7 +129,7 @@ const tshirtItems = allItems.filter((item: any) => hasCategory(item, 'Tshirt'));
 
       {/* T-Shirt Section */}
       {tshirtItems.length > 0 && (
-        <div>
+        <div class="mb-24">
           <div class="text-center mb-16">
             <h2 class="text-3xl font-light tracking-wider text-amber-400">T-SHIRT</h2>
           </div>
@@ -145,6 +146,37 @@ const tshirtItems = allItems.filter((item: any) => hasCategory(item, 'Tshirt'));
                   <img
                     src={b.image?.url}
                     alt={b.name || 'EDNA T-Shirt'}
+                    class="w-full object-cover hover:opacity-80 transition-opacity duration-300"
+                  />
+                </div>
+                {b.name && (
+                  <p class="text-xs tracking-[0.2em] text-stone-300 text-center py-3 px-4">{b.name}</p>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Resin-works Section */}
+      {resinworksItems.length > 0 && (
+        <div>
+          <div class="text-center mb-16">
+            <h2 class="text-3xl font-light tracking-wider text-amber-400">Resin-works</h2>
+          </div>
+          <div class="grid md:grid-cols-3 gap-4">
+            {resinworksItems.map((b: any) => (
+              <div
+                class="border border-stone-800 cursor-pointer"
+                data-lightbox={b.image?.url}
+                data-name={b.name}
+                data-length={b.size}
+                data-caption={b.description}
+              >
+                <div class="overflow-hidden">
+                  <img
+                    src={b.image?.url}
+                    alt={b.name || 'EDNA Resin-works'}
                     class="w-full object-cover hover:opacity-80 transition-opacity duration-300"
                   />
                 </div>
