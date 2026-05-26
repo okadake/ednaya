@@ -35,6 +35,16 @@ const brands = [
     border: 'hover:border-sky-400',
   },
   {
+    slug: 'studio-leon',
+    name: 'STUDIO LEON',
+    tagline: 'ARCHITECTURAL DESIGN',
+    description: '自然素材で作る湘南のビーチハウス。建築設計事務所',
+    image: 'studio-leon.jpg',
+    logo: 'studio-leon-logo.png',
+    accent: 'text-[#0694e9]',
+    border: 'hover:border-[#1d3c56]',
+  },
+  {
     slug: 'edna-books',
     name: 'EDNA BOOKS',
     tagline: 'ART BOOKS',
@@ -100,13 +110,16 @@ const brands = [
             <div class="absolute inset-0 bg-linear-to-t from-stone-950 via-stone-950/40 to-stone-950/20"></div>
             <p class={`absolute top-8 left-10 z-10 text-xs tracking-[0.3em] ${b.accent}`}>{b.tagline}</p>
             <div class="absolute inset-0 z-10 flex items-center justify-center px-10">
-              <div class="-mt-20 md:-mt-16">
+              <div class="-mt-20 md:-mt-16 flex items-center justify-center w-full">
                 {b.logo ? (
-                  <img
-                    src={`${base}/images/logo/${b.logo}`}
-                    alt={b.name}
-                    class="h-20 md:h-28 w-auto max-w-full"
-                  />
+                  <div style={b.slug === 'studio-leon' ? 'aspect-ratio: 740 / 143; display: flex; align-items: center; justify-content: center; width: 100%;' : ''}>
+                    <img
+                      src={`${base}/images/logo/${b.logo}`}
+                      alt={b.name}
+                      class="h-20 md:h-28 w-auto max-w-full"
+                      style={b.slug === 'studio-leon' ? 'object-fit: contain; width: 100%; height: auto;' : ''}
+                    />
+                  </div>
                 ) : (
                   <h3 class="text-4xl md:text-6xl font-light tracking-[0.15em] text-white text-center">
                     {b.name}
@@ -137,8 +150,9 @@ const brands = [
       <p class="text-stone-400 leading-loose">
         「エドナ屋」は、サーフボードの<strong class="font-medium text-stone-200">EDNA</strong>、植物の<strong class="font-medium text-stone-200">BIRDIE</strong>、<br />
         写真家のアトリエ<strong class="font-medium text-stone-200">PLANET FOTO LABO</strong>、<br />
+        建築設計の<strong class="font-medium text-stone-200">STUDIO LEON</strong>、<br />
         アートブックの<strong class="font-medium text-stone-200">EDNA BOOKS</strong>、<br />
-        4つのブランドを束ねるプラットフォームです。
+        5つのブランドを束ねるプラットフォームです。
       </p>
       <p class="text-stone-400 leading-loose mt-6">
         それぞれが独立した世界を持ちながら、<br />

@@ -1,0 +1,306 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const base = import.meta.env.BASE_URL;
+
+const aboutFiles = [
+  "003.jpeg",
+  "004.jpeg",
+  "005.jpeg",
+  "006.jpeg",
+  "007.jpeg",
+  "008.jpeg",
+];
+const aboutImages = aboutFiles.map(
+  (f) => `${base}/images/studio-leon/about/${f}`,
+);
+---
+
+<Layout
+  title="STUDIO LEON | エドナ屋"
+  description="STUDIO LEON — 自然素材で作る湘南のビーチハウス"
+>
+  <!-- Hero -->
+  <section
+    class="relative min-h-[80vh] flex items-center justify-center overflow-hidden -mt-16 pt-16"
+  >
+    <div class="absolute inset-0">
+      <img
+        src={`${base}/images/heroes/studio-leon.jpg`}
+        alt="STUDIO LEON"
+        class="w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-stone-950/65"></div>
+    </div>
+    <div class="relative z-10 text-center px-6">
+      <p class="text-xs tracking-[0.5em] text-[#0694e9] mb-6">
+        ARCHITECTURAL DESIGN
+      </p>
+      <h1 class="mb-6 flex justify-center" style="aspect-ratio: 740 / 143;">
+        <img
+          src={`${base}/images/logo/studio-leon-logo.png`}
+          alt="STUDIO LEON"
+          class="h-auto w-auto max-w-full"
+          style="object-fit: contain;"
+        />
+      </h1>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="py-24 px-6 bg-stone-950">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-8">
+        <h2 class="text-3xl font-light tracking-wider text-[#0694e9] mb-8">
+          ABOUT
+        </h2>
+        <p class="text-stone-400 leading-loose max-w-3xl mx-auto">
+          STUDIO LEONは、湘南を中心に建築を手掛けるビルダーです。<br />
+          住宅・リフォーム・店舗など、自然素材とアンティーク組み合わせ唯一無二の作品をお届けしています。
+        </p>
+      </div>
+
+      <div
+        class="grid md:grid-cols-3 gap-4"
+        data-gallery={JSON.stringify(aboutImages)}
+      >
+        {
+          aboutImages.map((src, idx) => (
+            <div
+              class="bg-stone-900 aspect-4/5 overflow-hidden cursor-pointer group border border-stone-800"
+              onclick={`openLightbox(this.closest('[data-gallery]'), ${idx})`}
+            >
+              <img
+                src={src}
+                alt=""
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                loading="lazy"
+              />
+            </div>
+          ))
+        }
+      </div>
+      <p class="text-stone-400 text-sm mt-4 text-center mb-16">
+        <a
+          href="https://studioleon.co.jp/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 text-xs tracking-[0.3em] text-[#0694e9] hover:text-[#0694e9]/80 transition"
+        >
+          VISIT WEBSITE ↗
+        </a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Office -->
+  <section class="py-24 px-6 bg-black">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-light tracking-wider text-[#0694e9] mb-12">
+          OFFICE
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12 items-center mb-12">
+        <div class="aspect-4/3 overflow-hidden border border-stone-800">
+          <img
+            src={`${base}/images/studio-leon/office.jpg`}
+            alt="STUDIO LEON Office"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="text-center md:text-left">
+          <!-- <p class="text-stone-400 leading-loose mb-6">
+            湘南の鵠沼海岸に佇む、<br>
+            自然素材とアンティークに囲まれたスタジオ。
+          </p> -->
+          <p class="text-stone-400 text-sm">
+            〒251-0037 神奈川県藤沢市鵠沼海岸2-2-15<br />
+            <span class="block mt-2">TEL 0466-33-6546</span>
+            <span class="block">FAX 0466-33-6522</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Depo -->
+  <section class="py-24 px-6 bg-black">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-light tracking-wider text-[#0694e9] mb-12">
+          Depo<span class="text-sm">（エドナ屋内）</span>
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12 items-center mb-12">
+        <div class="aspect-4/3 overflow-hidden border border-stone-800">
+          <img
+            src={`${base}/images/studio-leon/office.jpg`}
+            alt="STUDIO LEON Office"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="text-center md:text-left">
+          <!-- <p class="text-stone-400 leading-loose mb-6">
+            湘南の鵠沼海岸に佇む、<br>
+            自然素材とアンティークに囲まれたスタジオ。
+          </p> -->
+          <p class="text-stone-400 text-sm">
+            〒251-0037 神奈川県藤沢市本町3-11-12
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="py-24 px-6 bg-stone-950">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl font-light tracking-wider text-[#0694e9] mb-12">
+        CONTACT
+      </h2>
+      <p class="text-stone-400 text-sm mb-6">
+        建築設計のご相談はお気軽にお問い合わせください。
+      </p>
+      <a
+        href="https://studioleon.co.jp/contact.html"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 text-xs tracking-[0.3em] text-[#0694e9] hover:text-[#0694e9]/80 transition"
+      >
+        お問い合わせ ↗
+      </a>
+    </div>
+  </section>
+
+  <div class="text-center py-12 bg-stone-950">
+    <a
+      href={base}
+      class="text-xs tracking-[0.3em] text-stone-500 hover:text-[#0694e9] transition"
+    >
+      ← BACK TO エドナ屋
+    </a>
+  </div>
+</Layout>
+
+<!-- Lightbox -->
+<div
+  id="lb"
+  class="fixed inset-0 z-50 hidden flex-col items-center justify-center bg-black/90"
+  role="dialog"
+  aria-modal="true"
+>
+  <button
+    id="lb-prev"
+    class="absolute left-0 top-0 h-full w-[15%] flex items-center justify-start pl-4 text-white/50 hover:text-white text-5xl transition-colors z-10"
+    aria-label="前へ">‹</button
+  >
+  <button
+    id="lb-next"
+    class="absolute right-0 top-0 h-full w-[15%] flex items-center justify-end pr-4 text-white/50 hover:text-white text-5xl transition-colors z-10"
+    aria-label="次へ">›</button
+  >
+  <img
+    id="lb-img"
+    src=""
+    alt=""
+    class="max-h-[85vh] max-w-[70vw] object-contain select-none"
+  />
+  <p id="lb-counter" class="mt-4 text-xs tracking-widest text-stone-500"></p>
+  <button
+    id="lb-close"
+    class="absolute top-6 right-6 text-white text-3xl leading-none hover:text-[#0694e9] transition-colors z-20"
+    aria-label="閉じる">✕</button
+  >
+</div>
+
+<script>
+  let photos: string[] = [];
+  let current = 0;
+  let touchStartX = 0;
+  let touchStartY = 0;
+
+  const lb = document.getElementById("lb")!;
+  const lbImg = document.getElementById("lb-img") as HTMLImageElement;
+  const lbCnt = document.getElementById("lb-counter")!;
+
+  function showPhoto() {
+    lbImg.src = photos[current];
+    lbCnt.textContent = `${current + 1} / ${photos.length}`;
+  }
+
+  function openLightbox(gridEl: HTMLElement, index: number) {
+    photos = JSON.parse(gridEl.dataset.gallery || "[]");
+    current = index;
+    showPhoto();
+    lb.classList.remove("hidden");
+    lb.classList.add("flex");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeLightbox() {
+    lb.classList.add("hidden");
+    lb.classList.remove("flex");
+    lbImg.src = "";
+    document.body.style.overflow = "";
+  }
+
+  function prevPhoto() {
+    current = (current - 1 + photos.length) % photos.length;
+    showPhoto();
+  }
+  function nextPhoto() {
+    current = (current + 1) % photos.length;
+    showPhoto();
+  }
+
+  document.getElementById("lb-prev")!.addEventListener("click", (e) => {
+    e.stopPropagation();
+    prevPhoto();
+  });
+  document.getElementById("lb-next")!.addEventListener("click", (e) => {
+    e.stopPropagation();
+    nextPhoto();
+  });
+  document.getElementById("lb-close")!.addEventListener("click", closeLightbox);
+
+  lb.addEventListener(
+    "touchstart",
+    (e) => {
+      touchStartX = e.touches[0].clientX;
+      touchStartY = e.touches[0].clientY;
+    },
+    { passive: true },
+  );
+  lb.addEventListener(
+    "touchmove",
+    (e) => {
+      const dx = Math.abs(e.touches[0].clientX - touchStartX);
+      const dy = Math.abs(e.touches[0].clientY - touchStartY);
+      if (dx > dy) e.preventDefault();
+    },
+    { passive: false },
+  );
+  lb.addEventListener(
+    "touchend",
+    (e) => {
+      const dx = touchStartX - e.changedTouches[0].clientX;
+      const dy = Math.abs(e.changedTouches[0].clientY - touchStartY);
+      if (Math.abs(dx) > 40 && Math.abs(dx) > dy) {
+        dx > 0 ? nextPhoto() : prevPhoto();
+      }
+    },
+    { passive: true },
+  );
+
+  document.addEventListener("keydown", (e) => {
+    if (!lb.classList.contains("flex")) return;
+    if (e.key === "Escape") closeLightbox();
+    if (e.key === "ArrowLeft") prevPhoto();
+    if (e.key === "ArrowRight") nextPhoto();
+  });
+
+  (window as any).openLightbox = openLightbox;
+</script>
