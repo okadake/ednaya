@@ -356,6 +356,58 @@ const resinworksItems = allItems.filter((item: any) => hasCategory(item, 'ResinW
     </div>
   </section>
 
+  <!-- The Neighborhood -->
+  <section class="py-24 px-6 bg-stone-950">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-light tracking-wider text-amber-400">The Neighborhood</h2>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-6">
+        {[
+          {
+            name: 'The Rlm Rubber',
+            url: 'https://www.instagram.com/the_rlm_rubber/',
+            logo: 'rlm.jpg',
+          },
+          {
+            name: 'Deflow Surf Japan',
+            url: 'https://www.instagram.com/deflowsurf_japan/',
+            logo: 'deflowsurf.jpg',
+          },
+          {
+            name: 'MAXIM Craft Suits',
+            url: 'https://www.instagram.com/maximcraftsuits/',
+            logo: 'maxim.jpg',
+          },
+          {
+            name: 'FCS Japan',
+            url: 'https://www.instagram.com/fcs_japan/',
+            logo: 'fcs.jpg',
+          },
+          {
+            name: 'Destination',
+            url: 'https://www.instagram.com/destinationsurf1980/',
+            logo: 'destination.jpg',
+          },
+        ].map((brand) => (
+          <a
+            href={brand.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group flex items-center justify-center aspect-square border border-stone-800 hover:border-amber-400 transition overflow-hidden bg-stone-900"
+            title={brand.name}
+          >
+            <img
+              src={`${base}/images/neighborhood/${brand.logo}`}
+              alt={brand.name}
+              class="w-3/4 h-3/4 object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+            />
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
   <div class="text-center py-12 bg-stone-950">
     <a href={base} class="text-xs tracking-[0.3em] text-stone-500 hover:text-amber-400 transition">
       ← BACK TO エドナ屋
