@@ -7,7 +7,38 @@ const res = await fetch('https://edna.microcms.io/api/v1/surfboards?limit=100', 
   headers: { 'X-MICROCMS-API-KEY': import.meta.env.MICROCMS_API_KEY ?? '' },
 });
 const data = await res.json();
-const boards = data.contents ?? [];
+const allItems = data.contents ?? [];
+
+// カテゴリの値を取得（配列、文字列、オブジェクトに対応）
+const hasCategory = (item: any, targetCategory: string): boolean => {
+  // カテゴリが未設定またはダブるはい場合はデフォルトで 'Surfboards'
+  if (!item.category || (Array.isArray(item.category) && item.category.length === 0)) {
+    return targetCategory === 'Surfboards';
+  }
+
+  // 配列の場合
+  if (Array.isArray(item.category)) {
+    return item.category.some((cat: any) => {
+      if (typeof cat === 'string') return cat === targetCategory;
+      if (typeof cat === 'object' && cat.name) return cat.name === targetCategory;
+      return false;
+    });
+  }
+
+  // 文字列の場合
+  if (typeof item.category === 'string') return item.category === targetCategory;
+
+  // オブジェクトの場合
+  if (typeof item.category === 'object' && item.category.name) {
+    return item.category.name === targetCategory;
+  }
+
+  return false;
+};
+
+// カテゴリごとにグループ分け
+const boardItems = allItems.filter((item: any) => hasCategory(item, 'Surfboards'));
+const tshirtItems = allItems.filter((item: any) => hasCategory(item, 'Tshirt'));
 ---
 
 <Layout title="EDNA | エドナ屋" description="EDNA — サーフボードの製造・販売。">
@@ -36,9 +67,9 @@ const boards = data.contents ?? [];
 
   <!-- About -->
   <section class="py-24 px-6 bg-stone-950">
-    <div class="max-w-3xl mx-auto text-center">
+    <div class="text-left md:text-center mb-8">
       <!-- <p class="text-xs tracking-[0.4em] text-amber-400 mb-4">ABOUT</p> -->
-      <h2 class="text-3xl font-light tracking-wider text-amber-400 mb-12">ABOUT</h2>
+      <h2 class="text-3xl font-light tracking-wider text-amber-400 mb-12 text-center ">ABOUT</h2>
       <p class="text-stone-400 leading-loose">
         EDNAは、波と共に生きる人々のためのサーフボードブランドです。<br />
         Long Board、Short Board、Alternative —<br />
@@ -64,32 +95,67 @@ const boards = data.contents ?? [];
   <!-- Boards Gallery -->
   <section class="py-24 px-6 bg-black">
     <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-16">
-        <!-- <p class="text-xs tracking-[0.4em] text-amber-400 mb-4">BOARDS</p> -->
-        <h2 class="text-3xl font-light tracking-wider text-amber-400">BOARDS</h2>
-      </div>
-      <div class="grid md:grid-cols-3 gap-4">
-        {boards.map((b: any) => (
-          <div
-            class="border border-stone-800 cursor-pointer"
-            data-lightbox={b.image?.url}
-            data-name={b.name}
-            data-length={b.size}
-            data-caption={b.description}
-          >
-            <div class="overflow-hidden">
-              <img
-                src={b.image?.url}
-                alt={b.name || 'EDNA Surfboard'}
-                class="w-full object-cover hover:opacity-80 transition-opacity duration-300"
-              />
-            </div>
-            {b.name && (
-              <p class="text-xs tracking-[0.2em] text-stone-300 text-center py-3 px-4">{b.name}</p>
-            )}
+      {/* BOARDS Section */}
+      {boardItems.length > 0 && (
+        <div class="mb-24">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl font-light tracking-wider text-amber-400">BOARDS</h2>
           </div>
-        ))}
-      </div>
+          <div class="grid md:grid-cols-3 gap-4">
+            {boardItems.map((b: any) => (
+              <div
+                class="border border-stone-800 cursor-pointer"
+                data-lightbox={b.image?.url}
+                data-name={b.name}
+                data-length={b.size}
+                data-caption={b.description}
+              >
+                <div class="overflow-hidden">
+                  <img
+                    src={b.image?.url}
+                    alt={b.name || 'EDNA Surfboard'}
+                    class="w-full object-cover hover:opacity-80 transition-opacity duration-300"
+                  />
+                </div>
+                {b.name && (
+                  <p class="text-xs tracking-[0.2em] text-stone-300 text-center py-3 px-4">{b.name}</p>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* T-Shirt Section */}
+      {tshirtItems.length > 0 && (
+        <div>
+          <div class="text-center mb-16">
+            <h2 class="text-3xl font-light tracking-wider text-amber-400">T-SHIRT</h2>
+          </div>
+          <div class="grid md:grid-cols-3 gap-4">
+            {tshirtItems.map((b: any) => (
+              <div
+                class="border border-stone-800 cursor-pointer"
+                data-lightbox={b.image?.url}
+                data-name={b.name}
+                data-length={b.size}
+                data-caption={b.description}
+              >
+                <div class="overflow-hidden">
+                  <img
+                    src={b.image?.url}
+                    alt={b.name || 'EDNA T-Shirt'}
+                    class="w-full object-cover hover:opacity-80 transition-opacity duration-300"
+                  />
+                </div>
+                {b.name && (
+                  <p class="text-xs tracking-[0.2em] text-stone-300 text-center py-3 px-4">{b.name}</p>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   </section>
 
