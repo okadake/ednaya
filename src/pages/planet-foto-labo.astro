@@ -1,7 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const base = import.meta.env.BASE_URL;
 
 const peroFiles = [
   'pero_001.jpg','pero_002.png','pero_003.jpg','pero_004.jpg','pero_005.jpg',
@@ -12,7 +11,7 @@ const peroFiles = [
   'pero_026.jpg','pero_027.jpg','pero_028.png','pero_029.png','pero_030.png',
   'pero_031.png','pero_032.png','pero_033.png',
 ];
-const peroImages = peroFiles.map(f => `${base}/images/planet-foto-labo/pero/${f}`);
+const peroImages = peroFiles.map(f => `images/planet-foto-labo/pero/${f}`);
 
 const fumiFiles = [
   'fumi_001.jpg','fumi_002.jpg','fumi_003.jpg','fumi_004.jpg','fumi_005.jpg',
@@ -22,7 +21,7 @@ const fumiFiles = [
   'fumi_021.jpg','fumi_022.jpg','fumi_023.jpg','fumi_024.jpg','fumi_025.jpg',
   'fumi_026.jpg','fumi_027.jpg','fumi_028.jpg','fumi_029.jpg','fumi_030.jpg',
 ];
-const fumiImages = fumiFiles.map(f => `${base}/images/planet-foto-labo/fumi/${f}`);
+const fumiImages = fumiFiles.map(f => `images/planet-foto-labo/fumi/${f}`);
 ---
 
 <Layout title="PLANET FOTO LABO | エドナ屋" description="PLANET FOTO LABO — 写真家のアトリエ。">
@@ -30,7 +29,7 @@ const fumiImages = fumiFiles.map(f => `${base}/images/planet-foto-labo/fumi/${f}
   <section class="relative min-h-[80vh] flex items-center justify-center overflow-hidden -mt-16 pt-16">
     <div class="absolute inset-0">
       <img
-        src={`${base}/images/heroes/planet-foto-labo03.jpg`}
+        src={`images/heroes/planet-foto-labo03.jpg`}
         alt="PLANET FOTO LABO"
         class="w-full h-full object-cover"
       />
@@ -40,7 +39,7 @@ const fumiImages = fumiFiles.map(f => `${base}/images/planet-foto-labo/fumi/${f}
       <p class="text-xs tracking-[0.5em] text-sky-300 mb-6">PHOTOGRAPHER'S ATELIER</p>
       <h1 class="mb-6 flex justify-center">
         <img
-          src={`${base}/images/logo/pfl-white.png`}
+          src={`images/logo/pfl-white.png`}
           alt="PLANET FOTO LABO"
           class="h-30 md:h-50 w-auto"
           alt="planet-foto-labo"
@@ -92,7 +91,7 @@ const fumiImages = fumiFiles.map(f => `${base}/images/planet-foto-labo/fumi/${f}
             <div class="aspect-4/5 overflow-hidden bg-stone-900">
               {a.image ? (
                 <img
-                  src={`${base}/images/artists/${a.image}`}
+                  src={`images/artists/${a.image}`}
                   alt={a.name}
                   class="w-full h-full object-cover opacity-90"
                 />
@@ -228,7 +227,7 @@ const fumiImages = fumiFiles.map(f => `${base}/images/planet-foto-labo/fumi/${f}
   </section-->
 
   <div class="text-center py-12 bg-stone-950">
-    <a href={base} class="text-xs tracking-[0.3em] text-stone-500 hover:text-sky-400 transition">
+    <a href="/" class="text-xs tracking-[0.3em] text-stone-500 hover:text-sky-400 transition">
       ← BACK TO エドナ屋
     </a>
   </div>
