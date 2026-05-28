@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
+const base = import.meta.env.BASE_URL;
+
 const brands = [
   {
     slug: 'edna',
@@ -85,7 +87,24 @@ const brands = [
       ↓ SCROLL
     </div>
   </section>
-
+  <!-- About -->
+  <section id="about" class="py-12 px-6 bg-black">
+    <div class="max-w-3xl mx-auto text-center">
+      <!-- <p class="text-xs tracking-[0.4em] text-stone-500 mb-4">ABOUT</p> -->
+      <h2 class="text-3xl font-light tracking-wider mb-12 text-stone-400">ABOUT</h2>
+      <p class="text-stone-400 leading-loose">
+        「エドナ屋」は、サーフボードの<strong class="font-medium text-stone-200">EDNA</strong>、植物の<strong class="font-medium text-stone-200">BIRDIE</strong>、<br />
+        写真家のアトリエ<strong class="font-medium text-stone-200">PLANET FOTO LABO</strong>、<br />
+        建築設計の<strong class="font-medium text-stone-200">STUDIO LEON</strong>、<br />
+        アートブックの<strong class="font-medium text-stone-200">EDNA BOOKS</strong>、<br />
+        5つのブランドを束ねるプラットフォームです。
+      </p>
+      <p class="text-stone-400 leading-loose mt-6">
+        それぞれが独立した世界を持ちながら、<br />
+        日々の暮らしに彩りを添えるものを届けます。
+      </p>
+    </div>
+  </section>
   <!-- Brands Grid -->
   <section id="brands" class="py-12 px-6 bg-stone-950">
     <div class="max-w-6xl mx-auto">
@@ -101,7 +120,7 @@ const brands = [
             class={`group relative block overflow-hidden aspect-4/3 border border-stone-800 ${b.border} transition`}
           >
             <img
-              src={`/images/heroes/${b.image}`}
+              src={`${base}images/heroes/${b.image}`}
               alt={b.name}
               class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700"
             />
@@ -112,7 +131,7 @@ const brands = [
                 {b.logo ? (
                   <div style={b.slug === 'studio-leon' ? 'aspect-ratio: 740 / 143; display: flex; align-items: center; justify-content: center; width: 100%;' : ''}>
                     <img
-                      src={`/images/logo/${b.logo}`}
+                      src={`${base}images/logo/${b.logo}`}
                       alt={b.name}
                       class="h-20 md:h-28 w-auto max-w-full"
                       style={b.slug === 'studio-leon' ? 'object-fit: contain; width: 100%; height: auto;' : ''}
@@ -140,24 +159,7 @@ const brands = [
     </div>
   </section>
 
-  <!-- About -->
-  <section id="about" class="py-12 px-6 bg-black">
-    <div class="max-w-3xl mx-auto text-center">
-      <!-- <p class="text-xs tracking-[0.4em] text-stone-500 mb-4">ABOUT</p> -->
-      <h2 class="text-3xl font-light tracking-wider mb-12 text-stone-400">ABOUT</h2>
-      <p class="text-stone-400 leading-loose">
-        「エドナ屋」は、サーフボードの<strong class="font-medium text-stone-200">EDNA</strong>、植物の<strong class="font-medium text-stone-200">BIRDIE</strong>、<br />
-        写真家のアトリエ<strong class="font-medium text-stone-200">PLANET FOTO LABO</strong>、<br />
-        建築設計の<strong class="font-medium text-stone-200">STUDIO LEON</strong>、<br />
-        アートブックの<strong class="font-medium text-stone-200">EDNA BOOKS</strong>、<br />
-        5つのブランドを束ねるプラットフォームです。
-      </p>
-      <p class="text-stone-400 leading-loose mt-6">
-        それぞれが独立した世界を持ちながら、<br />
-        日々の暮らしに彩りを添えるものを届けます。
-      </p>
-    </div>
-  </section>
+
 
   <!-- Access -->
   <section id="access" class="py-24 px-6 bg-stone-950">

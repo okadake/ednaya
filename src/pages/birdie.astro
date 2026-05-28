@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
+const base = import.meta.env.BASE_URL;
 ---
 
 <Layout title="BIRDIE | エドナ屋" description="BIRDIE — 植物販売。">
@@ -8,7 +9,7 @@ import Layout from '../layouts/Layout.astro';
   <section class="relative min-h-[80vh] flex items-center justify-center overflow-hidden -mt-16 pt-16">
     <div class="absolute inset-0">
       <img
-        src={`/images/heroes/birdie.jpg`}
+        src={`${base}images/heroes/birdie.jpg`}
         alt="BIRDIE"
         class="w-full h-full object-cover"
       />
@@ -18,10 +19,9 @@ import Layout from '../layouts/Layout.astro';
       <p class="text-xs tracking-[0.5em] text-emerald-300 mb-6">BOTANICAL DESIGN</p>
       <h1 class="text-6xl md:text-8xl font-light tracking-[0.2em] text-white mb-4">
           <img
-          src={`/images/logo/birdie_logo.svg`}
-          alt=""BIRDIE"
+          src={`${base}images/logo/birdie_logo.svg`}
+          alt="BIRDIE - Botanical Design"
           class="h-30 md:h-40 w-auto"
-          alt="planet-foto-labo"
         />
       </h1>
 
@@ -48,9 +48,9 @@ import Layout from '../layouts/Layout.astro';
       </div>
       <div
         class="grid grid-cols-1 md:grid-cols-4 gap-4"
-        data-gallery={JSON.stringify(Array.from({ length: 8 }, (_, i) => `/images/birdie/BIRDIE00${i + 1}.jpg`))}
+        data-gallery={JSON.stringify(Array.from({ length: 8 }, (_, i) => `${base}images/birdie/BIRDIE00${i + 1}.jpg`))}
       >
-        {Array.from({ length: 8 }, (_, i) => `/images/birdie/BIRDIE00${i + 1}.jpg`).map((src, idx) => (
+        {Array.from({ length: 8 }, (_, i) => `${base}images/birdie/BIRDIE00${i + 1}.jpg`).map((src, idx) => (
           <div
             class="overflow-hidden border border-stone-800 hover:border-emerald-400 transition cursor-pointer"
             onclick={`openLightbox(${idx})`}
@@ -144,7 +144,7 @@ import Layout from '../layouts/Layout.astro';
   </script>
 
   <div class="text-center py-12 bg-stone-950">
-    <a href="/" class="text-xs tracking-[0.3em] text-stone-500 hover:text-emerald-400 transition">
+    <a href={base} class="text-xs tracking-[0.3em] text-stone-500 hover:text-emerald-400 transition">
       ← BACK TO エドナ屋
     </a>
   </div>

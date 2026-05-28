@@ -1,18 +1,19 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
+const base = import.meta.env.BASE_URL;
 
 const featuredBooks = [
   {
     title: 'Super Silent',
     artist: 'FUMI',
-    image: `/images/books/SuperSilent.jpg`,
+    image: `${base}images/books/SuperSilent.jpg`,
     gallery: [
-      `/images/books/SuperSilent/SuperSilent0702-2.jpg`,
-      `/images/books/SuperSilent/SuperSilent0702-7.jpg`,
-      `/images/books/SuperSilent/SuperSilent0702-49.jpg`,
-      `/images/books/SuperSilent/SuperSilent0702-90.jpg`,
-      `/images/books/SuperSilent/SuperSilent0702-108.jpg`,
+      `${base}images/books/SuperSilent/SuperSilent0702-2.jpg`,
+      `${base}images/books/SuperSilent/SuperSilent0702-7.jpg`,
+      `${base}images/books/SuperSilent/SuperSilent0702-49.jpg`,
+      `${base}images/books/SuperSilent/SuperSilent0702-90.jpg`,
+      `${base}images/books/SuperSilent/SuperSilent0702-108.jpg`,
     ],
     buyUrl: '',
     pages: 'A4/108P',
@@ -20,13 +21,13 @@ const featuredBooks = [
   {
     title: 'SKID ROW',
     artist: 'Photo and Text by FUMI',
-    image: `/images/books/SKIDROW.png`,
+    image: `${base}images/books/SKIDROW.png`,
     gallery: [
-      `/images/books/skidrow/skidrowF_16.jpg`,
-      `/images/books/skidrow/skidrowF_29.jpg`,
-      `/images/books/skidrow/skidrowF_73.jpg`,
-      `/images/books/skidrow/skidrowF_75.jpg`,
-      `/images/books/skidrow/skidrowF_82.jpg`,
+      `${base}images/books/skidrow/skidrowF_16.jpg`,
+      `${base}images/books/skidrow/skidrowF_29.jpg`,
+      `${base}images/books/skidrow/skidrowF_73.jpg`,
+      `${base}images/books/skidrow/skidrowF_75.jpg`,
+      `${base}images/books/skidrow/skidrowF_82.jpg`,
     ],
     buyUrl: 'https://dolocal.thebase.in/items/74795109',
     pages: 'A4/94P',
@@ -34,11 +35,11 @@ const featuredBooks = [
   {
     title: 'CPT Photobook',
     artist: 'PHOTO by FUMI / SHOUT by VEGA-T',
-    image: `/images/books/CPT-photobook.png`,
+    image: `${base}images/books/CPT-photobook.png`,
     gallery: [
-      `/images/books/CPT-photobook/001.jpeg`,
-      `/images/books/CPT-photobook/002.jpeg`,
-      `/images/books/CPT-photobook/003.jpeg`,
+      `${base}images/books/CPT-photobook/001.jpeg`,
+      `${base}images/books/CPT-photobook/002.jpeg`,
+      `${base}images/books/CPT-photobook/003.jpeg`,
     ],
     buyUrl: 'https://dolocal.thebase.in/items/38018887',
     pages: 'A4変形 / 100P / モノクロ',
@@ -46,21 +47,21 @@ const featuredBooks = [
   {
     title: 'Dear Style Masters,',
     artist: 'Pero Hayashi',
-    image: `/images/books/dear-style-masters.png`,
+    image: `${base}images/books/dear-style-masters.png`,
     gallery: [
-      `/images/books/dear-style-masters/1.png`,
-      `/images/books/dear-style-masters/2.png`,
-      `/images/books/dear-style-masters/3.png`,
-      `/images/books/dear-style-masters/4.png`,
-      `/images/books/dear-style-masters/5.png`,
-      `/images/books/dear-style-masters/6.png`,
-      `/images/books/dear-style-masters/7.png`,
-      `/images/books/dear-style-masters/8.png`,
-      `/images/books/dear-style-masters/9.png`,
-      `/images/books/dear-style-masters/10.png`,
-      `/images/books/dear-style-masters/11.png`,
-      `/images/books/dear-style-masters/12.png`,
-      `/images/books/dear-style-masters/13.png`,
+      `${base}images/books/dear-style-masters/1.png`,
+      `${base}images/books/dear-style-masters/2.png`,
+      `${base}images/books/dear-style-masters/3.png`,
+      `${base}images/books/dear-style-masters/4.png`,
+      `${base}images/books/dear-style-masters/5.png`,
+      `${base}images/books/dear-style-masters/6.png`,
+      `${base}images/books/dear-style-masters/7.png`,
+      `${base}images/books/dear-style-masters/8.png`,
+      `${base}images/books/dear-style-masters/9.png`,
+      `${base}images/books/dear-style-masters/10.png`,
+      `${base}images/books/dear-style-masters/11.png`,
+      `${base}images/books/dear-style-masters/12.png`,
+      `${base}images/books/dear-style-masters/13.png`,
     ],
     buyUrl: '',
     pages: 'A4 / 144P',
@@ -68,14 +69,14 @@ const featuredBooks = [
   {
     title: 'To Leave Is to Return <br /> -Saigon Red,Phu Quoc Blue',
     artist: 'Keizo Okada',
-    image: `/images/books/ToLeaveIsToReturn_sigonPhuQuoc.jpg`,
+    image: `${base}images/books/ToLeaveIsToReturn_sigonPhuQuoc.jpg`,
     gallery: [
-      `/images/books/ToLeaveIsToReturn_sigonPhuQuoc/A7400789.jpg`,
-      `/images/books/ToLeaveIsToReturn_sigonPhuQuoc/A7401131.jpg`,
-      `/images/books/ToLeaveIsToReturn_sigonPhuQuoc/A7402744.jpg`,
-      `/images/books/ToLeaveIsToReturn_sigonPhuQuoc/A7403564.jpg`,
-      `/images/books/ToLeaveIsToReturn_sigonPhuQuoc/A7405661.jpg`,
-      `/images/books/ToLeaveIsToReturn_sigonPhuQuoc/A7406414.jpg`,
+      `${base}images/books/ToLeaveIsToReturn_sigonPhuQuoc/A7400789.jpg`,
+      `${base}images/books/ToLeaveIsToReturn_sigonPhuQuoc/A7401131.jpg`,
+      `${base}images/books/ToLeaveIsToReturn_sigonPhuQuoc/A7402744.jpg`,
+      `${base}images/books/ToLeaveIsToReturn_sigonPhuQuoc/A7403564.jpg`,
+      `${base}images/books/ToLeaveIsToReturn_sigonPhuQuoc/A7405661.jpg`,
+      `${base}images/books/ToLeaveIsToReturn_sigonPhuQuoc/A7406414.jpg`,
     ],
     buyUrl: '',
     pages: 'B5 / 54P',
@@ -83,14 +84,14 @@ const featuredBooks = [
   {
     title: "To Leave Is to Return <br /> -At The Water's Edge",
     artist: 'Keizo Okada',
-    image: `/images/books/ToLeaveIsToReturn_AtTheWater'sEdge.jpg`,
+    image: `${base}images/books/ToLeaveIsToReturn_AtTheWater'sEdge.jpg`,
     gallery: [
-      `/images/books/ToLeaveIsToReturn_AtTheWater'sEdge/001.jpg`,
-      `/images/books/ToLeaveIsToReturn_AtTheWater'sEdge/002.jpg`,
-      `/images/books/ToLeaveIsToReturn_AtTheWater'sEdge/003.jpg`,
-      `/images/books/ToLeaveIsToReturn_AtTheWater'sEdge/004.jpg`,
-      `/images/books/ToLeaveIsToReturn_AtTheWater'sEdge/005.jpg`,
-      `/images/books/ToLeaveIsToReturn_AtTheWater'sEdge/006.jpg`,
+      `${base}images/books/ToLeaveIsToReturn_AtTheWater'sEdge/001.jpg`,
+      `${base}images/books/ToLeaveIsToReturn_AtTheWater'sEdge/002.jpg`,
+      `${base}images/books/ToLeaveIsToReturn_AtTheWater'sEdge/003.jpg`,
+      `${base}images/books/ToLeaveIsToReturn_AtTheWater'sEdge/004.jpg`,
+      `${base}images/books/ToLeaveIsToReturn_AtTheWater'sEdge/005.jpg`,
+      `${base}images/books/ToLeaveIsToReturn_AtTheWater'sEdge/006.jpg`,
     ],
     buyUrl: '',
     pages: 'B5 / 84P',
@@ -98,19 +99,19 @@ const featuredBooks = [
   {
     title: "To Leave Is to Return <br /> -Entre Cataluña y Euskadi",
     artist: 'Keizo Okada',
-    image: `/images/books/EntreCataluna_y_Euskadi.jpg`,
+    image: `${base}images/books/EntreCataluna_y_Euskadi.jpg`,
     gallery: [
-      `/images/books/EntreCataluna_y_Euskadi/001.jpg`,
-      `/images/books/EntreCataluna_y_Euskadi/002.jpg`,
-      `/images/books/EntreCataluna_y_Euskadi/003.jpg`,
-      `/images/books/EntreCataluna_y_Euskadi/004.jpg`,
-      `/images/books/EntreCataluna_y_Euskadi/005.jpg`,
+      `${base}images/books/EntreCataluna_y_Euskadi/001.jpg`,
+      `${base}images/books/EntreCataluna_y_Euskadi/002.jpg`,
+      `${base}images/books/EntreCataluna_y_Euskadi/003.jpg`,
+      `${base}images/books/EntreCataluna_y_Euskadi/004.jpg`,
+      `${base}images/books/EntreCataluna_y_Euskadi/005.jpg`,
     ],
     buyUrl: '',
     pages: 'A4 / 56P',
   },
   // 次のブックをここに追加:
-  // { title: '', artist: '', image: `/images/books/.jpg`, gallery: null, buyUrl: '' },
+  // { title: '', artist: '', image: `${base}images/books/.jpg`, gallery: null, buyUrl: '' },
 ];
 ---
 
@@ -119,7 +120,7 @@ const featuredBooks = [
   <section class="relative min-h-[80vh] flex items-center justify-center overflow-hidden -mt-16 pt-16">
     <div class="absolute inset-0">
       <img
-        src={`/images/heroes/ednabooks.jpg`}
+        src={`${base}images/heroes/ednabooks.jpg`}
         alt="EDNA BOOKS"
         class="w-full h-full object-cover"
       />
@@ -129,7 +130,7 @@ const featuredBooks = [
       <p class="text-xs tracking-[0.5em] text-rose-300 mb-6">Art books</p>
       <h1 class="mb-6 flex justify-center">
         <img
-          src={`/images/logo/ednabooks_logo.svg`}
+          src={`${base}images/logo/ednabooks_logo.svg`}
           alt="EDNA BOOKS"
           class="h-40 md:h-50 w-auto"
           alt="EDNA BOOKS"
@@ -297,7 +298,7 @@ const featuredBooks = [
   </section-->
 
   <div class="text-center py-3 bg-stone-950">
-    <a href="/" class="text-xs tracking-[0.3em] text-stone-500 hover:text-rose-400 transition">
+    <a href={base} class="text-xs tracking-[0.3em] text-stone-500 hover:text-rose-400 transition">
       ← BACK TO エドナ屋
     </a>
   </div>
