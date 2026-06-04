@@ -9,7 +9,11 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "deploy": "node deploy.js",
+    "deploy:full": "node deploy-full.js",
+    "build-deploy": "npm run build && npm run deploy",
+    "build-deploy:full": "npm run build && npm run deploy:full"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",
@@ -17,5 +21,9 @@
     "astro": "^6.2.1",
     "glightbox": "^3.3.1",
     "tailwindcss": "^4.2.4"
+  },
+  "devDependencies": {
+    "dotenv": "^17.4.2",
+    "ftp-deploy": "^2.4.7"
   }
 }

@@ -3,25 +3,26 @@ import Layout from '../layouts/Layout.astro';
 
 const base = import.meta.env.BASE_URL;
 
-const featuredBooks = [
+const allBooks = [
   {
-    title: 'Super Silent',
+    title: 'CPT Photobook',
     artist: 'FUMI',
-    image: `${base}images/books/SuperSilent.jpg`,
+    image: `${base}images/books/CPT-photobook.png`,
+    description: 'ストリートの皮膚を写すモノクロームの視点。VEGA-Tの言葉と共鳴しながら、場所と身体が交差する瞬間を静かに捉えた眼差し。',
     gallery: [
-      `${base}images/books/SuperSilent/SuperSilent0702-2.jpg`,
-      `${base}images/books/SuperSilent/SuperSilent0702-7.jpg`,
-      `${base}images/books/SuperSilent/SuperSilent0702-49.jpg`,
-      `${base}images/books/SuperSilent/SuperSilent0702-90.jpg`,
-      `${base}images/books/SuperSilent/SuperSilent0702-108.jpg`,
+      `${base}images/books/CPT-photobook/001.jpeg`,
+      `${base}images/books/CPT-photobook/002.jpeg`,
+      `${base}images/books/CPT-photobook/003.jpeg`,
     ],
-    buyUrl: '',
-    pages: 'A4/108P',
+    buyUrl: 'https://dolocal.thebase.in/items/38018887',
+    pages: 'A4変形 / 100P / モノクロ / 2009',
+    slug: 'cpt-photobook',
   },
   {
     title: 'SKID ROW',
-    artist: 'Photo and Text by FUMI',
+    artist: 'FUMI',
     image: `${base}images/books/SKIDROW.png`,
+    description: 'ロサンゼルス・ダウンタウンの一街区へ。写真と言葉の両方でSKID ROWの現実に踏み込んだ、FUMIの作家性が最も濃く滲む作品。',
     gallery: [
       `${base}images/books/skidrow/skidrowF_16.jpg`,
       `${base}images/books/skidrow/skidrowF_29.jpg`,
@@ -30,24 +31,30 @@ const featuredBooks = [
       `${base}images/books/skidrow/skidrowF_82.jpg`,
     ],
     buyUrl: 'https://dolocal.thebase.in/items/74795109',
-    pages: 'A4/94P',
+    pages: 'A4/94P / 2023',
+    slug: 'skidrow',
   },
   {
-    title: 'CPT Photobook',
-    artist: 'PHOTO by FUMI / SHOUT by VEGA-T',
-    image: `${base}images/books/CPT-photobook.png`,
+    title: 'Super Silent',
+    artist: 'FUMI',
+    image: `${base}images/books/SuperSilent.jpg`,
+    description: '音のない場所を巡る旅。都市の隙間に潜む沈黙を追い、静寂そのものを被写体にした108ページ。FUMIの最大ボリューム作にして最も内省的な一冊。',
     gallery: [
-      `${base}images/books/CPT-photobook/001.jpeg`,
-      `${base}images/books/CPT-photobook/002.jpeg`,
-      `${base}images/books/CPT-photobook/003.jpeg`,
+      `${base}images/books/SuperSilent/SuperSilent0702-2.jpg`,
+      `${base}images/books/SuperSilent/SuperSilent0702-7.jpg`,
+      `${base}images/books/SuperSilent/SuperSilent0702-49.jpg`,
+      `${base}images/books/SuperSilent/SuperSilent0702-90.jpg`,
+      `${base}images/books/SuperSilent/SuperSilent0702-108.jpg`,
     ],
-    buyUrl: 'https://dolocal.thebase.in/items/38018887',
-    pages: 'A4変形 / 100P / モノクロ',
+    buyUrl: '',
+    pages: 'A4/108P / 2025',
+    slug: 'super-silent',
   },
   {
     title: 'Dear Style Masters,',
     artist: 'Pero Hayashi',
     image: `${base}images/books/dear-style-masters.png`,
+    description: 'スタイルを持つすべての人へ宛てた手紙。サーフカルチャーを巡るロードムービーのような、静かで親密な旅の記録。',
     gallery: [
       `${base}images/books/dear-style-masters/1.png`,
       `${base}images/books/dear-style-masters/2.png`,
@@ -64,27 +71,30 @@ const featuredBooks = [
       `${base}images/books/dear-style-masters/13.png`,
     ],
     buyUrl: '',
-    pages: 'A4 / 144P',
+    pages: 'A4 / 144P / 2025.10',
+    slug: 'dear-style-masters',
   },
   {
-    title: 'To Leave Is to Return <br /> -Saigon Red,Phu Quoc Blue',
-    artist: 'Keizo Okada',
-    image: `${base}images/books/ToLeaveIsToReturn_sigonPhuQuoc.jpg`,
+    title: "To Leave Is to Return <br /> -Entre Cataluña y Euskadi",
+    artist: 'KEIZO OKADA',
+    image: `${base}images/books/EntreCataluna_y_Euskadi.jpg`,
+    description: 'カタルーニャからバスク地方へ。異なる言語と文化が交差するスペインの風景を、静かな視線で切り取ったドキュメンタリー写真集。',
     gallery: [
-      `${base}images/books/ToLeaveIsToReturn_sigonPhuQuoc/A7400789.jpg`,
-      `${base}images/books/ToLeaveIsToReturn_sigonPhuQuoc/A7401131.jpg`,
-      `${base}images/books/ToLeaveIsToReturn_sigonPhuQuoc/A7402744.jpg`,
-      `${base}images/books/ToLeaveIsToReturn_sigonPhuQuoc/A7403564.jpg`,
-      `${base}images/books/ToLeaveIsToReturn_sigonPhuQuoc/A7405661.jpg`,
-      `${base}images/books/ToLeaveIsToReturn_sigonPhuQuoc/A7406414.jpg`,
+      `${base}images/books/EntreCataluna_y_Euskadi/001.jpg`,
+      `${base}images/books/EntreCataluna_y_Euskadi/002.jpg`,
+      `${base}images/books/EntreCataluna_y_Euskadi/003.jpg`,
+      `${base}images/books/EntreCataluna_y_Euskadi/004.jpg`,
+      `${base}images/books/EntreCataluna_y_Euskadi/005.jpg`,
     ],
     buyUrl: '',
-    pages: 'B5 / 54P',
+    pages: 'A4 / 56P / 2025.10',
+    slug: 'entre-cataluna-euskadi',
   },
   {
     title: "To Leave Is to Return <br /> -At The Water's Edge",
-    artist: 'Keizo Okada',
+    artist: 'KEIZO OKADA',
     image: `${base}images/books/ToLeaveIsToReturn_AtTheWater'sEdge.jpg`,
+    description: '水辺にたたずむ人と風景。波打ち際、川沿い、港のほとり——水と人間の境界に宿る静けさを丁寧に拾い集めた、シリーズ最大のボリューム。',
     gallery: [
       `${base}images/books/ToLeaveIsToReturn_AtTheWater'sEdge/001.jpg`,
       `${base}images/books/ToLeaveIsToReturn_AtTheWater'sEdge/002.jpg`,
@@ -94,25 +104,40 @@ const featuredBooks = [
       `${base}images/books/ToLeaveIsToReturn_AtTheWater'sEdge/006.jpg`,
     ],
     buyUrl: '',
-    pages: 'B5 / 84P',
+    pages: 'B5 / 84P / 2026.05',
+    slug: 'water-edge',
   },
   {
-    title: "To Leave Is to Return <br /> -Entre Cataluña y Euskadi",
-    artist: 'Keizo Okada',
-    image: `${base}images/books/EntreCataluna_y_Euskadi.jpg`,
+    title: 'To Leave Is to Return <br /> -Saigon Red,Phu Quoc Blue',
+    artist: 'KEIZO OKADA',
+    image: `${base}images/books/ToLeaveIsToReturn_sigonPhuQuoc.jpg`,
+    description: '変わりゆくベトナムのホーチミンとフーコック島。それぞれの街が持つ独自のカラーを追いかけながら、目覚ましい開発の最中にある2026年を記録した一冊。',
     gallery: [
-      `${base}images/books/EntreCataluna_y_Euskadi/001.jpg`,
-      `${base}images/books/EntreCataluna_y_Euskadi/002.jpg`,
-      `${base}images/books/EntreCataluna_y_Euskadi/003.jpg`,
-      `${base}images/books/EntreCataluna_y_Euskadi/004.jpg`,
-      `${base}images/books/EntreCataluna_y_Euskadi/005.jpg`,
+      `${base}images/books/ToLeaveIsToReturn_sigonPhuQuoc/A7400789.jpg`,
+      `${base}images/books/ToLeaveIsToReturn_sigonPhuQuoc/A7401131.jpg`,
+      `${base}images/books/ToLeaveIsToReturn_sigonPhuQuoc/A7402744.jpg`,
+      `${base}images/books/ToLeaveIsToReturn_sigonPhuQuoc/A7403564.jpg`,
+      `${base}images/books/ToLeaveIsToReturn_sigonPhuQuoc/A7405661.jpg`,
+      `${base}images/books/ToLeaveIsToReturn_sigonPhuQuoc/A7406414.jpg`,
     ],
     buyUrl: '',
-    pages: 'A4 / 56P',
+    pages: 'B5 / 54P / 2026.05',
+    slug: 'saigon-phuquoc',
   },
-  // 次のブックをここに追加:
-  // { title: '', artist: '', image: `${base}images/books/.jpg`, gallery: null, buyUrl: '' },
 ];
+
+// Group books by artist
+const booksByArtist = allBooks.reduce((acc, book) => {
+  const artist = book.artist;
+  if (!acc[artist]) {
+    acc[artist] = [];
+  }
+  acc[artist].push(book);
+  return acc;
+}, {} as Record<string, typeof allBooks>);
+
+// Sort artists alphabetically
+const sortedArtists = Object.keys(booksByArtist).sort();
 ---
 
 <Layout title="EDNA BOOKS | エドナ屋" description="EDNA BOOKS — アートブック">
@@ -154,51 +179,94 @@ const featuredBooks = [
 
   <!-- Featured Books -->
   <section class="py-24 px-6 bg-black">
-    <div class="max-w-5xl mx-auto">
+    <div class="max-w-6xl mx-auto">
       <div class="text-center mb-16">
-        <!-- <p class="text-xs tracking-[0.4em] text-rose-400 mb-4">FEATURED</p> -->
-        <h2 class="text-3xl font-light tracking-wider text-rose-400">Photobooks</h2>
+        <h2 class="text-3xl font-light tracking-wider text-rose-400">PHOTOBOOKS</h2>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {featuredBooks.map((book) => (
-          <div
-            class="group cursor-pointer"
-            data-gallery={book.gallery ? JSON.stringify(book.gallery) : null}
-            onclick={book.gallery ? "openLightbox(this)" : null}
-          >
-            <div class="bg-stone-900 aspect-3/4 overflow-hidden border border-stone-800 group-hover:border-olive-500 transition mb-3">
-              {book.image ? (
-                <img src={book.image} alt={book.title} class="w-full h-full object-cover" />
-              ) : (
-                <div class="w-full h-full flex items-center justify-center">
-                  <span class="text-xs tracking-[0.3em] text-stone-600">BOOK</span>
+
+      {sortedArtists.map((artist, artistIndex) => (
+        <div key={artist}>
+          <div class="mb-12">
+            <h3 class="text-lg font-light tracking-wider text-rose-300 mb-2">
+              {artist}
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+              {booksByArtist[artist].map((book) => (
+                <div class="flex flex-col h-full">
+                  {/* Cover Image */}
+                  <div
+                    class="group relative bg-stone-900 aspect-3/4 overflow-hidden border border-stone-800 hover:border-rose-400 transition mb-3 cursor-pointer"
+                    data-gallery={book.gallery ? JSON.stringify(book.gallery) : null}
+                    onclick={book.gallery ? "openLightbox(this)" : null}
+                  >
+                    {book.image ? (
+                      <img
+                        src={book.image}
+                        alt={book.title}
+                        class="w-full h-full object-cover group-hover:opacity-80 transition-opacity"
+                      />
+                    ) : (
+                      <div class="w-full h-full flex items-center justify-center">
+                        <span class="text-xs tracking-[0.3em] text-stone-600">BOOK</span>
+                      </div>
+                    )}
+                    {/* Hover Overlay */}
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/30">
+                      <span class="px-3 py-1.5 bg-black/80 text-xs tracking-wider text-rose-300 rounded">Click to preview</span>
+                    </div>
+                  </div>
+
+                  {/* Title */}
+                  <p class="text-sm md:text-base tracking-wider text-stone-300 mb-2" set:html={book.title} />
+
+                  {/* Spec */}
+                  {book.pages && <p class="text-xs text-stone-600 mb-3">{book.pages}</p>}
+
+                  {/* Description */}
+                  <p class="text-sm text-stone-500 mb-4 flex-grow line-clamp-3">
+                    {book.description}
+                  </p>
+
+                  {/* Action Buttons */}
+                  <div class="flex gap-2">
+                    {book.buyUrl ? (
+                      <a
+                        href={book.buyUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="flex-1 text-center px-3 py-1.5 text-xs tracking-[0.2em] border border-rose-400 text-rose-400 hover:bg-rose-400 hover:text-black transition"
+                        onclick="event.stopPropagation()"
+                      >
+                        BUY
+                      </a>
+                    ) : (
+                      <span
+                        class="flex-1 text-center px-3 py-1.5 text-xs tracking-[0.2em] border border-stone-700 text-stone-600 cursor-default"
+                        onclick="event.stopPropagation()"
+                      >
+                        BUY
+                      </span>
+                    )}
+                    {book.gallery && (
+                      <button
+                        class="flex-1 px-3 py-1.5 text-xs tracking-[0.2em] border border-rose-400 bg-rose-400 text-black hover:bg-transparent hover:text-rose-400 transition text-center flex items-center justify-center gap-2"
+                        data-gallery={JSON.stringify(book.gallery)}
+                        onclick="event.stopPropagation(); openLightbox(this)"
+                      >
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+                        </svg>
+                        PREVIEW
+                      </button>
+                    )}
+                  </div>
                 </div>
-              )}
+              ))}
             </div>
-            <p class="text-xs tracking-wider text-stone-300" set:html={book.title} />
-            {book.pages && <p class="text-xs text-stone-600 mt-1">{book.pages}</p>}
-            <p class="text-xs text-stone-500 mt-1">{book.artist}</p>
-            {book.buyUrl ? (
-              <a
-                href={book.buyUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="inline-block mt-3 px-4 py-1.5 text-xs tracking-[0.2em] border border-rose-400 text-rose-400 hover:bg-rose-400 hover:text-black transition"
-                onclick="event.stopPropagation()"
-              >
-                BUY
-              </a>
-            ) : (
-              <span
-                class="inline-block mt-3 px-4 py-1.5 text-xs tracking-[0.2em] border border-stone-700 text-stone-600 cursor-default"
-                onclick="event.stopPropagation()"
-              >
-                BUY
-              </span>
-            )}
+            {artistIndex < sortedArtists.length - 1 && <hr class="border-stone-800 mb-12" />}
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
     </div>
   </section>
 
