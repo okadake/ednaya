@@ -15,7 +15,11 @@ pnpm-debug.log*
 
 # environment variables
 .env
+.env.local
 .env.production
+
+# auto-generated data
+src/data/keizo-gallery.json
 
 # macOS-specific files
 .DS_Store
