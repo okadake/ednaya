@@ -1,0 +1,349 @@
+---
+import SimpleLayout from '../../../layouts/SimpleLayout.astro';
+import galleryData from '../../../data/keizo-gallery.json';
+
+const base = import.meta.env.BASE_URL;
+
+// JSON から画像データを取得
+const galleryItems = galleryData.sort((a, b) => a.order - b.order);
+const galleryImages = galleryItems.map(item => item.imageUrl);
+
+// キャプション & カテゴリ マップを生成
+const captionMap: Record<string, string> = {};
+const categoryMap: Record<string, string> = {};
+galleryItems.forEach(item => {
+  captionMap[item.filename] = item.caption;
+  categoryMap[item.filename] = item.category || '';
+});
+
+// ユニークなカテゴリーリストを取得
+const categories = ['all', ...new Set(galleryItems.filter(item => item.category).map(item => item.category))].map(cat => ({
+  id: cat,
+  label: cat.charAt(0).toUpperCase() + cat.slice(1)
+}));
+
+const artistData = {
+  name: 'KEIZO OKADA',
+  role: 'PHOTOGRAPHER',
+  bio: '静かな視線でこの世界の風景と人間を捉える写真家。異なる文化や地域の違いに惹かれ、その土地の光と影を丁寧に記録する。シリーズ作品「To Leave Is to Return」を通じて、世界中の風景と人間の関係性を探求している。',
+  image: `${base}images/artists/keizo.jpg`,
+};
+---
+
+<SimpleLayout title={`${artistData.name} | エドナ屋`} description={artistData.name}>
+  <style>
+    @keyframes fadeInScale {
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .gallery-item-animate img {
+      animation: fadeInScale 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+    }
+  </style>
+  <!-- About Section -->
+  <section class="py-8 px-6 bg-black">
+    <div class="max-w-6xl mx-auto w-full">
+      <!-- モバイル: 肩書き → 名前 → 写真 → 説明 -->
+      <div class="md:hidden flex flex-col gap-8">
+        <!-- Title Section -->
+        <div>
+          <p class="text-xs tracking-[0.3em] text-rose-400 mb-4">{artistData.role}</p>
+          <h1 class="text-4xl font-light tracking-widest text-white">{artistData.name}</h1>
+        </div>
+
+        <!-- Image -->
+        <div class="w-full flex justify-center">
+          <div class="w-full max-w-[200px] overflow-hidden bg-stone-900 rounded-sm aspect-3/4">
+            <img
+              src={artistData.image}
+              alt={artistData.name}
+              class="w-full h-full object-cover opacity-95"
+            />
+          </div>
+        </div>
+
+        <!-- Bio -->
+        <div>
+          <p class="text-base text-stone-300 leading-relaxed mb-8">
+            {artistData.bio}
+          </p>
+
+          <div class="flex gap-6 text-xs tracking-[0.2em]">
+            <a
+              href={`${base}edna-books`}
+              class="text-stone-400 hover:text-rose-400 transition"
+            >
+              ← BACK TO BOOKS
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PC: 写真（左） | 肩書き + 名前 + 説明（右） -->
+      <div class="hidden md:flex gap-12 items-start">
+        <!-- Image -->
+        <div class="flex-shrink-0">
+          <div class="w-40 h-48 overflow-hidden bg-stone-900 rounded-sm">
+            <img
+              src={artistData.image}
+              alt={artistData.name}
+              class="w-full h-full object-cover opacity-95"
+            />
+          </div>
+        </div>
+
+        <!-- Bio -->
+        <div class="flex-1 pt-2">
+          <p class="text-xs tracking-[0.3em] text-rose-400 mb-4">{artistData.role}</p>
+          <h1 class="text-4xl font-light tracking-widest text-white mb-8">{artistData.name}</h1>
+          <p class="text-base text-stone-300 leading-relaxed mb-8">
+            {artistData.bio}
+          </p>
+
+          <div class="flex gap-6 text-xs tracking-[0.2em]">
+            <a
+              href={`${base}edna-books`}
+              class="text-stone-400 hover:text-rose-400 transition"
+            >
+              ← BACK TO BOOKS
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="py-12 px-6 bg-stone-950">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-3xl font-light tracking-wider text-rose-400 mb-4 text-center">GALLERY</h2>
+
+      <!-- Category Tabs -->
+      <div class="flex justify-center gap-3 mb-8 flex-wrap">
+        {categories.map((category, idx) => (
+          <button
+            class={`category-tab text-base tracking-[0.2em] transition pb-2 border-b-2 ${idx === 0 ? 'active text-rose-400 border-rose-400' : 'text-stone-300 hover:text-rose-400 border-transparent hover:border-rose-400'}`}
+            data-category={category.id}
+          >
+            {category.label}
+          </button>
+        ))}
+      </div>
+
+      <!-- Masonry Grid -->
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-2 auto-rows-[140px]" id="gallery-grid">
+        {galleryItems.map((item, idx) => {
+          const rowSpanPattern = [1, 1, 2, 1, 1, 1, 2, 1, 1, 1, 2, 1];
+          const rowSpan = rowSpanPattern[idx % rowSpanPattern.length];
+          return (
+            <div
+              class={`group relative bg-stone-900 overflow-hidden cursor-pointer hover:shadow-lg transition-shadow gallery-item-animate ${rowSpan === 2 ? 'row-span-2' : 'row-span-1'}`}
+              data-gallery-item
+              data-category="all"
+              data-category-item={item.category || ''}
+              data-index={idx}
+            >
+              <img
+                src={item.imageUrl}
+                alt=""
+                class="w-full h-full object-cover"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300"></div>
+            </div>
+          );
+        })}
+      </div>
+
+      <script>
+        // ギャラリーアイテムに遅延を設定
+        const galleryItems = document.querySelectorAll('.gallery-item-animate');
+        galleryItems.forEach((item, idx) => {
+          item.style.animationDelay = (idx * 0.05) + 's';
+        });
+      </script>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div id="lb" class="fixed inset-0 z-50 hidden flex-col items-center justify-center bg-black/95 p-6" role="dialog" aria-modal="true">
+    <button id="lb-prev" class="absolute left-0 top-0 h-full w-[15%] flex items-center justify-start pl-4 text-white/50 hover:text-white text-5xl transition-colors z-10" aria-label="前へ">‹</button>
+    <button id="lb-next" class="absolute right-0 top-0 h-full w-[15%] flex items-center justify-end pr-4 text-white/50 hover:text-white text-5xl transition-colors z-10" aria-label="次へ">›</button>
+
+    <div class="flex flex-col items-center max-w-[80vw]">
+      <img id="lb-img" src="" alt="" class="max-h-[70vh] max-w-[70vw] object-contain select-none" />
+
+      <div class="mt-4 w-full text-center">
+        <div class=" rounded py-1 mb-2 min-h-[40px] flex items- justify-center">
+          <input
+            id="lb-caption"
+            type="text"
+            placeholder="caption"
+            class="w-full bg-transparent text-sm text-stone-600 placeholder-stone-600 outline-none text-right"
+          />
+        </div>
+        <p id="lb-counter" class="text-xs tracking-widest text-stone-500 mb-3"></p>
+      </div>
+    </div>
+
+    <button id="lb-close" class="absolute top-6 right-6 text-white text-3xl leading-none hover:text-rose-400 transition-colors z-20" aria-label="閉じる">✕</button>
+  </div>
+
+  <script define:vars={{ galleryImages, captionMap, categoryMap }}>
+    let allPhotos = galleryImages;
+    let photos = galleryImages;
+    let current = 0;
+    let touchStartX = 0;
+    let touchStartY = 0;
+    let currentCategory = 'all';
+
+    const lb = document.getElementById('lb');
+    const lbImg = document.getElementById('lb-img');
+    const lbCnt = document.getElementById('lb-counter');
+    const lbCaption = document.getElementById('lb-caption');
+
+    function getFilename(url) {
+      const baseFilename = url.split('/').pop();
+      return baseFilename.split('?')[0];
+    }
+
+    function showPhoto() {
+      lbImg.src = photos[current];
+      lbCnt.textContent = `${current + 1} / ${photos.length}`;
+
+      // キャプションマップから取得して表示
+      const filename = getFilename(photos[current]);
+      lbCaption.value = captionMap[filename] || '';
+      lbCaption.disabled = true;
+      lbCaption.style.cursor = 'default';
+    }
+
+    function openLightbox(index) {
+      current = index;
+      showPhoto();
+      lb.classList.remove('hidden');
+      lb.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+      lbCaption.focus();
+    }
+
+    function closeLightbox() {
+      lb.classList.add('hidden');
+      lb.classList.remove('flex');
+      lbImg.src = '';
+      document.body.style.overflow = '';
+    }
+
+    function prevPhoto() {
+      current = (current - 1 + photos.length) % photos.length;
+      showPhoto();
+    }
+
+    function nextPhoto() {
+      current = (current + 1) % photos.length;
+      showPhoto();
+    }
+
+    document.getElementById('lb-prev').addEventListener('click', (e) => {
+      e.stopPropagation();
+      prevPhoto();
+    });
+
+    document.getElementById('lb-next').addEventListener('click', (e) => {
+      e.stopPropagation();
+      nextPhoto();
+    });
+
+    document.getElementById('lb-close').addEventListener('click', closeLightbox);
+
+    lb.addEventListener('touchstart', (e) => {
+      touchStartX = e.touches[0].clientX;
+      touchStartY = e.touches[0].clientY;
+    }, { passive: true });
+
+    lb.addEventListener('touchmove', (e) => {
+      const dx = Math.abs(e.touches[0].clientX - touchStartX);
+      const dy = Math.abs(e.touches[0].clientY - touchStartY);
+      if (dx > dy) e.preventDefault();
+    }, { passive: false });
+
+    lb.addEventListener('touchend', (e) => {
+      const dx = touchStartX - e.changedTouches[0].clientX;
+      const dy = Math.abs(e.changedTouches[0].clientY - touchStartY);
+      if (Math.abs(dx) > 40 && Math.abs(dx) > dy) {
+        dx > 0 ? nextPhoto() : prevPhoto();
+      }
+    }, { passive: true });
+
+    document.addEventListener('keydown', (e) => {
+      if (!lb.classList.contains('flex')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') prevPhoto();
+      if (e.key === 'ArrowRight') nextPhoto();
+    });
+
+    // ギャラリーアイテムのクリックハンドラー
+    function setupGalleryClickHandlers() {
+      document.querySelectorAll('[data-gallery-item]').forEach((item, originalIdx) => {
+        item.onclick = () => {
+          const filteredIdx = item.getAttribute('data-filtered-index');
+          openLightbox(filteredIdx ? parseInt(filteredIdx) : originalIdx);
+        };
+      });
+    }
+    setupGalleryClickHandlers();
+
+    // カテゴリータブのフィルタリング
+    document.querySelectorAll('.category-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        const selectedCategory = tab.getAttribute('data-category');
+        currentCategory = selectedCategory;
+
+        // タブのアクティブ状態を更新
+        document.querySelectorAll('.category-tab').forEach(t => {
+          if (t.getAttribute('data-category') === selectedCategory) {
+            t.classList.add('active', 'text-rose-400', 'border-rose-400');
+            t.classList.remove('text-stone-300', 'border-transparent');
+          } else {
+            t.classList.remove('active', 'text-rose-400', 'border-rose-400');
+            t.classList.add('text-stone-300', 'border-transparent');
+          }
+        });
+
+        // ギャラリーアイテムのフィルタリング
+        const galleryItems = document.querySelectorAll('[data-category-item]');
+        let filteredPhotos = [];
+        let filteredIndex = 0;
+
+        galleryItems.forEach((item, originalIdx) => {
+          const itemCategory = item.getAttribute('data-category-item');
+          const isMatch = selectedCategory === 'all' || itemCategory === selectedCategory;
+
+          if (isMatch) {
+            item.style.display = '';
+            item.setAttribute('data-filtered-index', filteredIndex);
+            filteredPhotos.push(allPhotos[originalIdx]);
+            filteredIndex++;
+          } else {
+            item.style.display = 'none';
+          }
+        });
+
+        photos = filteredPhotos;
+        current = 0;
+
+        // ハンドラーをリセット
+        setupGalleryClickHandlers();
+      });
+    });
+
+    window.openLightbox = openLightbox;
+  </script>
+</SimpleLayout>

@@ -2,9 +2,13 @@ import https from 'https';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import dotenv from 'dotenv';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
+// .env.local を読み込む
+dotenv.config({ path: path.join(__dirname, '../.env.local') });
 
 const NOTION_API_KEY = process.env.NOTION_API_KEY;
 const DATABASE_ID = '3806ec5bf404805f85cfe914b07c06ea';
@@ -57,22 +61,25 @@ async function fetchGalleryData() {
     }
 
     const galleryItems = response.data.results
-      .filter(page => page.properties.Filename?.title?.length > 0)
+      .filter(page => page.properties.Image?.files?.length > 0)
       .map(page => {
         const props = page.properties;
 
         let imageUrl = '';
+        let filename = '';
         if (props.Image?.files?.length > 0) {
           const file = props.Image.files[0];
           imageUrl = file.type === 'external'
             ? file.external.url
             : file.file.url;
+          filename = file.name || '';
         }
 
         return {
-          filename: props.Filename.title[0]?.plain_text || '',
+          filename: filename,
           caption: props.Caption?.rich_text[0]?.plain_text || '',
           order: props.Order?.number || 999,
+          category: props['選択']?.select?.name || '',
           imageUrl: imageUrl,
         };
       })

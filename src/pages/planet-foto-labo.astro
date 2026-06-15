@@ -87,8 +87,10 @@ const fumiImages = fumiFiles.map(f => `${base}images/planet-foto-labo/fumi/${f}`
             instagram: 'https://www.instagram.com/fumiphoto/',
             image: 'fumi002.jpg',
           },
-        ].map((a) => (
-          <div class="border border-stone-800 overflow-hidden">
+        ].map((a) => {
+          const artistId = a.name === 'Pero' ? 'pero-artist' : a.name === 'Fumi Photo' ? 'fumi-artist' : '';
+          return (
+          <div id={artistId} class="border border-stone-800 overflow-hidden">
             <div class="aspect-4/5 overflow-hidden bg-stone-900">
               {a.image ? (
                 <img
@@ -135,7 +137,8 @@ const fumiImages = fumiFiles.map(f => `${base}images/planet-foto-labo/fumi/${f}`
               </div>
             </div>
           </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   </section>
@@ -150,7 +153,7 @@ const fumiImages = fumiFiles.map(f => `${base}images/planet-foto-labo/fumi/${f}`
 
       <div class="grid md:grid-cols-2 gap-12">
         <!-- Pero -->
-        <div>
+        <div id="pero">
           <h3 class="text-lg font-light tracking-[0.2em] text-white mb-6 border-b border-stone-800 pb-3">Pero</h3>
           <div
             class="grid grid-cols-1 md:grid-cols-2 gap-2"
@@ -174,7 +177,7 @@ const fumiImages = fumiFiles.map(f => `${base}images/planet-foto-labo/fumi/${f}`
         </div>
 
         <!-- Fumi Photo -->
-        <div>
+        <div id="fumi">
           <h3 class="text-lg font-light tracking-[0.2em] text-white mb-6 border-b border-stone-800 pb-3">Fumi Photo</h3>
           {fumiImages.length > 0 ? (
             <div
