@@ -45,11 +45,11 @@ jobs:
       - name: Check if data was updated
         id: check-update
         run: |
-          if git diff --quiet src/data/keizo-gallery.json; then
+          if git diff --quiet -- src/data/keizo-gallery.json; then
             echo "updated=false" >> $GITHUB_OUTPUT
           else
             echo "updated=true" >> $GITHUB_OUTPUT
-            git diff src/data/keizo-gallery.json
+            git diff -- src/data/keizo-gallery.json
           fi
 
       - name: Commit and push Notion data
