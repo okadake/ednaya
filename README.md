@@ -41,6 +41,8 @@ All commands are run from the root of the project, from a terminal:
 | `npm run deploy:full`     | Deploy to Lolipop FTP (all files)                |
 | `npm run build-deploy`    | Build + deploy (images excluded)                 |
 | `npm run build-deploy:full` | Build + deploy (all files)                     |
+| `npm run fetch-notion`    | Fetch KEIZO gallery data from Notion DB          |
+| `npm run deploy:workflow` | Update GitHub Actions deploy workflow and push   |
 
 ## 👀 Want to learn more?
 

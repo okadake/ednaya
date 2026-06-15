@@ -15,7 +15,8 @@
     "deploy": "node deploy.js",
     "deploy:full": "node deploy-full.js",
     "build-deploy": "npm run build && npm run deploy",
-    "build-deploy:full": "npm run build && npm run deploy:full"
+    "build-deploy:full": "npm run build && npm run deploy:full",
+    "deploy:workflow": "git add .github/workflows/deploy.yml && git commit -m 'chore: update deploy workflow' && git push"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",

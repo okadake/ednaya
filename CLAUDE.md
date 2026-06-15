@@ -63,7 +63,30 @@ public/                    # 静的アセット
 ## よく使うコマンド
 
 ```sh
-npm run dev      # localhost:4321 で開発サーバー起動
-npm run build    # dist/ にビルド
-npm run preview  # ビルド確認
+npm run dev              # localhost:4321 で開発サーバー起動
+npm run build           # dist/ にビルド
+npm run preview         # ビルド確認
+npm run fetch-notion    # Notion DB から ギャラリーデータを取得
+npm run build-deploy    # ビルド + FTP デプロイ
+npm run deploy:workflow # GitHub Actions deploy workflow を更新・push
+```
+
+---
+
+## KEIZO Gallery 自動化
+
+### 毎日の自動実行（GitHub Actions）
+- UTC 0:00（JST 9:00）に実行
+- `npm run fetch-notion` で Notion からデータ取得
+- `npm run build` でビルド
+- FTP で自動デプロイ
+
+### ローカルで即座に反映させたい場合
+```bash
+npm run fetch-notion && npm run build-deploy
+```
+
+### Workflow ファイルを修正した場合
+```bash
+npm run deploy:workflow
 ```
