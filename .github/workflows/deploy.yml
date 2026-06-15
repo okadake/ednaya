@@ -3,12 +3,14 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
+  schedule:
+    - cron: '0 0 * * *'
   workflow_dispatch:
   repository_dispatch:
     types: [microcms_update]
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -17,7 +19,51 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  fetch-notion-data:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Fetch Notion Gallery Data
+        run: npm run fetch-notion
+        env:
+          NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
+        continue-on-error: true
+
+      - name: Debug - Check if JSON was generated
+        run: ls -la src/data/keizo-gallery.json && cat src/data/keizo-gallery.json | head -20
+        continue-on-error: true
+
+      - name: Check if data was updated
+        id: check-update
+        run: |
+          if git diff --quiet src/data/keizo-gallery.json; then
+            echo "updated=false" >> $GITHUB_OUTPUT
+          else
+            echo "updated=true" >> $GITHUB_OUTPUT
+            git diff src/data/keizo-gallery.json
+          fi
+
+      - name: Commit and push Notion data
+        if: steps.check-update.outputs.updated == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add src/data/keizo-gallery.json
+          git commit -m "chore: update keizo-gallery data from Notion [skip ci]"
+          git push
+        continue-on-error: true
+
   build:
+    needs: fetch-notion-data
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
