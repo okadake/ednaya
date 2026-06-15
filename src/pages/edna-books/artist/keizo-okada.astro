@@ -145,7 +145,7 @@ const artistData = {
           return (
             <div
               class={`group relative bg-stone-900 overflow-hidden cursor-pointer hover:shadow-lg transition-shadow gallery-item-animate ${rowSpan === 2 ? 'row-span-2' : 'row-span-1'}`}
-              data-gallery-item
+              data-gallery-item={true as any}
               data-category="all"
               data-category-item={item.category || ''}
               data-index={idx}
@@ -165,7 +165,7 @@ const artistData = {
       <script>
         // ギャラリーアイテムに遅延を設定
         const galleryItems = document.querySelectorAll('.gallery-item-animate');
-        galleryItems.forEach((item, idx) => {
+        galleryItems.forEach((item: any, idx) => {
           item.style.animationDelay = (idx * 0.05) + 's';
         });
       </script>
