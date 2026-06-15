@@ -7,8 +7,10 @@ import dotenv from 'dotenv';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// .env.local を読み込む
-dotenv.config({ path: path.join(__dirname, '../.env.local') });
+// ローカル開発時のみ .env.local を読み込む（GitHub Actions では環境変数を使用）
+if (process.env.CI !== 'true') {
+  dotenv.config({ path: path.join(__dirname, '../.env.local') });
+}
 
 const NOTION_API_KEY = process.env.NOTION_API_KEY;
 const DATABASE_ID = '3806ec5bf404805f85cfe914b07c06ea';
