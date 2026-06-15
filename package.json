@@ -10,6 +10,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "fetch-notion": "node scripts/fetch-notion-gallery.js",
+    "build:with-notion": "npm run fetch-notion && npm run build",
     "deploy": "node deploy.js",
     "deploy:full": "node deploy-full.js",
     "build-deploy": "npm run build && npm run deploy",
