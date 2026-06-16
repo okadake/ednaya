@@ -75,18 +75,30 @@ npm run deploy:workflow # GitHub Actions deploy workflow を更新・push
 
 ## KEIZO Gallery 自動化
 
-### 毎日の自動実行（GitHub Actions）
-- UTC 0:00（JST 9:00）に実行
-- `npm run fetch-notion` で Notion からデータ取得
-- `npm run build` でビルド
-- FTP で自動デプロイ
+### Vision API + 手動トリガー方式（✅ 完全実装）
 
-### ローカルで即座に反映させたい場合
-```bash
-npm run fetch-notion && npm run build-deploy
+**仕組み**
+- note.com の画像 URL から Vision API で自動分析
+- キャプション + カテゴリを自動生成
+- 複数カテゴリ対応
+- 手動トリガー（ワンコマンド）
+
+**使い方**
+
+1. **`gallery-urls.txt` に URL を追加**
+```
+https://example.com/img/image1.jpg
+https://example.com/img/image2.jpg
 ```
 
-### Workflow ファイルを修正した場合
+2. **ワンコマンドで完了**
 ```bash
-npm run deploy:workflow
+npm run add-gallery-images
 ```
+
+（Vision API 分析 → CSV → JSON → ビルド → デプロイまで自動実行）
+
+**設定情報**
+- Google Cloud Vision API キー: `.env.local` の `GOOGLE_CLOUD_API_KEY`
+- プロジェクト: API Project (api-project-511605367449)
+- データファイル: `keizo-gallery.csv` / `src/data/keizo-gallery.json`
