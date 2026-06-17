@@ -10,13 +10,9 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "fetch-notion": "node scripts/fetch-notion-gallery.js",
-    "build:with-notion": "npm run fetch-notion && npm run build",
     "deploy": "node deploy.js",
-    "deploy:full": "node deploy-full.js",
     "build-deploy": "npm run build && npm run deploy",
-    "build-deploy:full": "npm run build && npm run deploy:full",
-    "deploy:workflow": "git add .github/workflows/deploy.yml && git commit -m 'chore: update deploy workflow' && git push"
+    "add-gallery-images": "node scripts/add-gallery-images.js && npm run build-deploy"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",

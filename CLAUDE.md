@@ -24,9 +24,9 @@
 - **フレームワーク**: Astro 6.2.1
 - **スタイル**: Tailwind CSS 4.2.4
 - **言語**: TypeScript
-- **ホスティング**: GitHub Pages
-- **URL**: https://okadake.github.io/ednaya/
-- **デプロイ**: GitHub Actions（mainブランチへのpushで自動）
+- **ホスティング**: FTP（edna.jp）
+- **URL**: https://edna.jp/
+- **デプロイ**: ローカルコマンド（手動）
 
 ---
 
@@ -53,7 +53,7 @@ public/                    # 静的アセット
 ## 作業ルール
 
 - **ファイル生成はClaude.aiチャットで行い、手動でコピー&ペースト**
-- GitHub Actionsでmainへのpushが自動デプロイ
+- デプロイは `npm run build-deploy` で手動実行（FTP）
 - `dist/` は生成物なので編集しない
 - Tailwind 4.x 系：`@apply` 非推奨、ユーティリティクラス直書きを基本とする
 - TypeScript strict モード想定
@@ -66,9 +66,8 @@ public/                    # 静的アセット
 npm run dev              # localhost:4321 で開発サーバー起動
 npm run build           # dist/ にビルド
 npm run preview         # ビルド確認
-npm run fetch-notion    # Notion DB から ギャラリーデータを取得
 npm run build-deploy    # ビルド + FTP デプロイ
-npm run deploy:workflow # GitHub Actions deploy workflow を更新・push
+npm run add-gallery-images  # Vision API で画像分析 → CSV/JSON → ビルド → デプロイ
 ```
 
 ---
