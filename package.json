@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "astro build && mkdir -p dist/data && cp src/data/keizo-gallery.json dist/data/",
     "preview": "astro preview",
     "astro": "astro",
     "deploy": "node deploy.js",

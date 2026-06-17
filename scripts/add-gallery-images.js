@@ -125,7 +125,7 @@ async function main() {
   if (fs.existsSync(csvPath)) fs.copyFileSync(csvPath, csvBackup);
 
   const content = fs.readFileSync(urlsFile, 'utf-8');
-  const allUrls = content.split('\n').map(l => l.trim()).filter(l => l && l.startsWith('http'));
+  const allUrls = content.split('\n').map(l => l.trim()).filter(l => l && !l.startsWith('#') && (l.startsWith('http') || l.startsWith('/') || fs.existsSync(l)));
 
   // 実行前のアイテム数を記録（バリデーション用）
   let itemsBeforeCount = 0;

@@ -972,13 +972,22 @@
     "order": 108
   },
   {
+    "filename": "A7407244.jpg",
+    "caption": "食べ物, Tableware, Ingredient, Dishware, Serveware",
+    "categories": [
+      "Food"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7407244.jpg",
+    "order": 109
+  },
+  {
     "filename": "A7407695.jpg",
     "caption": "Advertising, Logo, Market, Retail, Electronic signage",
     "categories": [
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7407695.jpg",
-    "order": 109
+    "order": 110
   },
   {
     "filename": "A7409510.jpg",
@@ -987,7 +996,7 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7409510.jpg",
-    "order": 110
+    "order": 111
   },
   {
     "filename": "vet001.webp",
@@ -996,7 +1005,7 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/vet001.webp",
-    "order": 111
+    "order": 112
   },
   {
     "filename": "vet002.webp",
@@ -1005,7 +1014,7 @@
       "People"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/vet002.webp",
-    "order": 112
+    "order": 113
   },
   {
     "filename": "A7403739.jpg",
@@ -1014,6 +1023,6 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7403739.jpg",
-    "order": 113
+    "order": 114
   }
 ]

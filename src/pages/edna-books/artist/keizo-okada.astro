@@ -10,10 +10,10 @@ const galleryImages = galleryItems.map(item => item.imageUrl);
 
 // キャプション & カテゴリ マップを生成
 const captionMap: Record<string, string> = {};
-const categoryMap: Record<string, string> = {};
+const categoryMap: Record<string, string[]> = {};
 galleryItems.forEach(item => {
   captionMap[item.filename] = item.caption;
-  categoryMap[item.filename] = item.category || '';
+  categoryMap[item.filename] = item.categories || [];
 });
 
 // ユニークなカテゴリーリストを取得
@@ -66,7 +66,7 @@ const artistData = {
 
         <!-- Image -->
         <div class="w-full flex justify-center">
-          <div class="w-full max-w-[200px] overflow-hidden bg-stone-900 rounded-sm aspect-3/4">
+          <div class="w-full max-w-50 overflow-hidden bg-stone-900 rounded-sm aspect-3/4">
             <img
               src={artistData.image}
               alt={artistData.name}
@@ -95,7 +95,7 @@ const artistData = {
       <!-- PC: 写真（左） | 肩書き + 名前 + 説明（右） -->
       <div class="hidden md:flex gap-12 items-start">
         <!-- Image -->
-        <div class="flex-shrink-0">
+        <div class="shrink-0">
           <div class="w-40 h-48 overflow-hidden bg-stone-900 rounded-sm">
             <img
               src={artistData.image}
@@ -153,7 +153,7 @@ const artistData = {
               class={`group relative bg-stone-900 overflow-hidden cursor-pointer hover:shadow-lg transition-shadow gallery-item-animate ${rowSpan === 2 ? 'row-span-2' : 'row-span-1'}`}
               data-gallery-item={true as any}
               data-category="all"
-              data-category-item={item.category || ''}
+              data-category-item={item.categories ? item.categories.map((cat: string) => cat.toLowerCase()).join(',') : ''}
               data-index={idx}
             >
               <img
@@ -187,7 +187,7 @@ const artistData = {
       <img id="lb-img" src="" alt="" class="max-h-[70vh] max-w-[70vw] object-contain select-none" />
 
       <div class="mt-4 w-full text-center">
-        <div class=" rounded py-1 mb-2 min-h-[40px] flex items- justify-center">
+        <div class=" rounded py-1 mb-2 min-h-10 flex items- justify-center">
           <input
             id="lb-caption"
             type="text"
@@ -330,7 +330,8 @@ const artistData = {
 
         galleryItems.forEach((item, originalIdx) => {
           const itemCategory = item.getAttribute('data-category-item');
-          const isMatch = selectedCategory === 'all' || itemCategory === selectedCategory;
+          const itemCategories = itemCategory ? itemCategory.split(',') : [];
+          const isMatch = selectedCategory === 'all' || itemCategories.includes(selectedCategory);
 
           if (isMatch) {
             item.style.display = '';

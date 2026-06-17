@@ -196,7 +196,7 @@ const sortedArtists = Object.keys(booksByArtist).sort();
         const displayName = artist === 'Pero Hayashi' ? 'PERO HAYASHI' : artist;
 
         return (
-        <div key={artist}>
+        <div>
           <div class="mb-12">
             <a href={href} class="group inline-flex items-center gap-2 mb-2" target="_blank" rel="noopener noreferrer">
               <h3 class="text-lg font-light tracking-wider text-rose-300
@@ -204,7 +204,7 @@ const sortedArtists = Object.keys(booksByArtist).sort();
                 transition-colors cursor-pointer">
                 {displayName}
               </h3>
-              <svg class="w-4 h-4 text-rose-300 group-hover:text-rose-200 transition-colors flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+              <svg class="w-4 h-4 text-rose-300 group-hover:text-rose-200 transition-colors shrink-0" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M13.5 6H5.82C4.4 6 3 7.37 3 8.82V19c0 1.4 1.37 2.5 2.82 2.5h10.44c1.4 0 2.74-1.1 2.74-2.5v-7.67h-2v7.67H5.82V8.82h7.68V6z"/>
                 <path d="M21 3v6.5h-1.5V6.12L11.88 14.25l-1.06-1.06L18.44 5h-3.38V3z"/>
               </svg>
@@ -242,7 +242,7 @@ const sortedArtists = Object.keys(booksByArtist).sort();
                   {book.pages && <p class="text-xs text-stone-600 mb-3">{book.pages}</p>}
 
                   {/* Description */}
-                  <p class="text-sm text-stone-500 mb-4 flex-grow line-clamp-3">
+                  <p class="text-sm text-stone-500 mb-4 grow line-clamp-3">
                     {book.description}
                   </p>
 
@@ -254,14 +254,14 @@ const sortedArtists = Object.keys(booksByArtist).sort();
                           href={book.buyUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          class="flex-1 flex items-center justify-center px-3 py-1.5 text-xs tracking-[0.2em] border border-rose-400 text-rose-400 hover:bg-rose-400 hover:text-black transition min-h-[46px]"
+                          class="flex-1 flex items-center justify-center px-3 py-1.5 text-xs tracking-[0.2em] border border-rose-400 text-rose-400 hover:bg-rose-400 hover:text-black transition min-h-11.5"
                           onclick="event.stopPropagation()"
                         >
                           BUY
                         </a>
                       ) : (
                         <span
-                          class="flex-1 flex items-center justify-center px-3 py-1.5 text-xs tracking-[0.2em] border border-stone-700 text-stone-600 cursor-default min-h-[46px]"
+                          class="flex-1 flex items-center justify-center px-3 py-1.5 text-xs tracking-[0.2em] border border-stone-700 text-stone-600 cursor-default min-h-11.5"
                           onclick="event.stopPropagation()"
                         >
                           BUY
@@ -269,7 +269,7 @@ const sortedArtists = Object.keys(booksByArtist).sort();
                       )}
                       {book.gallery && (
                         <button
-                          class="flex-1 px-3 py-1.5 text-xs tracking-[0.2em] border border-rose-400 bg-rose-400 text-black hover:bg-transparent hover:text-rose-400 transition text-center flex items-center justify-center gap-2 min-h-[46px]"
+                          class="flex-1 px-3 py-1.5 text-xs tracking-[0.2em] border border-rose-400 bg-rose-400 text-black hover:bg-transparent hover:text-rose-400 transition text-center flex items-center justify-center gap-2 min-h-11.5"
                           data-gallery={JSON.stringify(book.gallery)}
                           onclick="event.stopPropagation(); openLightbox(this)"
                         >
@@ -285,7 +285,7 @@ const sortedArtists = Object.keys(booksByArtist).sort();
                         href={book.digitalEditionUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="w-full px-3 py-1.5 text-xs tracking-[0.2em] border border-rose-400 text-rose-400 hover:bg-rose-400 hover:text-black transition flex items-center justify-center gap-2 min-h-[46px]"
+                        class="w-full px-3 py-1.5 text-xs tracking-[0.2em] border border-rose-400 text-rose-400 hover:bg-rose-400 hover:text-black transition flex items-center justify-center gap-2 min-h-11.5"
                         onclick="event.stopPropagation()"
                       >
                         <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -294,7 +294,7 @@ const sortedArtists = Object.keys(booksByArtist).sort();
                         BUY DIGITAL (PDF)
                       </a>
                     ) : (
-                      <div class="w-full px-3 py-1.5 border border-transparent min-h-[46px]"></div>
+                      <div class="w-full px-3 py-1.5 border border-transparent min-h-11.5"></div>
                     )}
                   </div>
                 </div>
