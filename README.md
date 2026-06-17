@@ -1,49 +1,78 @@
-# Astro Starter Kit: Minimal
+# EDNA BOOKS — KEIZO OKADA Gallery
 
-```sh
-npm create astro@latest -- --template minimal
+ポートフォリオサイト EDNA の KEIZO OKADA アーティストページ。Vision API を使った自動ギャラリー管理システム。
+
+## 🚀 Tech Stack
+
+- **Framework**: Astro 6.2.1
+- **Styling**: Tailwind CSS 4.2.4
+- **Language**: TypeScript
+- **Hosting**: FTP (edna.jp)
+- **Gallery**: Google Cloud Vision API (自動分析)
+
+## 📁 Project Structure
+
 ```
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
 /
-├── public/
+├── public/           # 静的アセット
 ├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── pages/       # ルート（.astro ファイル）
+│   ├── layouts/     # 共通レイアウト
+│   ├── data/        # keizo-gallery.json（生成）
+│   └── styles/      # グローバルスタイル
+├── scripts/         # automation scripts
+│   └── add-gallery-images.js  # Vision API 分析スクリプト
+├── gallery-urls.txt # ギャラリー画像 URL リスト
+└── keizo-gallery.csv # 生成されるメタデータ
 ```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
 
 ## 🧞 Commands
 
-All commands are run from the root of the project, from a terminal:
+| Command | Action |
+|---------|--------|
+| `npm install` | 依存をインストール |
+| `npm run dev` | localhost:4321 で開発サーバー起動 |
+| `npm run build` | dist/ にビルド |
+| `npm run preview` | ビルド確認 |
+| `npm run build-deploy` | ビルド + FTP デプロイ |
+| `npm run add-gallery-images` | Vision API で画像分析 → CSV/JSON 生成 → ビルド → デプロイ |
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-| `npm run deploy`          | Deploy to Lolipop FTP (images excluded)          |
-| `npm run deploy:full`     | Deploy to Lolipop FTP (all files)                |
-| `npm run build-deploy`    | Build + deploy (images excluded)                 |
-| `npm run build-deploy:full` | Build + deploy (all files)                     |
-| `npm run fetch-notion`    | Fetch KEIZO gallery data from Notion DB          |
-| `npm run deploy:workflow` | Update GitHub Actions deploy workflow and push   |
+## 📸 Gallery Management
 
-## 👀 Want to learn more?
+### 使い方
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+1. `gallery-urls.txt` に画像 URL を追加
+   ```
+   https://example.com/image1.jpg
+   https://example.com/image2.jpg
+   ```
+
+2. ワンコマンドで完了
+   ```bash
+   npm run add-gallery-images
+   ```
+
+### 特徴
+
+- ✅ Vision API で自動分析（キャプション + カテゴリ生成）
+- ✅ 複数カテゴリ対応
+- ✅ CSV/JSON で管理
+- ✅ バックアップ機能（失敗時復元）
+- ✅ 既分析画像は再分析しない（API コスト削減）
+- ✅ gallery-urls.txt で一元管理
+
+## 🔐 Environment Variables
+
+`.env.local` に設定：
+
+```
+GOOGLE_CLOUD_API_KEY=your_api_key
+FTP_USER=your_ftp_user
+FTP_PASSWORD=your_ftp_password
+```
+
+## 📝 Development Notes
+
+- CLAUDE.md を参照（詳細ドキュメント）
+- GitHub Actions は使用していない（ローカル FTP デプロイのみ）
+- Tailwind 4.x：@apply 非推奨、ユーティリティクラス直書き
