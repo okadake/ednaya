@@ -26,3 +26,4 @@ src/data/keizo-gallery.json
 
 # jetbrains setting folder
 .idea/
+*.swp
