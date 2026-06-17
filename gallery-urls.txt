@@ -1,7 +1,6 @@
 # KEIZO OKADA Gallery URLs
 # 管理対象の画像 URL リスト
 
-https://edna.jp/edna-books/artist/keizo-okada/gallery/0006.jpg
 https://edna.jp/edna-books/artist/keizo-okada/gallery/A7400108.jpg
 https://edna.jp/edna-books/artist/keizo-okada/gallery/A7400303.jpg
 https://edna.jp/edna-books/artist/keizo-okada/gallery/A7400321.jpg
@@ -13,6 +12,7 @@ https://edna.jp/edna-books/artist/keizo-okada/gallery/A7400945.jpg
 https://edna.jp/edna-books/artist/keizo-okada/gallery/A7400952.jpg
 https://edna.jp/edna-books/artist/keizo-okada/gallery/A7400965.jpg
 https://edna.jp/edna-books/artist/keizo-okada/gallery/A7401289.jpg
+https://edna.jp/edna-books/artist/keizo-okada/gallery/0006.jpg
 https://edna.jp/edna-books/artist/keizo-okada/gallery/A7401357.jpg
 https://edna.jp/edna-books/artist/keizo-okada/gallery/A7401360.jpg
 https://edna.jp/edna-books/artist/keizo-okada/gallery/A7401381.jpg
@@ -28,7 +28,6 @@ https://edna.jp/edna-books/artist/keizo-okada/gallery/A7402617.jpg
 https://edna.jp/edna-books/artist/keizo-okada/gallery/A7403177.jpg
 https://edna.jp/edna-books/artist/keizo-okada/gallery/A7403179.jpg
 https://edna.jp/edna-books/artist/keizo-okada/gallery/A7403251-2.jpg
-https://edna.jp/edna-books/artist/keizo-okada/gallery/A7403260.jpg
 https://edna.jp/edna-books/artist/keizo-okada/gallery/A7403346.jpg
 https://edna.jp/edna-books/artist/keizo-okada/gallery/A7403356.jpg
 https://edna.jp/edna-books/artist/keizo-okada/gallery/A7403368.jpg
@@ -44,7 +43,6 @@ https://edna.jp/edna-books/artist/keizo-okada/gallery/A7404063.jpg
 https://edna.jp/edna-books/artist/keizo-okada/gallery/A7404305.jpg
 https://edna.jp/edna-books/artist/keizo-okada/gallery/A7404417.jpg
 https://edna.jp/edna-books/artist/keizo-okada/gallery/A7404439.jpg
-https://edna.jp/edna-books/artist/keizo-okada/gallery/A7404510.jpg
 https://edna.jp/edna-books/artist/keizo-okada/gallery/A7404527.jpg
 https://edna.jp/edna-books/artist/keizo-okada/gallery/A7404556.jpg
 https://edna.jp/edna-books/artist/keizo-okada/gallery/A7405305.jpg
@@ -58,7 +56,6 @@ https://edna.jp/edna-books/artist/keizo-okada/gallery/A7405925.jpg
 https://edna.jp/edna-books/artist/keizo-okada/gallery/A7406196.jpg
 https://edna.jp/edna-books/artist/keizo-okada/gallery/A7406295.jpg
 https://edna.jp/edna-books/artist/keizo-okada/gallery/A7406739.jpg
-https://edna.jp/edna-books/artist/keizo-okada/gallery/A7407170.jpg
 https://edna.jp/edna-books/artist/keizo-okada/gallery/A7406782.jpg
 https://edna.jp/edna-books/artist/keizo-okada/gallery/A7406898.jpg
 https://edna.jp/edna-books/artist/keizo-okada/gallery/A7406905.jpg
@@ -79,7 +76,6 @@ https://edna.jp/edna-books/artist/keizo-okada/gallery/A7407700.jpg
 https://edna.jp/edna-books/artist/keizo-okada/gallery/A7407708.jpg
 https://edna.jp/edna-books/artist/keizo-okada/gallery/A7407712.jpg
 https://edna.jp/edna-books/artist/keizo-okada/gallery/A7407750.jpg
-https://edna.jp/edna-books/artist/keizo-okada/gallery/A7407818.jpg
 https://edna.jp/edna-books/artist/keizo-okada/gallery/A7407880.jpg
 https://edna.jp/edna-books/artist/keizo-okada/gallery/A7408093.jpg
 https://edna.jp/edna-books/artist/keizo-okada/gallery/A7408142.jpg
@@ -120,7 +116,6 @@ https://edna.jp/edna-books/artist/keizo-okada/gallery/0001.jpg
 https://edna.jp/edna-books/artist/keizo-okada/gallery/0004.jpg
 https://edna.jp/edna-books/artist/keizo-okada/gallery/0009.jpg
 https://edna.jp/edna-books/artist/keizo-okada/gallery/001-14.jpg
-https://edna.jp/edna-books/artist/keizo-okada/gallery/0010.jpg
 https://edna.jp/edna-books/artist/keizo-okada/gallery/0012.jpg
 https://edna.jp/edna-books/artist/keizo-okada/gallery/0023.jpg
 https://edna.jp/edna-books/artist/keizo-okada/gallery/0027.jpg
@@ -230,7 +225,6 @@ https://edna.jp/edna-books/artist/keizo-okada/gallery/A7407380.jpg
 https://edna.jp/edna-books/artist/keizo-okada/gallery/A74075421_r.jpg
 https://edna.jp/edna-books/artist/keizo-okada/gallery/A7407661.jpg
 https://edna.jp/edna-books/artist/keizo-okada/gallery/A7407688.jpg
-https://edna.jp/edna-books/artist/keizo-okada/gallery/A7407700.jpg
 https://edna.jp/edna-books/artist/keizo-okada/gallery/A7407816.jpg
 https://edna.jp/edna-books/artist/keizo-okada/gallery/A7407818.jpg
 https://edna.jp/edna-books/artist/keizo-okada/gallery/A7407956.jpg
@@ -261,7 +255,6 @@ https://edna.jp/edna-books/artist/keizo-okada/gallery/A7409479.jpg
 https://edna.jp/edna-books/artist/keizo-okada/gallery/A7409494.jpg
 https://edna.jp/edna-books/artist/keizo-okada/gallery/A7409509.jpg
 https://edna.jp/edna-books/artist/keizo-okada/gallery/A7409551.jpg
-https://edna.jp/edna-books/artist/keizo-okada/gallery/A7409553.jpg
 https://edna.jp/edna-books/artist/keizo-okada/gallery/A7409650.jpg
 https://edna.jp/edna-books/artist/keizo-okada/gallery/A7409651.jpg
 https://edna.jp/edna-books/artist/keizo-okada/gallery/A7409670.jpg

@@ -30,7 +30,7 @@
     "filename": "A7406782.jpg",
     "caption": "Green, Leaf, Yellow, Close-up, Macro photography",
     "categories": [
-      "Daily Life"
+      "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7406782.jpg",
     "order": 4
@@ -66,7 +66,7 @@
     "filename": "A7407428.jpg",
     "caption": "猫, Felidae, Felinae, Carnivores, Whiskers",
     "categories": [
-      "Daily Life"
+      "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7407428.jpg",
     "order": 8
@@ -99,22 +99,13 @@
     "order": 11
   },
   {
-    "filename": "A7407889.jpg",
-    "caption": "空, 水, Water resources, 自然, Afterglow",
-    "categories": [
-      "Places"
-    ],
-    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7407889.jpg",
-    "order": 12
-  },
-  {
     "filename": "A7408198.jpg",
     "caption": "笑顔, Happiness, Flowerpot, Houseplant, Floral design",
     "categories": [
-      "Daily Life"
+      "People"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7408198.jpg",
-    "order": 13
+    "order": 12
   },
   {
     "filename": "A7408434.jpg",
@@ -123,16 +114,16 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7408434.jpg",
-    "order": 14
+    "order": 13
   },
   {
     "filename": "vet003.webp",
     "caption": "Night, Customer, Logo, Midnight, レストラン",
     "categories": [
-      "Food"
+      "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/vet003.webp",
-    "order": 15
+    "order": 14
   },
   {
     "filename": "vet004.webp",
@@ -141,16 +132,16 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/vet004.webp",
-    "order": 16
+    "order": 15
   },
   {
     "filename": "vet005.webp",
     "caption": "Concrete, Wood stain, Still life photography, Houseplant, Flowerpot",
     "categories": [
-      "Daily Life"
+      "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/vet005.webp",
-    "order": 17
+    "order": 16
   },
   {
     "filename": "vet006.webp",
@@ -159,7 +150,7 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/vet006.webp",
-    "order": 18
+    "order": 17
   },
   {
     "filename": "vet007.webp",
@@ -168,7 +159,7 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/vet007.webp",
-    "order": 19
+    "order": 18
   },
   {
     "filename": "vet008.webp",
@@ -177,7 +168,7 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/vet008.webp",
-    "order": 20
+    "order": 19
   },
   {
     "filename": "vet009.webp",
@@ -186,16 +177,16 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/vet009.webp",
-    "order": 21
+    "order": 20
   },
   {
     "filename": "A7403346.jpg",
     "caption": "ドア, Glass, Night, Iron, Home Door",
     "categories": [
-      "Daily Life"
+      "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7403346.jpg",
-    "order": 22
+    "order": 21
   },
   {
     "filename": "A7408204.jpg",
@@ -204,7 +195,7 @@
       "Food"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7408204.jpg",
-    "order": 23
+    "order": 22
   },
   {
     "filename": "A7404439.jpg",
@@ -213,16 +204,7 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7404439.jpg",
-    "order": 24
-  },
-  {
-    "filename": "A7407578.jpg",
-    "caption": "Produce, フルーツ, Seedless fruit, Berry, Fruit tree",
-    "categories": [
-      "Food"
-    ],
-    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7407578.jpg",
-    "order": 25
+    "order": 23
   },
   {
     "filename": "A7403179.jpg",
@@ -231,7 +213,7 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7403179.jpg",
-    "order": 26
+    "order": 24
   },
   {
     "filename": "A7405452-2.jpg",
@@ -240,7 +222,7 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7405452-2.jpg",
-    "order": 27
+    "order": 25
   },
   {
     "filename": "A7409102.jpg",
@@ -249,7 +231,7 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7409102.jpg",
-    "order": 28
+    "order": 26
   },
   {
     "filename": "A7405348.jpg",
@@ -258,7 +240,7 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7405348.jpg",
-    "order": 29
+    "order": 27
   },
   {
     "filename": "miyako-173.jpg",
@@ -267,16 +249,16 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/miyako-173.jpg",
-    "order": 30
+    "order": 28
   },
   {
     "filename": "A7407001.jpg",
     "caption": "Wood, ドア, Brown, Metal, Home Door",
     "categories": [
-      "Daily Life"
+      "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7407001.jpg",
-    "order": 31
+    "order": 29
   },
   {
     "filename": "A7403177.jpg",
@@ -285,7 +267,7 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7403177.jpg",
-    "order": 32
+    "order": 30
   },
   {
     "filename": "A7408142.jpg",
@@ -294,7 +276,7 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7408142.jpg",
-    "order": 33
+    "order": 31
   },
   {
     "filename": "A7401381.jpg",
@@ -303,16 +285,16 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7401381.jpg",
-    "order": 34
+    "order": 32
   },
   {
     "filename": "A7403603.jpg",
     "caption": "Transport, Public transport, Train, Passenger, Rolling stock",
     "categories": [
-      "Daily Life"
+      "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7403603.jpg",
-    "order": 35
+    "order": 33
   },
   {
     "filename": "A7400952.jpg",
@@ -321,16 +303,16 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7400952.jpg",
-    "order": 36
+    "order": 34
   },
   {
     "filename": "A7407692-NR.jpeg",
     "caption": "家具, Interior design, Flooring, Floor, Lighting",
     "categories": [
-      "Daily Life"
+      "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7407692-NR.jpeg",
-    "order": 37
+    "order": 35
   },
   {
     "filename": "A7401357.jpg",
@@ -339,7 +321,7 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7401357.jpg",
-    "order": 38
+    "order": 36
   },
   {
     "filename": "gok-5.jpg",
@@ -348,7 +330,7 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/gok-5.jpg",
-    "order": 39
+    "order": 37
   },
   {
     "filename": "A7403356.jpg",
@@ -357,7 +339,7 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7403356.jpg",
-    "order": 40
+    "order": 38
   },
   {
     "filename": "A7403371.jpg",
@@ -366,7 +348,7 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7403371.jpg",
-    "order": 41
+    "order": 39
   },
   {
     "filename": "A7404063.jpg",
@@ -375,7 +357,7 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7404063.jpg",
-    "order": 42
+    "order": 40
   },
   {
     "filename": "A7403593.jpg",
@@ -384,16 +366,16 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7403593.jpg",
-    "order": 43
+    "order": 41
   },
   {
     "filename": "A7408507.jpg",
     "caption": "Pedestrian, Crowd, Vacation, Customer, Backpack",
     "categories": [
-      "Daily Life"
+      "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7408507.jpg",
-    "order": 44
+    "order": 42
   },
   {
     "filename": "A7408760.jpg",
@@ -402,7 +384,7 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7408760.jpg",
-    "order": 45
+    "order": 43
   },
   {
     "filename": "0006.jpg",
@@ -411,7 +393,7 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/0006.jpg",
-    "order": 46
+    "order": 44
   },
   {
     "filename": "A7400108.jpg",
@@ -420,7 +402,7 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7400108.jpg",
-    "order": 47
+    "order": 45
   },
   {
     "filename": "A7406905.jpg",
@@ -429,7 +411,7 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7406905.jpg",
-    "order": 48
+    "order": 46
   },
   {
     "filename": "A7406930.jpg",
@@ -438,16 +420,16 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7406930.jpg",
-    "order": 49
+    "order": 47
   },
   {
     "filename": "A7403999.jpg",
     "caption": "Mode of transport, Transport, Train, Public transport, Rolling stock",
     "categories": [
-      "Daily Life"
+      "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7403999.jpg",
-    "order": 50
+    "order": 48
   },
   {
     "filename": "A7408093.jpg",
@@ -456,7 +438,7 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7408093.jpg",
-    "order": 51
+    "order": 49
   },
   {
     "filename": "A7409007.jpg",
@@ -465,7 +447,7 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7409007.jpg",
-    "order": 52
+    "order": 50
   },
   {
     "filename": "A7404556.jpg",
@@ -474,7 +456,7 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7404556.jpg",
-    "order": 53
+    "order": 51
   },
   {
     "filename": "A7405774.jpg",
@@ -483,7 +465,7 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7405774.jpg",
-    "order": 54
+    "order": 52
   },
   {
     "filename": "gi-84.jpg",
@@ -492,7 +474,7 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/gi-84.jpg",
-    "order": 55
+    "order": 53
   },
   {
     "filename": "A7402617.jpg",
@@ -501,7 +483,7 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7402617.jpg",
-    "order": 56
+    "order": 54
   },
   {
     "filename": "A7404305.jpg",
@@ -510,7 +492,7 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7404305.jpg",
-    "order": 57
+    "order": 55
   },
   {
     "filename": "A7406898.jpg",
@@ -519,7 +501,7 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7406898.jpg",
-    "order": 58
+    "order": 56
   },
   {
     "filename": "A7406739.jpg",
@@ -528,7 +510,7 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7406739.jpg",
-    "order": 59
+    "order": 57
   },
   {
     "filename": "A7407750.jpg",
@@ -537,7 +519,7 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7407750.jpg",
-    "order": 60
+    "order": 58
   },
   {
     "filename": "IMG_7595.jpg",
@@ -546,7 +528,7 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/IMG_7595.jpg",
-    "order": 61
+    "order": 59
   },
   {
     "filename": "IMG_7066.jpg",
@@ -555,25 +537,25 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/IMG_7066.jpg",
-    "order": 62
+    "order": 60
   },
   {
     "filename": "A7401417.jpg",
     "caption": "Green, Leaf, Red, Branch, Yellow",
     "categories": [
-      "Daily Life"
+      "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7401417.jpg",
-    "order": 63
+    "order": 61
   },
   {
     "filename": "A7404527.jpg",
     "caption": "Train, Land vehicle, Mode of transport, Vehicle, Transport",
     "categories": [
-      "Daily Life"
+      "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7404527.jpg",
-    "order": 64
+    "order": 62
   },
   {
     "filename": "A7403368.jpg",
@@ -582,7 +564,7 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7403368.jpg",
-    "order": 65
+    "order": 63
   },
   {
     "filename": "A7403251-2.jpg",
@@ -591,7 +573,7 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7403251-2.jpg",
-    "order": 66
+    "order": 64
   },
   {
     "filename": "A7408158.jpg",
@@ -600,7 +582,7 @@
       "Food"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7408158.jpg",
-    "order": 67
+    "order": 65
   },
   {
     "filename": "A7401891.jpg",
@@ -609,7 +591,7 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7401891.jpg",
-    "order": 68
+    "order": 66
   },
   {
     "filename": "A7407402.jpg",
@@ -618,7 +600,7 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7407402.jpg",
-    "order": 69
+    "order": 67
   },
   {
     "filename": "A7400513.jpg",
@@ -627,7 +609,7 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7400513.jpg",
-    "order": 70
+    "order": 68
   },
   {
     "filename": "A7408596.jpg",
@@ -636,7 +618,7 @@
       "Food"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7408596.jpg",
-    "order": 71
+    "order": 69
   },
   {
     "filename": "A7407007.jpg",
@@ -645,7 +627,7 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7407007.jpg",
-    "order": 72
+    "order": 70
   },
   {
     "filename": "A7407057.jpg",
@@ -654,7 +636,7 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7407057.jpg",
-    "order": 73
+    "order": 71
   },
   {
     "filename": "A7409479-3.jpg",
@@ -663,7 +645,7 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7409479-3.jpg",
-    "order": 74
+    "order": 72
   },
   {
     "filename": "A7400303.jpg",
@@ -672,7 +654,7 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7400303.jpg",
-    "order": 75
+    "order": 73
   },
   {
     "filename": "A7409553.jpg",
@@ -681,7 +663,7 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7409553.jpg",
-    "order": 76
+    "order": 74
   },
   {
     "filename": "A7405925.jpg",
@@ -690,7 +672,7 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7405925.jpg",
-    "order": 77
+    "order": 75
   },
   {
     "filename": "A7405305.jpg",
@@ -699,7 +681,7 @@
       "Food"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7405305.jpg",
-    "order": 78
+    "order": 76
   },
   {
     "filename": "A7407684.jpg",
@@ -708,7 +690,7 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7407684.jpg",
-    "order": 79
+    "order": 77
   },
   {
     "filename": "A7400321.jpg",
@@ -717,7 +699,7 @@
       "Food"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7400321.jpg",
-    "order": 80
+    "order": 78
   },
   {
     "filename": "nn-89.jpg",
@@ -726,7 +708,7 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/nn-89.jpg",
-    "order": 81
+    "order": 79
   },
   {
     "filename": "A7400965.jpg",
@@ -735,16 +717,16 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7400965.jpg",
-    "order": 82
+    "order": 80
   },
   {
     "filename": "A7406295.jpg",
     "caption": "家具, Interior design, Flooring, Textile, Couch",
     "categories": [
-      "Daily Life"
+      "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7406295.jpg",
-    "order": 83
+    "order": 81
   },
   {
     "filename": "A7407880.jpg",
@@ -753,16 +735,16 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7407880.jpg",
-    "order": 84
+    "order": 82
   },
   {
     "filename": "A7400457.jpg",
     "caption": "Train, Mode of transport, Rolling stock, Land vehicle, Transport",
     "categories": [
-      "Daily Life"
+      "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7400457.jpg",
-    "order": 85
+    "order": 83
   },
   {
     "filename": "A7409526.jpg",
@@ -771,7 +753,7 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7409526.jpg",
-    "order": 86
+    "order": 84
   },
   {
     "filename": "A7401360.jpg",
@@ -780,7 +762,7 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7401360.jpg",
-    "order": 87
+    "order": 85
   },
   {
     "filename": "A7409469.jpg",
@@ -789,7 +771,7 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7409469.jpg",
-    "order": 88
+    "order": 86
   },
   {
     "filename": "A7401289.jpg",
@@ -798,7 +780,7 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7401289.jpg",
-    "order": 89
+    "order": 87
   },
   {
     "filename": "A7407712.jpg",
@@ -807,7 +789,7 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7407712.jpg",
-    "order": 90
+    "order": 88
   },
   {
     "filename": "A7407170.jpg",
@@ -816,25 +798,25 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7407170.jpg",
-    "order": 91
+    "order": 89
   },
   {
     "filename": "A7404417.jpg",
     "caption": "Transport, Public transport, Train, Rolling stock, 海",
     "categories": [
-      "Daily Life"
+      "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7404417.jpg",
-    "order": 92
+    "order": 90
   },
   {
     "filename": "A7403718-2.jpg",
     "caption": "Orange, Plant stem, Pedicel, Lilies, Autumn",
     "categories": [
-      "Daily Life"
+      "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7403718-2.jpg",
-    "order": 93
+    "order": 91
   },
   {
     "filename": "A7409532.jpg",
@@ -843,7 +825,7 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7409532.jpg",
-    "order": 94
+    "order": 92
   },
   {
     "filename": "A7402194.jpg",
@@ -852,7 +834,7 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7402194.jpg",
-    "order": 95
+    "order": 93
   },
   {
     "filename": "A7404510.jpg",
@@ -861,7 +843,7 @@
       "Food"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7404510.jpg",
-    "order": 96
+    "order": 94
   },
   {
     "filename": "A7402534.jpg",
@@ -870,7 +852,7 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7402534.jpg",
-    "order": 97
+    "order": 95
   },
   {
     "filename": "A7402088.jpg",
@@ -879,7 +861,7 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7402088.jpg",
-    "order": 98
+    "order": 96
   },
   {
     "filename": "A7401779.jpg",
@@ -888,7 +870,7 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7401779.jpg",
-    "order": 99
+    "order": 97
   },
   {
     "filename": "A7400910.jpg",
@@ -897,7 +879,7 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7400910.jpg",
-    "order": 100
+    "order": 98
   },
   {
     "filename": "A7400945.jpg",
@@ -906,7 +888,7 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7400945.jpg",
-    "order": 101
+    "order": 99
   },
   {
     "filename": "A7401398.jpg",
@@ -915,25 +897,16 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7401398.jpg",
-    "order": 102
+    "order": 100
   },
   {
     "filename": "A7401421_1.jpg",
     "caption": "Branch, Red, Twig, Woody plant, Maple leaf",
     "categories": [
-      "Daily Life"
+      "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7401421_1.jpg",
-    "order": 103
-  },
-  {
-    "filename": "A7403260.jpg",
-    "caption": "Daytime, Red, Air travel, Aircraft, Wing",
-    "categories": [
-      "People"
-    ],
-    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7403260.jpg",
-    "order": 104
+    "order": 101
   },
   {
     "filename": "A7403622.jpg",
@@ -942,7 +915,7 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7403622.jpg",
-    "order": 105
+    "order": 102
   },
   {
     "filename": "A7405328.jpg",
@@ -951,16 +924,16 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7405328.jpg",
-    "order": 106
+    "order": 103
   },
   {
     "filename": "A7405449.jpg",
     "caption": "Automotive Parking Light, Family car, Luxury vehicle, Filling station, Full-size car",
     "categories": [
-      "Daily Life"
+      "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7405449.jpg",
-    "order": 107
+    "order": 104
   },
   {
     "filename": "A7406196.jpg",
@@ -969,7 +942,7 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7406196.jpg",
-    "order": 108
+    "order": 105
   },
   {
     "filename": "A7407695.jpg",
@@ -978,7 +951,7 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7407695.jpg",
-    "order": 109
+    "order": 106
   },
   {
     "filename": "A7409510.jpg",
@@ -987,7 +960,7 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7409510.jpg",
-    "order": 110
+    "order": 107
   },
   {
     "filename": "vet001.webp",
@@ -996,7 +969,7 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/vet001.webp",
-    "order": 111
+    "order": 108
   },
   {
     "filename": "vet002.webp",
@@ -1005,7 +978,7 @@
       "People"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/vet002.webp",
-    "order": 112
+    "order": 109
   },
   {
     "filename": "A7403739.jpg",
@@ -1014,6 +987,1833 @@
       "Places"
     ],
     "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7403739.jpg",
+    "order": 110
+  },
+  {
+    "filename": "A7403755.jpg",
+    "caption": "建築, Urban design, Composite material, Brick, Apartment",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7403755.jpg",
+    "order": 111
+  },
+  {
+    "filename": "A74014701.jpg",
+    "caption": "Leaf, Spring, Twig, Autumn, Japanese architecture",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A74014701.jpg",
+    "order": 112
+  },
+  {
+    "filename": "00-4.jpg",
+    "caption": "空, Water resources, Horizon, 水, Fluid",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/00-4.jpg",
     "order": 113
+  },
+  {
+    "filename": "0001.jpg",
+    "caption": "Blue, 水, Rock, Watercourse, Coastal and oceanic landforms",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/0001.jpg",
+    "order": 114
+  },
+  {
+    "filename": "0004.jpg",
+    "caption": "Coastal and oceanic landforms, Sea, 海岸, Chinese architecture, 島",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/0004.jpg",
+    "order": 115
+  },
+  {
+    "filename": "0009.jpg",
+    "caption": "道, Road surface, Night, 街, Electricity",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/0009.jpg",
+    "order": 116
+  },
+  {
+    "filename": "001-14.jpg",
+    "caption": "Statue, 彫刻, Temple, Eye, Lawn ornament",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/001-14.jpg",
+    "order": 117
+  },
+  {
+    "filename": "0012.jpg",
+    "caption": "Winter, Snow, Mountain range, Freezing, Morning",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/0012.jpg",
+    "order": 118
+  },
+  {
+    "filename": "0023.jpg",
+    "caption": "Sea, 海, 海岸, Tropics, ビーチ",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/0023.jpg",
+    "order": 119
+  },
+  {
+    "filename": "0027.jpg",
+    "caption": "食べ物, Tableware, Ingredient, Dishware, Serveware",
+    "categories": [
+      "Food"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/0027.jpg",
+    "order": 120
+  },
+  {
+    "filename": "2-1.jpg",
+    "caption": "Blue, 水, Fluid, Horizon, Liquid",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/2-1.jpg",
+    "order": 121
+  },
+  {
+    "filename": "A7400297.jpg",
+    "caption": "Blue, 空, 水, Body of water, Water resources",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7400297.jpg",
+    "order": 122
+  },
+  {
+    "filename": "A7400335.jpg",
+    "caption": "レストラン, Light fixture, Night",
+    "categories": [
+      "Food"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7400335.jpg",
+    "order": 123
+  },
+  {
+    "filename": "A7400437.jpg",
+    "caption": "Hand, Hat, Headgear, Sun hat, Barechestedness",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7400437.jpg",
+    "order": 124
+  },
+  {
+    "filename": "A7400789.jpg",
+    "caption": "Boat, Watercraft, Sea, Ship, Naval architecture",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7400789.jpg",
+    "order": 125
+  },
+  {
+    "filename": "A7400816.jpg",
+    "caption": "Mode of transport, Electricity, Urban area, Road surface, Night",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7400816.jpg",
+    "order": 126
+  },
+  {
+    "filename": "A7400826.jpg",
+    "caption": "Mode of transport, Train, Transport, Electricity, Rolling stock",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7400826.jpg",
+    "order": 127
+  },
+  {
+    "filename": "A7401032.jpg",
+    "caption": "空, Blue, 水, 雲, Body of water",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7401032.jpg",
+    "order": 128
+  },
+  {
+    "filename": "A7401079-3.jpg",
+    "caption": "Afterglow, Horizon, 夕焼け, Dusk, 雲",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7401079-3.jpg",
+    "order": 129
+  },
+  {
+    "filename": "A7401160.jpg",
+    "caption": "Dinosaur, High-rise building, Extinction, Skyscraper, Composite material",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7401160.jpg",
+    "order": 130
+  },
+  {
+    "filename": "A7401162.jpg",
+    "caption": "Dinosaur, Extinction, Terrestrial animal, Tyrannosaurus, Snout",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7401162.jpg",
+    "order": 131
+  },
+  {
+    "filename": "A7401164.jpg",
+    "caption": "Manhole cover, Manhole, Separative sewer, Cobblestone, Still life",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7401164.jpg",
+    "order": 132
+  },
+  {
+    "filename": "A7401406.jpg",
+    "caption": "Fireworks, Event, Night, Midnight, Festival",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7401406.jpg",
+    "order": 133
+  },
+  {
+    "filename": "A7401442-2.jpg",
+    "caption": "Snow, Winter, Freezing, Slope, Tower",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7401442-2.jpg",
+    "order": 134
+  },
+  {
+    "filename": "A7401443.jpg",
+    "caption": "Night, 都市, Urban area, Electricity, Town",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7401443.jpg",
+    "order": 135
+  },
+  {
+    "filename": "A7401450.jpg",
+    "caption": "Clock tower, Clock, Tower, ランドマーク, Brown",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7401450.jpg",
+    "order": 136
+  },
+  {
+    "filename": "A7401487-3.jpg",
+    "caption": "Winter, Graffiti, Paint, Street art, Mural",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7401487-3.jpg",
+    "order": 137
+  },
+  {
+    "filename": "A7401514.jpg",
+    "caption": "Tableware, Drinkware, テーブル, 食べ物, Ingredient",
+    "categories": [
+      "Food"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7401514.jpg",
+    "order": 138
+  },
+  {
+    "filename": "A7401556.jpg",
+    "caption": "Handwriting, Hardwood, Wood stain, Plank, Still life photography",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7401556.jpg",
+    "order": 139
+  },
+  {
+    "filename": "A7401560.jpg",
+    "caption": "Mode of transport, Transport, Train, Rolling stock, Public transport",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7401560.jpg",
+    "order": 140
+  },
+  {
+    "filename": "A7401674.jpg",
+    "caption": "Leaf, 自然, Vegetation, Pagoda, Chinese architecture",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7401674.jpg",
+    "order": 141
+  },
+  {
+    "filename": "A7401701.jpg",
+    "caption": "Manhole",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7401701.jpg",
+    "order": 142
+  },
+  {
+    "filename": "A7401734.jpg",
+    "caption": "Japanese architecture, Chinese architecture, Pagoda, Tourist attraction, Temple",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7401734.jpg",
+    "order": 143
+  },
+  {
+    "filename": "A7401795.jpg",
+    "caption": "Creative arts, Symmetry, Motif",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7401795.jpg",
+    "order": 144
+  },
+  {
+    "filename": "A7401810%EF%BC%88%E5%A4%A7%EF%BC%89.jpeg",
+    "caption": "Train, Rolling stock, Rail transport, Engineering, Electricity",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7401810（大）.jpeg",
+    "order": 145
+  },
+  {
+    "filename": "A7401860.jpg",
+    "caption": "Arch, Leisure, Palm trees, Vacation, Walking",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7401860.jpg",
+    "order": 146
+  },
+  {
+    "filename": "A7401865.jpg",
+    "caption": "Coastal and oceanic landforms, Shade, 海岸, Sea, 海",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7401865.jpg",
+    "order": 147
+  },
+  {
+    "filename": "A7401892.jpg",
+    "caption": "建築, Japanese architecture, Chinese architecture, Spring, Shrine",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7401892.jpg",
+    "order": 148
+  },
+  {
+    "filename": "A7401948.jpg",
+    "caption": "Outdoor furniture, Resort, 家具, Shade, イス",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7401948.jpg",
+    "order": 149
+  },
+  {
+    "filename": "A7401950.jpg",
+    "caption": "Blue, Daytime, 自然, Sun, Horizon",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7401950.jpg",
+    "order": 150
+  },
+  {
+    "filename": "A7402031.jpg",
+    "caption": "Engineering, Iron, Metal, Transport hub, List of nonbuilding structure types",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7402031.jpg",
+    "order": 151
+  },
+  {
+    "filename": "A7402056-%E5%BC%B7%E5%8C%96-NR.jpg",
+    "caption": "Wood, Flooring, Floor, Interior design, Hardwood",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7402056-強化-NR.jpg",
+    "order": 152
+  },
+  {
+    "filename": "A7402059.jpg",
+    "caption": "Night, Boat, Watercraft, Mast, Sailing ship",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7402059.jpg",
+    "order": 153
+  },
+  {
+    "filename": "A7402141.jpg",
+    "caption": "Blue, 空, 水, Daytime, Water resources",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7402141.jpg",
+    "order": 154
+  },
+  {
+    "filename": "A7402182.jpg",
+    "caption": "水, Blue, Water resources, Body of water, Fluid",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7402182.jpg",
+    "order": 155
+  },
+  {
+    "filename": "A7402276-%E5%BC%B7%E5%8C%96-NR.jpg",
+    "caption": "Chinese architecture, Japanese architecture, Pagoda, 建築, ランドマーク",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7402276-強化-NR.jpg",
+    "order": 156
+  },
+  {
+    "filename": "A7402449.jpg",
+    "caption": "顔, Happiness, 笑顔, Nose, Mouth",
+    "categories": [
+      "People"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7402449.jpg",
+    "order": 157
+  },
+  {
+    "filename": "A7402517.jpg",
+    "caption": "Garden, Pond, Botanical garden, Landscaping, Park",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7402517.jpg",
+    "order": 158
+  },
+  {
+    "filename": "A7402549.jpg",
+    "caption": "Paint, Molding, Hotel",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7402549.jpg",
+    "order": 159
+  },
+  {
+    "filename": "A7402556.jpg",
+    "caption": "空, 雲, Blue, 水, Water resources",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7402556.jpg",
+    "order": 160
+  },
+  {
+    "filename": "A7402718.jpg",
+    "caption": "空, 雲, Daytime, 水, Body of water",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7402718.jpg",
+    "order": 161
+  },
+  {
+    "filename": "A7402744.jpg",
+    "caption": "空, 雲, 水, Daytime, Body of water",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7402744.jpg",
+    "order": 162
+  },
+  {
+    "filename": "A7402840.jpg",
+    "caption": "Ceiling, Glass, Airport, Engineering, Daylighting",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7402840.jpg",
+    "order": 163
+  },
+  {
+    "filename": "A7403009.jpg",
+    "caption": "空, Blue, 水, Horizon, Water resources",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7403009.jpg",
+    "order": 164
+  },
+  {
+    "filename": "A7403091.jpg",
+    "caption": "猫, Window screen, Felinae, Felidae, Mesh",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7403091.jpg",
+    "order": 165
+  },
+  {
+    "filename": "A7403137.jpg",
+    "caption": "Train, Mode of transport, Land vehicle, Transport, Rolling stock",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7403137.jpg",
+    "order": 166
+  },
+  {
+    "filename": "A7403365.jpg",
+    "caption": "Red, Lighting, Orange, Electricity, Night",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7403365.jpg",
+    "order": 167
+  },
+  {
+    "filename": "A7403383.jpg",
+    "caption": "Wall, Iron",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7403383.jpg",
+    "order": 168
+  },
+  {
+    "filename": "A7403387.jpg",
+    "caption": "Shade, Kiosk, Retail, Market",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7403387.jpg",
+    "order": 169
+  },
+  {
+    "filename": "A7403400.jpg",
+    "caption": "Alcoholic drink, Bar, Alcohol, 笑顔, Liquor",
+    "categories": [
+      "People"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7403400.jpg",
+    "order": 170
+  },
+  {
+    "filename": "A7403407.jpg",
+    "caption": "Hair, Lips, 顔, Black hair, Beauty",
+    "categories": [
+      "People"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7403407.jpg",
+    "order": 171
+  },
+  {
+    "filename": "A7403488-%E5%BC%B7%E5%8C%96-NR.jpg",
+    "caption": "Shadow",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7403488-強化-NR.jpg",
+    "order": 172
+  },
+  {
+    "filename": "A7403886.jpg",
+    "caption": "水, Coastal and oceanic landforms, Sea, 海岸, 島",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7403886.jpg",
+    "order": 173
+  },
+  {
+    "filename": "A7403912%EF%BC%88%E5%A4%A7%EF%BC%89.jpeg",
+    "caption": "食べ物, Tableware, Ingredient, テーブル, Drinkware",
+    "categories": [
+      "Food"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7403912（大）.jpeg",
+    "order": 174
+  },
+  {
+    "filename": "A7403922.jpg",
+    "caption": "Tableware, Cooking, 食べ物, Cook, レストラン",
+    "categories": [
+      "People"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7403922.jpg",
+    "order": 175
+  },
+  {
+    "filename": "A7403935%EF%BC%88%E4%B8%AD%EF%BC%89.jpeg",
+    "caption": "Drinkware, Barware, Bottle, Liquor, Bar",
+    "categories": [
+      "People"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7403935（中）.jpeg",
+    "order": 176
+  },
+  {
+    "filename": "A7403953.jpg",
+    "caption": "空, Chinese architecture, Japanese architecture, 建築, Temple",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7403953.jpg",
+    "order": 177
+  },
+  {
+    "filename": "A7404061.jpg",
+    "caption": "Skyscraper, Urban area, High-rise building, 都市, 都会",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7404061.jpg",
+    "order": 178
+  },
+  {
+    "filename": "A7404089.jpg",
+    "caption": "食べ物, Tableware, Ingredient, Soup, Serveware",
+    "categories": [
+      "Food"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7404089.jpg",
+    "order": 179
+  },
+  {
+    "filename": "A7404122.jpg",
+    "caption": "窓, Facade, Arch, Turret, Classical architecture",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7404122.jpg",
+    "order": 180
+  },
+  {
+    "filename": "A7404123.jpg",
+    "caption": "Blue, Glass, Metal, Engineering, Light fixture",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7404123.jpg",
+    "order": 181
+  },
+  {
+    "filename": "A7404307.jpg",
+    "caption": "Night, Electricity, 道, Lighting, Neighbourhood",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7404307.jpg",
+    "order": 182
+  },
+  {
+    "filename": "A7404341.jpg",
+    "caption": "Ceiling, Graffiti",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7404341.jpg",
+    "order": 183
+  },
+  {
+    "filename": "A7404354.jpg",
+    "caption": "Lighting, Alley, Flooring, Floor, Ceiling",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7404354.jpg",
+    "order": 184
+  },
+  {
+    "filename": "A7404371.jpg",
+    "caption": "Watercraft, Dusk, Boat, Ship, Afterglow",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7404371.jpg",
+    "order": 185
+  },
+  {
+    "filename": "A7404468.jpg",
+    "caption": "Blue, Mountainous landforms, 山, Hill, Highland",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7404468.jpg",
+    "order": 186
+  },
+  {
+    "filename": "A7404499.jpg",
+    "caption": "水, Water resources, Body of water, 木, 自然",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7404499.jpg",
+    "order": 187
+  },
+  {
+    "filename": "A7404528.jpg",
+    "caption": "Train, Mode of transport, Land vehicle, Transport, Vehicle",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7404528.jpg",
+    "order": 188
+  },
+  {
+    "filename": "A7404552-2.jpg",
+    "caption": "Mode of transport, Transport, Train, Rolling stock, Public transport",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7404552-2.jpg",
+    "order": 189
+  },
+  {
+    "filename": "A7404590-2.jpg",
+    "caption": "Blue, 水, Rock, Coastal and oceanic landforms, Sea",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7404590-2.jpg",
+    "order": 190
+  },
+  {
+    "filename": "A7404610.jpg",
+    "caption": "Blue, 水, Rock, Watercourse, Coastal and oceanic landforms",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7404610.jpg",
+    "order": 191
+  },
+  {
+    "filename": "A7404811.jpg",
+    "caption": "食べ物, Ingredient, Tableware, 肉, Seafood",
+    "categories": [
+      "Food"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7404811.jpg",
+    "order": 192
+  },
+  {
+    "filename": "A7404818.jpg",
+    "caption": "ドア, Night, Advertising, Sign",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7404818.jpg",
+    "order": 193
+  },
+  {
+    "filename": "A7404938.jpg",
+    "caption": "食べ物, Comfort food, Desk",
+    "categories": [
+      "People"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7404938.jpg",
+    "order": 194
+  },
+  {
+    "filename": "A7404950.jpg",
+    "caption": "Electronic signage, Advertising, Neon, Night, Logo",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7404950.jpg",
+    "order": 195
+  },
+  {
+    "filename": "A7405031.jpg",
+    "caption": "Sea, Horizon, 海, 海岸, Leisure",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7405031.jpg",
+    "order": 196
+  },
+  {
+    "filename": "A7405086.jpg",
+    "caption": "Symbol, Scaled reptiles, Mythical creature",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7405086.jpg",
+    "order": 197
+  },
+  {
+    "filename": "A7405311-2.jpg",
+    "caption": "Lighting, Customer, レストラン, 食べ物, Bar",
+    "categories": [
+      "Food"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7405311-2.jpg",
+    "order": 198
+  },
+  {
+    "filename": "A7405534.jpg",
+    "caption": "Skyscraper, Daytime, Urban area, 建物, 都会",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7405534.jpg",
+    "order": 199
+  },
+  {
+    "filename": "A7405639.jpg",
+    "caption": "食べ物, Tableware, Ingredient, Serveware, Dishware",
+    "categories": [
+      "Food"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7405639.jpg",
+    "order": 200
+  },
+  {
+    "filename": "A7406144.jpg",
+    "caption": "食べ物, Produce, Green, Ingredient, Natural foods",
+    "categories": [
+      "Food"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7406144.jpg",
+    "order": 201
+  },
+  {
+    "filename": "A7406147.jpg",
+    "caption": "Alcoholic drink, 食べ物, Liquid, Drink can, Beer",
+    "categories": [
+      "Food"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7406147.jpg",
+    "order": 202
+  },
+  {
+    "filename": "A7406189.jpg",
+    "caption": "Land vehicle, Mode of transport, Wheel, Tire, Motorcycle",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7406189.jpg",
+    "order": 203
+  },
+  {
+    "filename": "A7406309.jpg",
+    "caption": "Retail, Market, Display window, Bazaar, Sidewalk",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7406309.jpg",
+    "order": 204
+  },
+  {
+    "filename": "A7406347.jpg",
+    "caption": "Wood, Trunk, 森, Idiophone, Woodland",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7406347.jpg",
+    "order": 205
+  },
+  {
+    "filename": "A7406420.jpg",
+    "caption": "Pedestrian, 都会, 街, Composite material, Metropolis",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7406420.jpg",
+    "order": 206
+  },
+  {
+    "filename": "A7406429.jpg",
+    "caption": "Primate, Vertebrate, Macaque, Wildlife, Fur",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7406429.jpg",
+    "order": 207
+  },
+  {
+    "filename": "A7406434.jpg",
+    "caption": "Blue, Skyscraper, Daytime, High-rise building, Urban area",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7406434.jpg",
+    "order": 208
+  },
+  {
+    "filename": "A7406451.jpg",
+    "caption": "Flooring, Floor, Interior design, Ceiling, 部屋",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7406451.jpg",
+    "order": 209
+  },
+  {
+    "filename": "A7406497.jpg",
+    "caption": "Tableware, 食べ物, Drink can, Ingredient, Drinkware",
+    "categories": [
+      "Food"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7406497.jpg",
+    "order": 210
+  },
+  {
+    "filename": "A7406621.jpg",
+    "caption": "建物, Urban area, 都会, 都市, Metropolis",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7406621.jpg",
+    "order": 211
+  },
+  {
+    "filename": "A7406785.jpg",
+    "caption": "Urban area, 都市, Town, Neighbourhood, Public space",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7406785.jpg",
+    "order": 212
+  },
+  {
+    "filename": "A7406932.jpg",
+    "caption": "Flooring, Floor, Interior design, Ceiling, Silver",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7406932.jpg",
+    "order": 213
+  },
+  {
+    "filename": "A7406954.jpg",
+    "caption": "Advertising",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7406954.jpg",
+    "order": 214
+  },
+  {
+    "filename": "A7407053.jpg",
+    "caption": "雲, Reflection, Reservoir, List of nonbuilding structure types, Meteorological phenomenon",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7407053.jpg",
+    "order": 215
+  },
+  {
+    "filename": "A7407155.jpg",
+    "caption": "空, Blue, 水, 雲, Daytime",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7407155.jpg",
+    "order": 216
+  },
+  {
+    "filename": "A7407202.jpg",
+    "caption": "Advertising, Metro station, Pedestrian, Train station, Public transport",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7407202.jpg",
+    "order": 217
+  },
+  {
+    "filename": "A7407226.jpg",
+    "caption": "木, Outdoor furniture, Vacation, Resort, Umbrella",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7407226.jpg",
+    "order": 218
+  },
+  {
+    "filename": "A7407256.jpg",
+    "caption": "Uniform, Chef, Cook, Cooking, Chef's uniform",
+    "categories": [
+      "People"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7407256.jpg",
+    "order": 219
+  },
+  {
+    "filename": "A7407320.jpg",
+    "caption": "Body of water, ビーチ, Summer, Sea, Outdoor furniture",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7407320.jpg",
+    "order": 220
+  },
+  {
+    "filename": "A7407357.jpg",
+    "caption": "食べ物, Tableware, Ingredient, Soup, Bowl",
+    "categories": [
+      "Food"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7407357.jpg",
+    "order": 221
+  },
+  {
+    "filename": "A7407369.jpg",
+    "caption": "Iron, Electricity, Track, Train, Public transport",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7407369.jpg",
+    "order": 222
+  },
+  {
+    "filename": "A7407380.jpg",
+    "caption": "Bicycle, Bicycle wheel, Bicycle frame, Bicycle tire, 道",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7407380.jpg",
+    "order": 223
+  },
+  {
+    "filename": "A74075421_r.jpg",
+    "caption": "Playground slide, Outdoor Play Equipment, Public space, Chute, Playground",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A74075421_r.jpg",
+    "order": 224
+  },
+  {
+    "filename": "A7407661.jpg",
+    "caption": "木, 自然, Waterway, Blossom, Spring",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7407661.jpg",
+    "order": 225
+  },
+  {
+    "filename": "A7407688.jpg",
+    "caption": "犬, Carnivores, Snout, Working animal, Canidae",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7407688.jpg",
+    "order": 226
+  },
+  {
+    "filename": "A7407816.jpg",
+    "caption": "Outdoor furniture, イス, Resort, Shade, Outdoor Table",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7407816.jpg",
+    "order": 227
+  },
+  {
+    "filename": "A7407956.jpg",
+    "caption": "Mode of transport, Tire, Wheel, Motorcycle, Transport",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7407956.jpg",
+    "order": 228
+  },
+  {
+    "filename": "A7408024%EF%BC%88%E5%A4%A7%EF%BC%89.jpeg",
+    "caption": "Mountainous landforms, 木, 山, Hill, Bank",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7408024（大）.jpeg",
+    "order": 229
+  },
+  {
+    "filename": "A7408056.jpg",
+    "caption": "Mode of transport, 街, Town, Public space, Motorcycle",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7408056.jpg",
+    "order": 230
+  },
+  {
+    "filename": "A7408057%EF%BC%88%E5%A4%A7%EF%BC%89.jpeg",
+    "caption": "Branch, Blossom, Petal, Spring, Twig",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7408057（大）.jpeg",
+    "order": 231
+  },
+  {
+    "filename": "A7408063.jpg",
+    "caption": "食べ物, Tableware, パン, Ingredient, Finger food",
+    "categories": [
+      "Food"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7408063.jpg",
+    "order": 232
+  },
+  {
+    "filename": "A7408109.jpg",
+    "caption": "Symbol, Symmetry, Mosaic, Mural",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7408109.jpg",
+    "order": 233
+  },
+  {
+    "filename": "A7408292.jpg",
+    "caption": "Blue, Grassland, Plain, Woody plant, Lawn",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7408292.jpg",
+    "order": 234
+  },
+  {
+    "filename": "A7408299.jpg",
+    "caption": "Industry, Factory, Pipe, Power station, Chimney",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7408299.jpg",
+    "order": 235
+  },
+  {
+    "filename": "A7408331.jpg",
+    "caption": "空, Mountainous landforms, Water resources, 山, Body of water",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7408331.jpg",
+    "order": 236
+  },
+  {
+    "filename": "A7408368_1.jpg",
+    "caption": "Wood",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7408368_1.jpg",
+    "order": 237
+  },
+  {
+    "filename": "A7408372_1.jpg",
+    "caption": "Clock, Clock tower, Watch, Quartz clock",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7408372_1.jpg",
+    "order": 238
+  },
+  {
+    "filename": "A7408479.jpg",
+    "caption": "Customer, Alcoholic drink, Retail, Shelf, Liquor store",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7408479.jpg",
+    "order": 239
+  },
+  {
+    "filename": "A7408529.jpg",
+    "caption": "食べ物, Tableware, Alcoholic drink, Ingredient, Finger food",
+    "categories": [
+      "Food"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7408529.jpg",
+    "order": 240
+  },
+  {
+    "filename": "A7408568.jpg",
+    "caption": "食べ物, Tableware, Finger food, Ingredient, レストラン",
+    "categories": [
+      "Food"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7408568.jpg",
+    "order": 241
+  },
+  {
+    "filename": "A7408622.jpg",
+    "caption": "Aluminium, Headquarters",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7408622.jpg",
+    "order": 242
+  },
+  {
+    "filename": "A7408639.jpg",
+    "caption": "Glass, Display window, Retail, Night, Mannequin",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7408639.jpg",
+    "order": 243
+  },
+  {
+    "filename": "A7408928.jpg",
+    "caption": "Shoulder, 笑顔, Happiness, Facial expression, Waist",
+    "categories": [
+      "People"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7408928.jpg",
+    "order": 244
+  },
+  {
+    "filename": "A7409101.jpg",
+    "caption": "家具, Interior design, 部屋, Lighting, Electronic device",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7409101.jpg",
+    "order": 245
+  },
+  {
+    "filename": "A7409115.jpg",
+    "caption": "Automotive lighting, Automotive Exterior, Motorcycle, Headlamp, Automotive Mirror",
+    "categories": [
+      "People"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7409115.jpg",
+    "order": 246
+  },
+  {
+    "filename": "A7409212.jpg",
+    "caption": "Wood, Bamboo, 森, Jungle, Plant stem",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7409212.jpg",
+    "order": 247
+  },
+  {
+    "filename": "A7409265.jpg",
+    "caption": "Hill station, Cumulus, Meteorological phenomenon",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7409265.jpg",
+    "order": 248
+  },
+  {
+    "filename": "A7409325.jpg",
+    "caption": "Grass, 雲, 風景, Land lot, Mound",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7409325.jpg",
+    "order": 249
+  },
+  {
+    "filename": "A7409393.jpg",
+    "caption": "猫, Felidae, Felinae, Whiskers, Carnivores",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7409393.jpg",
+    "order": 250
+  },
+  {
+    "filename": "A7409439.jpg",
+    "caption": "Facial expression, Happiness, おもちゃ, Figurine, Animation",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7409439.jpg",
+    "order": 251
+  },
+  {
+    "filename": "A7409479.jpg",
+    "caption": "空, Blue, 水, Daytime, Horizon",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7409479.jpg",
+    "order": 252
+  },
+  {
+    "filename": "A7409494.jpg",
+    "caption": "Green, Plants, Natural landscape, Shrub, 風景",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7409494.jpg",
+    "order": 253
+  },
+  {
+    "filename": "A7409509.jpg",
+    "caption": "Rock, Natural material, Boulder, Environmental art",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7409509.jpg",
+    "order": 254
+  },
+  {
+    "filename": "A7409551.jpg",
+    "caption": "Lawn ornament, Garden, Park, Environmental art, Botanical garden",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7409551.jpg",
+    "order": 255
+  },
+  {
+    "filename": "A7409650.jpg",
+    "caption": "Daytime, Horizon, Yellow, 雲, Fluid",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7409650.jpg",
+    "order": 256
+  },
+  {
+    "filename": "A7409651.jpg",
+    "caption": "Dusk, Silhouette, 夕焼け, Sunlight, Evening",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7409651.jpg",
+    "order": 257
+  },
+  {
+    "filename": "A7409670.jpg",
+    "caption": "空, 水, Horizon, Water resources, Afterglow",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7409670.jpg",
+    "order": 258
+  },
+  {
+    "filename": "A7409714.jpg",
+    "caption": "犬, ビーチ, Summer, Carnivores, Black",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7409714.jpg",
+    "order": 259
+  },
+  {
+    "filename": "A7409736.jpg",
+    "caption": "猫, Felidae, Felinae, Carnivores, Whiskers",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7409736.jpg",
+    "order": 260
+  },
+  {
+    "filename": "A7409797.jpg",
+    "caption": "犬, Carnivores, Vertebrate, Snout, Working animal",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7409797.jpg",
+    "order": 261
+  },
+  {
+    "filename": "A7409837.jpg",
+    "caption": "空, Blue, 水, ビーチ, Body of water",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/A7409837.jpg",
+    "order": 262
+  },
+  {
+    "filename": "IMG_7123.jpg",
+    "caption": "食べ物, Ingredient, Packaging and labeling, Pasta, Fast food",
+    "categories": [
+      "Food"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/IMG_7123.jpg",
+    "order": 263
+  },
+  {
+    "filename": "IMG_7347.jpg",
+    "caption": "Grass, Leaf, Groundcover, Plant community, Grasses",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/IMG_7347.jpg",
+    "order": 264
+  },
+  {
+    "filename": "IMG_7418.jpg",
+    "caption": "食べ物, Ingredient, Finger food, Junk food, Potato chip",
+    "categories": [
+      "Food"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/IMG_7418.jpg",
+    "order": 265
+  },
+  {
+    "filename": "IMG_7729%202.jpg",
+    "caption": "Paper, Office supplies, テーブル, Writing, Writing implement",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/IMG_7729 2.jpg",
+    "order": 266
+  },
+  {
+    "filename": "de-9.jpg",
+    "caption": "Horizon, Afterglow, Orange, Fluid, 夕焼け",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/de-9.jpg",
+    "order": 267
+  },
+  {
+    "filename": "en-27.jpg",
+    "caption": "Blue, Daytime, Horizon, Sea, 海",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/en-27.jpg",
+    "order": 268
+  },
+  {
+    "filename": "gasaki-36.jpg",
+    "caption": "Blue, 水, Rock, Horizon, Fluid",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/gasaki-36.jpg",
+    "order": 269
+  },
+  {
+    "filename": "ip-5.jpg",
+    "caption": "水, Pagoda, Chinese architecture, Japanese architecture, Reflection",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/ip-5.jpg",
+    "order": 270
+  },
+  {
+    "filename": "kuge-1.jpg",
+    "caption": "空, Blue, 水, Daytime, Horizon",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/kuge-1.jpg",
+    "order": 271
+  },
+  {
+    "filename": "kuge-11.jpg",
+    "caption": "空, Blue, 水, Daytime, Horizon",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/kuge-11.jpg",
+    "order": 272
+  },
+  {
+    "filename": "kuge-12.jpg",
+    "caption": "空, Blue, 水, Horizon, ビーチ",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/kuge-12.jpg",
+    "order": 273
+  },
+  {
+    "filename": "kugeq-5.jpg",
+    "caption": "Blue, 水, Water resources, Afterglow, Horizon",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/kugeq-5.jpg",
+    "order": 274
+  },
+  {
+    "filename": "kura-20.jpg",
+    "caption": "Japanese architecture, Hill station, Chinese architecture, Temple, Shrine",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/kura-20.jpg",
+    "order": 275
+  },
+  {
+    "filename": "kura-41.jpg",
+    "caption": "Nest box",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/kura-41.jpg",
+    "order": 276
+  },
+  {
+    "filename": "miyako-106.jpg",
+    "caption": "Green, 自然, Spire, Tower, Tourist attraction",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/miyako-106.jpg",
+    "order": 277
+  },
+  {
+    "filename": "miyako-113.jpg",
+    "caption": "猫, Green, Felidae, Felinae, Whiskers",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/miyako-113.jpg",
+    "order": 278
+  },
+  {
+    "filename": "miyako-215.jpg",
+    "caption": "空, Blue, 水, Daytime, Body of water",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/miyako-215.jpg",
+    "order": 279
+  },
+  {
+    "filename": "moto-132.jpg",
+    "caption": "Orange, Sign",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/moto-132.jpg",
+    "order": 280
+  },
+  {
+    "filename": "nn-284.jpg",
+    "caption": "空, Blue, Mountainous landforms, 山, Mountain range",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/nn-284.jpg",
+    "order": 281
+  },
+  {
+    "filename": "numa-11.jpg",
+    "caption": "Sun, Horizon, 夕焼け, Afterglow, Dusk",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/numa-11.jpg",
+    "order": 282
+  },
+  {
+    "filename": "ro-109.jpg",
+    "caption": "Chinese architecture, Japanese architecture, Pagoda, 建築, ランドマーク",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/ro-109.jpg",
+    "order": 283
+  },
+  {
+    "filename": "ro-139.jpg",
+    "caption": "彫刻, Temple, Statue, アート, Artifact",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/ro-139.jpg",
+    "order": 284
+  },
+  {
+    "filename": "ro-142.jpg",
+    "caption": "Deer, Terrestrial animal, Antelope, Pasture, Grazing",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/ro-142.jpg",
+    "order": 285
+  },
+  {
+    "filename": "ro-157.jpg",
+    "caption": "Grass, Green, Vegetation, Grassland, Land lot",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/ro-157.jpg",
+    "order": 286
+  },
+  {
+    "filename": "s-8.jpg",
+    "caption": "空, 水, Horizon, Body of water, Afterglow",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/s-8.jpg",
+    "order": 287
+  },
+  {
+    "filename": "sai-19.jpg",
+    "caption": "花, Blue, Petal, Flowering plant, Close-up",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/sai-19.jpg",
+    "order": 288
+  },
+  {
+    "filename": "samui-119.jpg",
+    "caption": "Mode of transport, 木, Road surface, 道, Town",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/samui-119.jpg",
+    "order": 289
+  },
+  {
+    "filename": "samui-13.jpg",
+    "caption": "ビーチ, 海岸, Summer, Coastal and oceanic landforms, Shore",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/samui-13.jpg",
+    "order": 290
+  },
+  {
+    "filename": "samui-160.jpg",
+    "caption": "雲, 空, Blue, Daytime, Cumulus",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/samui-160.jpg",
+    "order": 291
+  },
+  {
+    "filename": "samui-26.jpg",
+    "caption": "Tableware, Alcoholic drink, Liquor, 食べ物, Cocktail",
+    "categories": [
+      "Food"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/samui-26.jpg",
+    "order": 292
+  },
+  {
+    "filename": "samui-35.jpg",
+    "caption": "Advertising, Logo, Neon, Electronic signage, Palm trees",
+    "categories": [
+      "Food"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/samui-35.jpg",
+    "order": 293
+  },
+  {
+    "filename": "samui-39.jpg",
+    "caption": "空, Blue, 水, Horizon, Water resources",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/samui-39.jpg",
+    "order": 294
+  },
+  {
+    "filename": "samui-41.jpg",
+    "caption": "空, 水, Horizon, Water resources, Sun",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/samui-41.jpg",
+    "order": 295
+  },
+  {
+    "filename": "samui-55.jpg",
+    "caption": "Wood stain, レストラン, Picture frame",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/samui-55.jpg",
+    "order": 296
+  },
+  {
+    "filename": "samui-58.jpg",
+    "caption": "Town, 街, Pedestrian, Travel, Electricity",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/samui-58.jpg",
+    "order": 297
+  },
+  {
+    "filename": "samui-61.jpg",
+    "caption": "家具, 水, Body of water, Horizon, Sea",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/samui-61.jpg",
+    "order": 298
+  },
+  {
+    "filename": "samui-74.jpg",
+    "caption": "雲, 空, Blue, 水, Daytime",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/samui-74.jpg",
+    "order": 299
+  },
+  {
+    "filename": "samui-84.jpg",
+    "caption": "猫, Felidae, Felinae, Vertebrate, Carnivores",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/samui-84.jpg",
+    "order": 300
+  },
+  {
+    "filename": "samui-89.jpg",
+    "caption": "空, Mode of transport, Motorcycle, Road surface, Town",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/samui-89.jpg",
+    "order": 301
+  },
+  {
+    "filename": "samui-96.jpg",
+    "caption": "Tower, Palm trees, Lighthouse, Observation tower, California palm",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/samui-96.jpg",
+    "order": 302
+  },
+  {
+    "filename": "samui00-82.jpg",
+    "caption": "猫, Felidae, Felinae, Carnivores, Vertebrate",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/samui00-82.jpg",
+    "order": 303
+  },
+  {
+    "filename": "set-66.jpg",
+    "caption": "水, Horizon, 夕焼け, Afterglow, Dusk",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/set-66.jpg",
+    "order": 304
+  },
+  {
+    "filename": "shima-165.jpg",
+    "caption": "水, 自然, Horizon, 風景, Sun",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/shima-165.jpg",
+    "order": 305
+  },
+  {
+    "filename": "st-26.jpg",
+    "caption": "Event, Tradition, Costume, Public event, Crowd",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/st-26.jpg",
+    "order": 306
+  },
+  {
+    "filename": "sunset-4.jpg",
+    "caption": "Blue, 空, 水, Horizon, Afterglow",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/sunset-4.jpg",
+    "order": 307
+  },
+  {
+    "filename": "thai-108.jpg",
+    "caption": "空, Blue, Body of water, 雲, Horizon",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/thai-108.jpg",
+    "order": 308
+  },
+  {
+    "filename": "thai-122.jpg",
+    "caption": "Alley, Stairs, Bicycle wheel, Cobblestone, Spoke",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/thai-122.jpg",
+    "order": 309
+  },
+  {
+    "filename": "thai-20.jpg",
+    "caption": "猫, Felidae, Felinae, Carnivores, Whiskers",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/thai-20.jpg",
+    "order": 310
+  },
+  {
+    "filename": "thai-80.jpg",
+    "caption": "山, Coastal and oceanic landforms, 海岸, Terrain, Summer",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/thai-80.jpg",
+    "order": 311
+  },
+  {
+    "filename": "yakushiji-9.jpg",
+    "caption": "水, Torii, Chinese architecture, Japanese architecture, Shinto shrine",
+    "categories": [
+      "Places"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/yakushiji-9.jpg",
+    "order": 312
+  },
+  {
+    "filename": "IMG_7129.jpg",
+    "caption": "Walnut, 食べ物, Nut, Produce, Ingredient",
+    "categories": [
+      "Food"
+    ],
+    "imageUrl": "https://edna.jp/edna-books/artist/keizo-okada/gallery/IMG_7129.jpg",
+    "order": 313
   }
 ]
