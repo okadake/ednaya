@@ -77,7 +77,7 @@ npm run add-gallery-images  # Vision API で画像分析 → CSV/JSON → ビル
 ### Vision API + 手動トリガー方式（✅ 完全実装）
 
 **仕組み**
-- note.com の画像 URL から Vision API で自動分析
+- 画像 URL から Google Cloud Vision API で自動分析
 - キャプション + カテゴリを自動生成
 - 複数カテゴリ対応
 - 手動トリガー（ワンコマンド）
