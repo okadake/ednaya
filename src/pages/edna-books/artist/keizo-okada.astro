@@ -17,8 +17,14 @@ galleryItems.forEach(item => {
 });
 
 // ユニークなカテゴリーリストを取得
-const categories = ['all', ...new Set(galleryItems.filter(item => item.category).map(item => item.category))].map(cat => ({
-  id: cat,
+const uniqueCategories = new Set<string>();
+galleryItems.forEach(item => {
+  if (item.categories && Array.isArray(item.categories)) {
+    item.categories.forEach(cat => uniqueCategories.add(cat));
+  }
+});
+const categories = ['all', ...Array.from(uniqueCategories)].map(cat => ({
+  id: cat.toLowerCase(),
   label: cat.charAt(0).toUpperCase() + cat.slice(1)
 }));
 
