@@ -1,0 +1,20 @@
+# ここに URL を1行1つずつ貼ってください
+# 例：
+# https://edna.jp/edna-books/artist/keizo-okada/gallery/image1.jpg
+# https://edna.jp/edna-books/artist/keizo-okada/gallery/image2.jpg
+
+https://edna.jp/edna-books/artist/keizo-okada/gallery/A7400441.jpg
+https://edna.jp/edna-books/artist/keizo-okada/gallery/A7406780.jpg
+https://edna.jp/edna-books/artist/keizo-okada/gallery/A7406782.jpg
+https://edna.jp/edna-books/artist/keizo-okada/gallery/A7407198.jpg
+https://edna.jp/edna-books/artist/keizo-okada/gallery/A7407229.jpg
+https://edna.jp/edna-books/artist/keizo-okada/gallery/A7407244.jpg
+https://edna.jp/edna-books/artist/keizo-okada/gallery/A7407259.jpg
+https://edna.jp/edna-books/artist/keizo-okada/gallery/A7407428.jpg
+https://edna.jp/edna-books/artist/keizo-okada/gallery/A7407700.jpg
+https://edna.jp/edna-books/artist/keizo-okada/gallery/A7407708.jpg
+https://edna.jp/edna-books/artist/keizo-okada/gallery/A7407818.jpg
+https://edna.jp/edna-books/artist/keizo-okada/gallery/A7407889.jpg
+https://edna.jp/edna-books/artist/keizo-okada/gallery/A7408198.jpg
+https://edna.jp/edna-books/artist/keizo-okada/gallery/A7408434.jpg
+https://edna.jp/edna-books/artist/keizo-okada/gallery/A7408561.jpg
