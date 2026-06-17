@@ -1,79 +1,123 @@
 # KEIZO Gallery - 画像更新ガイド
 
-## 新しい画像を追加する方法（推奨）
+Vision API を使った自動ギャラリー管理システム。
 
-### 1. Notion に新しい行を追加
-- Notion で「KEIZO Gallery DB」を開く
-- 新しい行を追加
-- 以下を入力：
-  - **Caption**: キャプション（例：`Mountain View`）
-  - **Image**: 画像をアップロード
-  - **選択**: カテゴリを選択（`Landscape`, `People`, `Places`, `Daily Life`, `Food` など）
-  - **Order**: 順序番号（オプション。指定しない場合は自動で最後に追加）
+## 新しい画像を追加する方法
 
-### 2. ローカルでスクリプト実行
-```bash
-npm run fetch-notion
+### 1. gallery-urls.txt に URL を追加
+
+`gallery-urls.txt` に画像 URL を1行ずつ追加します：
+
+```
+https://edna.jp/edna-books/artist/keizo-okada/gallery/image1.jpg
+https://edna.jp/edna-books/artist/keizo-okada/gallery/image2.jpg
+https://edna.jp/edna-books/artist/keizo-okada/gallery/image3.jpg
 ```
 
-このコマンドで：
-- Notion DB から自動的にすべての画像データを取得
-- JSON ファイルを自動生成・更新
-- dev サーバーが自動リロード
+### 2. ワンコマンドで完了
+
+```bash
+npm run add-gallery-images
+```
+
+このコマンドで自動実行されます：
+- ✅ Google Cloud Vision API で画像を分析
+- ✅ キャプション自動生成（日本語翻訳付き）
+- ✅ カテゴリ自動判定（Places, People, Food, Daily Life）
+- ✅ CSV/JSON ファイル生成
+- ✅ ビルド + FTP デプロイ
 
 ### 3. ブラウザで確認
-- ブラウザをリロード（`Cmd + Shift + R`）
-- 新しい画像がギャラリーに表示されます
-- 選択したカテゴリーでタブフィルタリングが可能
+
+本番サイト（edna.jp）で新しい画像が表示されます。
 
 ---
 
 ## カテゴリ機能
 
-ギャラリーの下部にあるタブで、カテゴリー別に画像を絞り込めます：
+Vision API が自動判定した4つのカテゴリ：
 
 - **All**: すべての画像を表示
-- **Landscape**, **People**, **Places** など: 選択したカテゴリーのみ表示
+- **Places**: 風景、建物、ランドマーク
+- **People**: 人物、ポートレート
+- **Food**: 食べ物、料理、飲み物
+- **Daily Life**: 室内、ペット、アート、ファッション
 
-Notion で「選択」フィールドに値が入っているカテゴリーのタブが自動生成されます。
+タブで簡単に絞り込めます。
 
 ---
 
 ## コマンド一覧
 
-### Notion からデータを取得して JSON を更新
+### Vision API で分析 → ビルド → デプロイ
 ```bash
-npm run fetch-notion
+npm run add-gallery-images
 ```
-- `.env.local` から自動的に API キーを読み込み
-- Notion DB の最新データを取得
-- `src/data/keizo-gallery.json` を更新
+- gallery-urls.txt から URL を読み込み
+- Vision API で新規画像のみ分析（既分析画像は再分析しない）
+- CSV/JSON を生成
+- ビルド + FTP デプロイを自動実行
+- バックアップ機能付き（失敗時復元可能）
 
 ### ローカル開発サーバーを起動
 ```bash
 npm run dev
 ```
 
+### ビルド確認
+```bash
+npm run build
+npm run preview
+```
+
+---
+
+## ファイル管理
+
+| ファイル | 役割 |
+|---------|------|
+| `gallery-urls.txt` | 管理対象の URL リスト（唯一の管理ファイル） |
+| `keizo-gallery.csv` | メタデータ（自動生成） |
+| `src/data/keizo-gallery.json` | ギャラリーデータ（自動生成） |
+
+---
+
+## データ削除方法
+
+gallery-urls.txt から URL を削除すると、次回実行時に自動削除されます。
+
+```
+# 削除したい URL を行ごと削除
+# npm run add-gallery-images を実行
+# → 削除されたギャラリーから自動削除
+```
+
+---
+
+## API コスト管理
+
+- **無料枠**: Google Cloud Vision API 1000リクエスト/月まで無料
+- **効率化**: 既分析画像は自動的にスキップ（再分析しない）
+- **バックアップ**: 実行前に JSON/CSV をバックアップ
+
+---
+
+## トラブルシューティング
+
+### Vision API エラーが出た場合
+1. URL が外部から確認可能か確認
+2. `.env.local` に `GOOGLE_CLOUD_API_KEY` が設定されているか確認
+3. Google Cloud プロジェクトに課金が有効になっているか確認
+
+### ビルドエラーが出た場合
+1. `npm install` で依存を更新
+2. `npm run build` でローカルビルドテスト
+3. JSON 形式が正しいか確認
+
 ---
 
 ## 自動化について
 
-### GitHub Actions による自動更新
-GitHub Actions ワークフローが以下を自動実行します：
-- **毎日 UTC 0:00**（JST 9:00）に実行
-- **main へのプッシュ時**に実行
-- Notion DB から最新データを自動取得
-- JSON ファイルを自動生成・更新
-
-### 手動実行
-スケジュールを待たずに更新したい場合：
-1. ローカルで `npm run fetch-notion` を実行
-2. ブラウザをリロード
-
----
-
-## 注意事項
-
-- **Filename フィールドは不要です**（自動的に画像から取得）
-- **Order は指定しなくてもOK**（デフォルト値: 999。つまり一番最後に追加）
-- **画像 URL の有効期限**: Notion CDN の URL は約1時間有効（スクリプト実行時に自動更新）
+- GitHub Actions ワークフローは **削除済み**
+- デプロイは **手動トリガー**（`npm run add-gallery-images`）で実行
+- エラー検知と確認が可能
