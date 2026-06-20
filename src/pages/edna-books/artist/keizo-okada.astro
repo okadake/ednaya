@@ -38,28 +38,13 @@ const artistData = {
 
 <SimpleLayout title={`${artistData.name} | エドナ屋`} description={artistData.name}>
   <style>
-    @keyframes galleryPopIn {
-      0% {
+    @keyframes fadeInScale {
+      from {
         opacity: 0;
-        filter: blur(12px) brightness(0.5);
-        transform: scale(0.3);
+        transform: scale(0.95);
       }
-      25% {
-        opacity: 0;
-        filter: blur(12px) brightness(0.5);
-        transform: scale(0.3);
-      }
-      45% {
-        opacity: 0.7;
-        filter: blur(6px) brightness(0.8);
-      }
-      75% {
-        transform: scale(1.08);
-        filter: blur(2px) brightness(1.1);
-      }
-      100% {
+      to {
         opacity: 1;
-        filter: blur(0px) brightness(1);
         transform: scale(1);
       }
     }
@@ -68,10 +53,17 @@ const artistData = {
       opacity: 0;
     }
 
-    .gallery-item-animate.play img {
-      animation: galleryPopIn 1.4s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+    .gallery-item-animate.loaded img {
+      animation: fadeInScale 0.7s ease-out forwards;
     }
   </style>
+<!-- Artist Header -->
+  <section class="pt-8 pb-6 px-6 bg-black border-b border-stone-800">
+    <div class="max-w-6xl mx-auto w-full">
+      <p class="text-2xl tracking-[0.4em] text-stone-500 uppercase">Artist</p>
+    </div>
+  </section>
+
   <!-- About Section -->
   <section class="py-8 px-6 bg-black">
     <div class="max-w-6xl mx-auto w-full">
@@ -163,7 +155,7 @@ const artistData = {
       </div>
 
       <!-- Masonry Grid -->
-      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-2 auto-rows-[140px]" id="gallery-grid">
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-1 auto-rows-[140px]" id="gallery-grid">
         {galleryItems.map((item, idx) => {
           const rowSpanPattern = [1, 1, 2, 1, 1, 1, 2, 1, 1, 1, 2, 1];
           const rowSpan = rowSpanPattern[idx % rowSpanPattern.length];
@@ -188,28 +180,61 @@ const artistData = {
       </div>
 
       <script>
-        // Intersection Observer でスクロール時にアニメーション開始
-        const galleryItems = document.querySelectorAll('.gallery-item-animate');
-        let animatedCount = 0;
+        // ギャラリーアイテムをランダムに並び替え
+        const galleryGrid = document.getElementById('gallery-grid') as HTMLElement;
+        const galleryItems = Array.from(document.querySelectorAll('.gallery-item-animate'));
 
+        // Fisher-Yates シャッフルアルゴリズム
+        function shuffleArray<T>(array: T[]): T[] {
+          const shuffled = [...array];
+          for (let i = shuffled.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+          }
+          return shuffled;
+        }
+
+        // シャッフルして DOM に再挿入
+        const shuffledItems = shuffleArray(galleryItems);
+        const shuffledPhotos = shuffledItems.map(item => {
+          const img = item.querySelector('img');
+          return img ? img.src : '';
+        });
+        // グローバルに保存して Lightbox で使用
+        window['shuffledPhotos'] = shuffledPhotos;
+
+        shuffledItems.forEach((item, newIndex) => {
+          item.setAttribute('data-shuffled-index', newIndex.toString());
+          galleryGrid.appendChild(item);
+        });
+
+        // 画像を段階的に表示する
         const observer = new IntersectionObserver((entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
               const item = entry.target as HTMLElement;
-              // ディレイを計算して順序に再生
-              const idx = Array.from(galleryItems).indexOf(item);
+              const visibleItems = Array.from(document.querySelectorAll('.gallery-item-animate')).filter(el => {
+                const rect = el.getBoundingClientRect();
+                return rect.top < window.innerHeight && rect.bottom > 0;
+              });
+
+              // 見える範囲の中での順序を取得
+              const orderInView = visibleItems.indexOf(item);
+
+              // 100ms ずつディレイを付けて段階的に表示
               setTimeout(() => {
-                item.classList.add('play');
-              }, idx * 50);
+                item.classList.add('loaded');
+              }, orderInView * 100);
+
               observer.unobserve(item);
             }
           });
         }, {
           threshold: 0,
-          rootMargin: '700px'
+          rootMargin: '100px'
         });
 
-        galleryItems.forEach(item => observer.observe(item));
+        document.querySelectorAll('.gallery-item-animate').forEach(item => observer.observe(item));
       </script>
     </div>
   </section>
@@ -239,7 +264,9 @@ const artistData = {
   </div>
 
   <script define:vars={{ galleryImages, captionMap, categoryMap }}>
+    // シャッフル済みの配列を使用（ギャラリースクリプトで設定）
     let allPhotos = galleryImages;
+    let originalPhotos = galleryImages;  // 元の順序を保持
     let photos = galleryImages;
     let current = 0;
     let touchStartX = 0;
@@ -268,6 +295,12 @@ const artistData = {
     }
 
     function openLightbox(index) {
+      // カテゴリフィルターが適用されていなければシャッフル配列を使用
+      if (currentCategory === 'all' && window['shuffledPhotos']) {
+        allPhotos = window['shuffledPhotos'];
+        photos = allPhotos;
+      }
+      // カテゴリフィルター時はphotosはすでに設定済み
       current = index;
       showPhoto();
       lb.classList.remove('hidden');
@@ -333,10 +366,20 @@ const artistData = {
 
     // ギャラリーアイテムのクリックハンドラー
     function setupGalleryClickHandlers() {
-      document.querySelectorAll('[data-gallery-item]').forEach((item, originalIdx) => {
+      document.querySelectorAll('[data-gallery-item]').forEach((item) => {
         item.onclick = () => {
-          const filteredIdx = item.getAttribute('data-filtered-index');
-          openLightbox(filteredIdx ? parseInt(filteredIdx) : originalIdx);
+          // カテゴリフィルター時は data-filtered-index を使用
+          let index = 0;
+          if (item.hasAttribute('data-filtered-index')) {
+            index = parseInt(item.getAttribute('data-filtered-index'));
+          } else {
+            // フィルター前は data-shuffled-index を使用
+            const shuffledIndex = item.getAttribute('data-shuffled-index');
+            if (shuffledIndex !== null) {
+              index = parseInt(shuffledIndex);
+            }
+          }
+          openLightbox(index);
         };
       });
     }
@@ -364,7 +407,7 @@ const artistData = {
         let filteredPhotos = [];
         let filteredIndex = 0;
 
-        galleryItems.forEach((item, originalIdx) => {
+        galleryItems.forEach((item) => {
           const itemCategory = item.getAttribute('data-category-item');
           const itemCategories = itemCategory ? itemCategory.split(',') : [];
           const isMatch = selectedCategory === 'all' || itemCategories.includes(selectedCategory);
@@ -372,7 +415,9 @@ const artistData = {
           if (isMatch) {
             item.style.display = '';
             item.setAttribute('data-filtered-index', filteredIndex);
-            filteredPhotos.push(allPhotos[originalIdx]);
+            // 元の順序を保持するため、data-index属性を使用して元の配列からの取得
+            const originalDataIndex = parseInt(item.getAttribute('data-index'));
+            filteredPhotos.push(originalPhotos[originalDataIndex]);
             filteredIndex++;
           } else {
             item.style.display = 'none';
